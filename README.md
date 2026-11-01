@@ -11,7 +11,7 @@ Static, six-language dashboard on illegal migration to the UK, built from offici
 | Magyar (Csatornafigyelő) | [`hu/index.html`](hu/index.html) |
 | Polski | [`pl/index.html`](pl/index.html) |
 
-Last data update: 1 November 2026 (small boat arrivals to 30 October).
+Last data update: 1 November 2026 (small boat arrivals to 30 October; quarterly Home Office figures to June 2026, next release 26 November 2026).
 
 ## Structure
 

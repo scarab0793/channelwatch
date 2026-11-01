@@ -1,0 +1,481 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Channelwatch</title><meta name="description" content="Illegale Migration ins Vereinigte Königreich anhand amtlicher Daten: Kleinboot-Ankünfte, Asylanträge, Hilfen und Kosten, Kriminalitätsstatistik und gerichtlich bestätigte Fälle, mit Quellen."><link rel="alternate" hreflang="en" href="https://scarab0793.github.io/channelwatch/"><link rel="alternate" hreflang="de" href="https://scarab0793.github.io/channelwatch/de/"><link rel="alternate" hreflang="fr" href="https://scarab0793.github.io/channelwatch/fr/"><link rel="alternate" hreflang="es" href="https://scarab0793.github.io/channelwatch/es/"><link rel="alternate" hreflang="hu" href="https://scarab0793.github.io/channelwatch/hu/"><link rel="alternate" hreflang="pl" href="https://scarab0793.github.io/channelwatch/pl/"><link rel="alternate" hreflang="x-default" href="https://scarab0793.github.io/channelwatch/"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@600;800&family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: harbour board – figures strip first, topic sections below, verified cases and sources last */
+:root{
+  --bg:#eef1f3; --surface:#ffffff; --ink:#14212b; --muted:#566673; --line:#c9d2d9;
+  --accent:#d9811a; --sea:#1f5a7a; --ok:#2e7050; --bad:#a3392b;
+  --f-display:"Big Shoulders Text","Arial Narrow",sans-serif;
+  --f-body:"Literata",Georgia,serif;
+  --f-data:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f171d; --surface:#17222b; --ink:#e4eaee; --muted:#93a3ae; --line:#2c3a45;
+  --accent:#f0a24a; --sea:#6fb1d6; --ok:#6cc495; --bad:#ec8576; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f171d; --surface:#17222b; --ink:#e4eaee; --muted:#93a3ae; --line:#2c3a45;
+  --accent:#f0a24a; --sea:#6fb1d6; --ok:#6cc495; --bad:#ec8576; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16.5px/1.6 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1080px;margin:0 auto}
+a{color:var(--sea)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+header{padding-block:26px 14px;border-bottom:3px solid var(--ink)}
+.logo{font:800 clamp(30px,9vw,76px)/.88 var(--f-display);margin:0;overflow-wrap:anywhere;letter-spacing:.01em;text-transform:uppercase}
+.logo span{color:var(--accent)}
+.tag{margin:10px 0 0;color:var(--muted);max-width:60ch;font-size:15px}
+.stamp{font:600 12px var(--f-data);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:10px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);
+  display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav a{flex:none;font:600 13px var(--f-data);text-decoration:none;color:var(--ink);border:1px solid var(--line);padding:5px 11px;border-radius:99px;background:var(--surface)}
+nav a:hover{border-color:var(--ink)}
+section{padding-block:30px 8px;border-bottom:1px solid var(--line)}
+h2{font:800 clamp(30px,5vw,42px)/1 var(--f-display);text-transform:uppercase;margin:0 0 6px;text-wrap:balance}
+.kicker{font:600 12px var(--f-data);color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin:0 0 4px}
+.lede{color:var(--muted);max-width:65ch;margin:0 0 18px}
+p{max-width:68ch}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:18px}
+.stat{background:var(--surface);padding:14px 16px;min-width:0}
+.stat .n{font:800 38px/1 var(--f-display);font-variant-numeric:tabular-nums}
+.stat .l{font-size:14px;margin-top:6px}
+.stat .d{font:600 12px var(--f-data);margin-top:6px;color:var(--muted)}
+.dn{color:var(--ok)}.up{color:var(--bad)}
+.chart{background:var(--surface);border:1px solid var(--line);padding:14px;overflow-x:auto}
+.chart svg{display:block;width:100%;min-width:520px;height:auto}
+.cap{font:12px var(--f-data);color:var(--muted);margin-top:8px}
+.tbl{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:460px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 12px var(--f-data);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+td.v{font:600 15px var(--f-data);white-space:nowrap;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;align-items:start}
+.two>*{min-width:0}
+.box{background:var(--surface);border-left:4px solid var(--sea);padding:14px 16px;font-size:15px}
+.box.warn{border-left-color:var(--accent)}
+.box h3{font:800 20px var(--f-display);text-transform:uppercase;margin:0 0 6px}
+.box ul{margin:0;padding-left:18px}
+.box li+li{margin-top:6px}
+.cases{display:grid;gap:0}
+.case{padding-block:18px;border-top:1px solid var(--line)}
+.case:first-child{border-top:0}
+.case h3{font:800 24px/1.1 var(--f-display);margin:4px 0 8px;text-wrap:balance}
+.meta{display:flex;gap:8px;flex-wrap:wrap;font:600 12px var(--f-data);color:var(--muted)}
+.pill{border:1px solid currentColor;border-radius:99px;padding:1px 8px}
+.pill.s{color:var(--bad)}
+.feed{list-style:none;margin:0;padding:0}
+.feed li{display:grid;grid-template-columns:76px 1fr;gap:12px;padding-block:12px;border-top:1px solid var(--line)}
+.feed li:first-child{border-top:0}
+.feed time{font:600 13px var(--f-data);color:var(--accent)}
+.feed b{display:block;font-weight:600}
+.feed span{color:var(--muted);font-size:15px}
+.srcs{font-size:14px;columns:2 300px;column-gap:28px;padding-left:18px}
+.srcs li{break-inside:avoid;margin-bottom:6px}
+footer{padding-block:24px 40px;color:var(--muted);font-size:14px}
+@media(max-width:520px){.feed li{grid-template-columns:1fr;gap:2px}}
+.tabs{display:flex;gap:0;margin-top:18px;border:2px solid var(--ink);width:max-content;max-width:100%}
+.tabs button{font:800 18px var(--f-display);text-transform:uppercase;letter-spacing:.03em;background:var(--bg);color:var(--ink);border:0;padding:8px 18px;cursor:pointer}
+.tabs button+button{border-left:2px solid var(--ink)}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+nav.sub a{background:var(--bg)}
+.an{padding-block:34px 18px;border-bottom:1px solid var(--line)}
+.an h3{font:800 22px var(--f-display);text-transform:uppercase;margin:22px 0 6px}
+.an p{margin:0 0 10px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:4px 0 8px}
+.facts div{background:var(--surface);padding:12px 14px;min-width:0}
+.facts b{display:block;font:800 30px/1 var(--f-display);font-variant-numeric:tabular-nums;color:var(--sea)}
+.facts span{display:block;font-size:14px;margin-top:6px}
+.verdict{background:var(--surface);border-left:4px solid var(--accent);padding:12px 16px;margin:20px 0 12px;max-width:72ch}
+.verdict b{display:block;font:600 12px var(--f-data);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:4px}
+.asrc{font:12px/1.7 var(--f-data);color:var(--muted)}
+.langs{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;font:600 12px var(--f-data)}.langs a,.langs b{padding:3px 11px;border:1px solid var(--line);border-radius:99px;text-decoration:none;color:var(--ink);background:var(--surface)}.langs a:hover{border-color:var(--ink)}.langs b{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+</style>
+<div class="wrap">
+<header>
+  <h1 class="logo">Channel<span>watch</span></h1>
+  <div class="stamp">Stand: 1. November 2026 · Daten: Home Office, MoJ, NAO, Migration Observatory</div>
+  <div class="langs" role="navigation" aria-label="Languages"><a href="../" hreflang="en" lang="en">English</a><b lang="de" aria-current="page">Deutsch</b><a href="../fr/" hreflang="fr" lang="fr">Français</a><a href="../es/" hreflang="es" lang="es">Español</a><a href="../hu/" hreflang="hu" lang="hu">Magyar</a><a href="../pl/" hreflang="pl" lang="pl">Polski</a></div>
+</header>
+
+<div class="tabs" role="tablist"><button type="button" role="tab" data-v="w" aria-selected="true">Monitor</button><button type="button" role="tab" data-v="a" aria-selected="false" id="analysis">Analyse</button></div>
+<div id="v-watch">
+<nav aria-label="Abschnitte">
+  <a href="#figures">Zahlen</a><a href="#boats-sec">Kleinboote</a><a href="#asylum">Asyl</a><a href="#support">Hilfen und Kosten</a><a href="#crime">Kriminalität</a><a href="#cases">Fälle</a><a href="#news">Nachrichten</a><a href="#local">Lokales</a><a href="#sources">Quellen</a>
+</nav>
+
+<section id="figures">
+  <p class="kicker">Auf einen Blick</p>
+  <h2>Wichtigste Zahlen</h2>
+  <div class="stats">
+    <div class="stat"><div class="n">21.869</div><div class="l">Ankünfte per Kleinboot 2026 (bis 30. Okt.)</div><div class="d dn">▼ 41 % gegenüber dem gleichen Zeitpunkt 2025 (36.954)</div></div>
+    <div class="stat"><div class="n">85.891</div><div class="l">Asylanträge, 12 Monate bis Juni 2026</div><div class="d dn">▼ 21 % gegenüber dem Vorjahr</div></div>
+    <div class="stat"><div class="n">40.168</div><div class="l">warten auf eine Erstentscheidung (Juni 2026)</div><div class="d dn">▼ etwa halbiert</div></div>
+    <div class="stat"><div class="n">16.021</div><div class="l">Asylsuchende in Hotels (Juni 2026)</div><div class="d dn">▼ 50 % gegenüber dem Vorjahr</div></div>
+    <div class="stat"><div class="n">£4,36 Mrd.</div><div class="l">Asylausgaben des Home Office, 2025–26</div><div class="d dn">▼ 8 % gegenüber dem Vorjahr</div></div>
+    <div class="stat"><div class="n">39.690</div><div class="l">Rückführungen, 12 Monate bis Juli 2026</div><div class="d up">▲ 5 % gegenüber dem Vorjahr</div></div>
+  </div>
+</section>
+
+<section id="boats-sec">
+  <p class="kicker">Ärmelkanal</p>
+  <h2>Ankünfte per Kleinboot</h2>
+  <p class="lede">Seit 2018 sind mehr als 200.000 Menschen per Kleinboot angekommen. 2026 kommen weniger, aber jedes Boot trägt mehr Menschen: Der Durchschnitt liegt mit etwa 67 pro Boot auf Rekordniveau, in der Woche bis zum 30. Oktober waren es etwa 78 (934 Menschen auf 12 Booten).</p>
+  <div class="chart" role="img" aria-label="Jährliche Ankünfte per Kleinboot, 2018 bis 2026">
+    <svg id="boats" viewBox="0 0 640 300"></svg>
+  </div>
+  <p class="cap">Jahreszahlen des Home Office. 2026: vorläufig, bis 30. Oktober. Der Höchststand 2022 lag bei 45.774.</p>
+  <div class="two" style="margin-top:18px">
+    <div class="box">
+      <h3>Wer kommt</h3>
+      <ul>
+        <li>82 % der Ankömmlinge 2025/26 waren männlich.</li>
+        <li>Eritrea war 2025 das wichtigste Herkunftsland, mit mehr als doppelt so vielen Ankünften wie 2024.</li>
+        <li>Etwa 40 % der Asylantragsteller kamen per Kleinboot.</li>
+      </ul>
+    </div>
+    <div class="box warn">
+      <h3>Ein bewegter September</h3>
+      <ul>
+        <li>Am 24. September kamen 781 Menschen an, der stärkste Tag des Jahres.</li>
+        <li>Zwei Boote landeten innerhalb von zwei Tagen unentdeckt; die Innenministerin ordnete eine dringende Überprüfung an.</li>
+        <li>Die letzte unentdeckte Landung davor gab es im September 2025.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="asylum">
+  <p class="kicker">Das System</p>
+  <h2>Asyl und Rückführungen</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Kennzahl</th><th>Wert</th><th>Anmerkung</th></tr></thead>
+    <tbody>
+      <tr><td>Anerkennungsquote (Erstentscheidungen)</td><td class="v">38%</td><td>Vor einem Jahr 48 %; 77 % auf dem Höhepunkt 2022.</td></tr>
+      <tr><td>Warten auf eine Erstentscheidung</td><td class="v">40.168</td><td>Niedrigster Stand seit 2019. Der Rückstau bei den Berufungen wächst weiter.</td></tr>
+      <tr><td>Rückführungen, Jul. 2024 – Jul. 2026</td><td class="v">80.286</td><td>Darunter 19.622 erzwungene Rückführungen und 6.103 Kleinboot-Ankömmlinge.</td></tr>
+      <tr><td>Rückführungen nach Frankreich</td><td class="v">3.310</td><td>Nach der seit August 2025 geltenden Vereinbarung zwischen Großbritannien und Frankreich, bis Juni 2026.</td></tr>
+      <tr><td>Abgeschobene ausländische Straftäter</td><td class="v">11.733</td><td>Juli 2024 bis Juli 2026.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="support">
+  <p class="kicker">Kostenlose Hilfen</p>
+  <h2>Hilfen und Kosten</h2>
+  <p class="lede">Asylhilfe erhalten Menschen, die sonst mittellos wären, solange über ihren Antrag entschieden wird. Die meisten Antragsteller dürfen in den ersten 12 Monaten nicht arbeiten.</p>
+  <div class="two">
+    <div class="tbl"><table>
+      <thead><tr><th>Leistung</th><th>Betrag</th></tr></thead>
+      <tbody>
+        <tr><td>Wöchentliches Bargeld, Selbstversorger-Unterkunft (ASPEN-Karte)</td><td class="v">£49,18 / Woche</td></tr>
+        <tr><td>Wöchentliches Bargeld bei Verpflegung (Hotels)</td><td class="v">£9,95 / Woche</td></tr>
+        <tr><td>Möblierte Unterkunft inklusive Nebenkosten</td><td class="v">kostenlos</td></tr>
+        <tr><td>NHS-Gesundheitsversorgung, Schulplätze für Kinder</td><td class="v">kostenlos</td></tr>
+        <tr><td>Kosten pro Person und Nacht: Hotel</td><td class="v">£144</td></tr>
+        <tr><td>Kosten pro Person und Nacht: Wohnunterkunft (Dispersal)</td><td class="v">£23,25</td></tr>
+        <tr><td>Durchschnittliche Gesamtkosten eines Asylantrags</td><td class="v">£18.700</td></tr>
+        <tr><td>Menschen in staatlich finanzierter Unterstützung</td><td class="v">≈ 93.300</td></tr>
+      </tbody>
+    </table></div>
+    <div class="box">
+      <h3>Was sich 2026 geändert hat</h3>
+      <ul>
+        <li>Seit dem 2. Juni ist die gesetzliche Pflicht zur Unterstützung eine Befugnis: Die Regierung darf sie gewähren, muss aber nicht mehr.</li>
+        <li>Wer bei illegaler Arbeit erwischt wird, kann die Unterstützung verlieren.</li>
+        <li>Anträge nach dem 2. März erhalten 30 Monate Schutz statt fünf Jahre.</li>
+        <li>Der Gesetzentwurf im Parlament würde Flüchtlinge, die später genug verdienen, zur Rückzahlung von etwa £10.000 verpflichten.</li>
+        <li>Die Regierung will bis 2029 alle Asylhotels schließen; weniger als 160 sind übrig, auf dem Höhepunkt waren es etwa 400.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="crime">
+  <p class="kicker">Amtliche Statistik</p>
+  <h2>Kriminalität</h2>
+  <p class="lede">Die britische Statistik erfasst die Staatsangehörigkeit, nicht den Asylstatus. Verlässliche öffentliche Daten dazu, wie viele Kleinboot-Ankömmlinge im Gefängnis sitzen, gibt es nicht.</p>
+  <div class="two">
+    <div class="tbl"><table>
+      <thead><tr><th>Ausländische Straftäter</th><th>Anzahl</th></tr></thead>
+      <tbody>
+        <tr><td>Ausländer als Anteil der Gefängnispopulation</td><td class="v">≈ 12%</td></tr>
+        <tr><td>In Freiheit lebend, abschiebbar (Ende 2025)</td><td class="v">19.470</td></tr>
+        <tr><td>In Haft wegen einer Straftat mit Todesfolge (Juni 2025)</td><td class="v">989</td></tr>
+        <tr><td>In Haft und möglicherweise für eine vorzeitige Abschiebung infrage kommend (Juni 2026)</td><td class="v">≈ 4.800</td></tr>
+      </tbody>
+    </table></div>
+    <div class="box warn">
+      <h3>Einordnung</h3>
+      <ul>
+        <li>Das Migration Observatory stellt fest, dass Ausländer, altersbereinigt, im Gefängnis leicht unterrepräsentiert sind, weil Migranten im Durchschnitt jünger sind.</li>
+        <li>Bei Sexualdelikten sind Ausländer unter den Verurteilten überrepräsentiert.</li>
+        <li>Studien finden keinen Zusammenhang zwischen dem Migrantenanteil einer Gegend und Gewaltkriminalität. Eine Studie fand, dass ein um 1 Prozentpunkt höherer Anteil von Asylsuchenden mit 1,1 % mehr Eigentumsdelikten einherging.</li>
+        <li>Die meisten Straftaten führen nie zu einer Verurteilung, daher sind die wahren Tatraten für jede Gruppe unbekannt.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <p class="kicker">Nur Urteile</p>
+  <h2>Geprüfte Fälle</h2>
+  <p class="lede">Nur Fälle, in denen ein Gericht ein Urteil gesprochen hat und über die ein seriöses überregionales oder lokales Medium berichtet hat. Verdächtige und laufende Prozesse werden nicht aufgeführt.</p>
+  <div class="cases">
+    <article class="case">
+      <div class="meta"><span class="pill s">Vorbereitung terroristischer Taten</span><span>London</span><span>Verurteilt am 5. Okt. 2026</span></div>
+      <h3>Lebenslang für versuchten Messerangriff auf die israelische Botschaft</h3>
+      <p>Der in Kuwait geborene Abdullah Albadri (34) versuchte im April 2025 mit zwei Messern, in Kensington über den Botschaftszaun zu klettern, und wurde von bewaffneten Polizisten gestoppt. Der Old Bailey setzte eine Mindeststrafe von 20 Jahren fest. Er war zweimal per Kleinboot gekommen, 2021 und 2025, und sein Asylantrag wurde abgelehnt.</p>
+      <div class="meta">Quellen: <a href="https://www.irishnews.com/news/uk/failed-asylum-seeker-who-attempted-attack-on-israeli-embassy-jailed-for-life-JPCI2EF7XJORBLIU4VF75BH42A/" target="_blank" rel="noopener">PA / Irish News</a> · <a href="https://www.arabnews.pk/middle-east/kuwaiti-jailed-for-life-in-uk-over-bid-to-attack-israeli-embassy-3003251" target="_blank" rel="noopener">AFP / Arab News</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Versuchte Vergewaltigung</span><span>Hereford</span><span>Verurteilt im Okt. 2026</span></div>
+      <h3>Sechs Jahre für einen nächtlichen Angriff, den eine Überwachungskamera aufzeichnete</h3>
+      <p>Mehmet Bulut (31) folgte einer Frau in der Nähe einer Unterführung und griff sie an. Er kam 2022 per Kleinboot; sein Asylantrag wurde wegen mangelnder Mitwirkung eingestellt, und er tauchte unter. Er bekannte sich schuldig, und der Worcester Crown Court stufte ihn als gefährlichen Straftäter ein. Ihm droht die Abschiebung.</p>
+      <div class="meta">Quellen: <a href="https://uk.news.yahoo.com/failed-asylum-seeker-arrived-small-114900890.html" target="_blank" rel="noopener">Yahoo News UK</a> · <a href="https://discover.swns.com/2026/10/small-boat-migrant-who-tried-to-rape-woman-jailed/" target="_blank" rel="noopener">SWNS</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Sexueller Übergriff</span><span>Crewe</span><span>Verurteilt am 12. Okt. 2026</span></div>
+      <h3>15 Wochen für den sexuellen Übergriff auf ein 15-jähriges Mädchen</h3>
+      <p>Taha Derwish (26) sprach im September 2025 eine Gruppe jugendlicher Mädchen an und berührte eine von ihnen, obwohl man ihm gesagt hatte, sie seien 15. Er wurde innerhalb von zehn Minuten festgenommen. Er legte Rechtsmittel gegen einen abgelehnten Asylantrag ein und wohnte in einem Hotel in Crewe. Es ist unklar, ob er sofort abgeschoben wird.</p>
+      <div class="meta">Quelle: <a href="https://www.aol.co.uk/articles/asylum-seeker-jailed-sexually-assaulting-163816000.html" target="_blank" rel="noopener">BBC / AOL</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Steuern eines Schleuserboots</span><span>Canterbury</span><span>Verurteilt am 18. Sep. 2026</span></div>
+      <h3>Zwei Jahre und drei Monate für das Steuern eines überfüllten Schlauchboots</h3>
+      <p>Chan Mathok Atak (19) aus dem Südsudan steuerte im Juli 2026 mindestens 90 Minuten lang ein 14 Meter langes Schlauchboot mit 165 Menschen, darunter 31 Kinder. Es gehört zu den ersten Urteilen nach dem im Januar 2026 eingeführten Straftatbestand der Gefährdung anderer auf See. Er bekannte sich schuldig; der Richter sagte, ihm könne die automatische Abschiebung drohen.</p>
+      <div class="meta">Quelle: <a href="https://www.aljazeera.com/news/2026/9/19/uk-jails-teen-asylum-seeker-for-steering-overcrowded-channel-migrant-boat" target="_blank" rel="noopener">Al Jazeera</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Kindesentführung und Vergewaltigung</span><span>Nuneaton</span><span>Verurteilt im März 2026</span></div>
+      <h3>15 Jahre für die Entführung und Vergewaltigung eines 12-jährigen Mädchens</h3>
+      <p>Der afghanische Staatsangehörige Ahmad Mulakhil (23) wurde vom Warwick Crown Court verurteilt. Der Fall löste im Sommer 2025 Proteste in Nuneaton aus. Ein zweiter afghanischer Mann, der gemeinsam mit ihm angeklagt war, wurde freigesprochen.</p>
+      <div class="meta">Quellen: <a href="https://uk.news.yahoo.com/afghan-asylum-seeker-convicted-abducting-161158724.html" target="_blank" rel="noopener">Yahoo News UK</a> · <a href="https://www.hellorayo.co.uk/absolute-radio/uk/news/asylum-seeker-nuneaton-rape-sentenced" target="_blank" rel="noopener">Rayo / Absolute Radio</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Sexueller Übergriff</span><span>Margate, Kent</span><span>Verurteilt am 18. Dez. 2025</span></div>
+      <h3>Neun Jahre für einen Angriff an der Strandpromenade</h3>
+      <p>Der eritreische Staatsangehörige Amer Mohammed (24), der in einem Asylhotel in Cliftonville untergebracht war, griff im August 2024 auf der Promenade eine allein gehende Frau an. Eine Jury verurteilte ihn nach einem zehntägigen Prozess am Canterbury Crown Court.</p>
+      <div class="meta">Quelle: <a href="https://www.kentonline.co.uk/thanet/news/asylum-seeker-staying-in-kent-hotel-jailed-after-seafront-se-334126/" target="_blank" rel="noopener">KentOnline</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Mord</span><span>Derby</span><span>Verurteilt im Okt. 2025</span></div>
+      <h3>Lebenslang für einen Mord in einer Bankfiliale</h3>
+      <p>Haybe Cabdiraxmaan Nur stach dem 37-jährigen Gurvinder Johal im Mai 2025 in einer Lloyds-Filiale ohne Anlass ins Herz. Er kam im Oktober 2024 per Kleinboot, und sein Asylantrag wurde im Januar 2025 abgelehnt. Er muss mindestens 25 Jahre verbüßen.</p>
+      <div class="meta">Quellen: <a href="https://www.judiciary.uk/wp-content/uploads/2025/10/Nur-sentencing-remarks.pdf" target="_blank" rel="noopener">Urteilsbegründung (judiciary.uk)</a> · <a href="https://www.lbc.co.uk/crime/small-boat-migrant-jailed-for-life/" target="_blank" rel="noopener">LBC</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="news">
+  <p class="kicker">Politik und Entscheidungen</p>
+  <h2>Nachrichtenticker</h2>
+  <ul class="feed">
+    <li><time>30. Okt.</time><div><b>Ankünfte seit Jahresbeginn erreichen 21.869</b><span>41 % weniger als zum gleichen Zeitpunkt 2025 (36.954). In den letzten sieben Tagen kamen 934 Menschen auf 12 Booten, etwa 78 pro Boot.</span></div></li>
+    <li><time>29. Okt.</time><div><b>Neue, begrenzte Flüchtlingswege für Wohltätigkeitsorganisationen</b><span>Das Home Office hat Bewerbungen für Wege der Gemeinschaftspatenschaft und des Flüchtlingsstudiums geöffnet; die ersten Ankünfte werden im Herbst 2027 erwartet, ein arbeitgebergeführter Weg soll im Frühjahr 2027 folgen. Suella Braverman warnte, das werde böse enden; der Anführer von Restore Britain sagte, eine Regierung seiner Partei würde jeden abschieben, der auf diesem Weg kommt.</span></div></li>
+    <li><time>26. Okt.</time><div><b>Reform UK bei 20 % in der jüngsten YouGov-Umfrage</b><span>Der niedrigste Wert, seit YouGovs Erhebung im Januar 2025 neu startete. Labour 27 %, Konservative 22 %.</span></div></li>
+    <li><time>19. Okt.</time><div><b>£270 Mio. geschätzt für das Lager Linton-on-Ouse</b><span>Bis zu 1.200 Menschen sollen auf dem ehemaligen RAF-Stützpunkt neben einem Dorf mit 700 Einwohnern untergebracht werden. Die Kostenzahl stammt von einer lokalen Bürgerinitiative und wurde nicht unabhängig geprüft.</span></div></li>
+    <li><time>15. Okt.</time><div><b>Visa-Verbot angedroht, weil Eritrea Rückführungen verweigert</b><span>Die Innenministerin sagte, alle Visa für Eritreer würden gesperrt, wenn das Land nicht seine Staatsangehörigen ohne Bleiberecht im Vereinigten Königreich zurücknehme. Die beschleunigte Visabearbeitung für Amtsträger wurde bereits abgeschafft.</span></div></li>
+    <li><time>8. Okt.</time><div><b>Faktenblatt zum Gesetz über Einwanderung und Asyl veröffentlicht</b><span>Eine neue unabhängige Berufungsbehörde, ein einheitlicher Schutzstatus und die Rückforderung von Unterstützungskosten. Seit 2021 haben mehr als 460.000 Menschen Asyl beantragt.</span></div></li>
+    <li><time>5. Okt.</time><div><b>Lebenslange Haft für Abdullah Albadri</b><span>Der Mann, der die israelische Botschaft angreifen wollte, muss mindestens 20 Jahre absitzen.</span></div></li>
+    <li><time>4. Okt.</time><div><b>Gosport: stadtweite Polizeianordnung bei 149 Ankünften</b><span>Eine Auflösungsanordnung, ein ausgewiesener Protestbereich und ein Vermummungsverbot; 12 Festnahmen. Es gab keine vollständige Abriegelung, und die Behauptung über Störsender beruhte auf einem alten Foto aus Dover. Am selben Tag starben zwei Menschen auf einem Boot, das von Berck aus gestartet war.</span></div></li>
+    <li><time>24. Sep.</time><div><b>781 Ankünfte an einem Tag</b><span>Der stärkste Tag des Jahres; zwei unentdeckte Landungen lösten zudem eine Überprüfung aus.</span></div></li>
+    <li><time>27. Aug.</time><div><b>Quartalsstatistik: alle Kennzahlen rückläufig</b><span>Weniger Anträge, nur noch halb so viele Menschen in Hotels, und der Rückstau bei Erstentscheidungen auf dem niedrigsten Stand seit 2019.</span></div></li>
+    <li><time>24. Aug.</time><div><b>80.000 Rückführungen in zwei Jahren</b><span>Die Rückführungen stiegen um 52 % gegenüber dem vorherigen Zweijahreszeitraum.</span></div></li>
+    <li><time>30. Juni</time><div><b>Gesetz über Einwanderung und Asyl eingebracht</b><span>Eine engere Definition des Familienlebens in Abschiebungsfällen und eine Rückzahlungspflicht von etwa £10.000. Von Konservativen und Reform UK gleichermaßen kritisiert.</span></div></li>
+  </ul>
+</section>
+
+<section id="local">
+  <p class="kicker">Regional- und Stadtzeitungen</p>
+  <h2>Lokales</h2>
+  <p class="lede">Lokalzeitungen zeigen, wo die nationale Politik ankommt: Hotelschließungen, Lager auf ehemaligen Militärgeländen und Widerstand von Anwohnern und Gemeinden.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Ort</th><th>Was geschah</th><th>Quelle</th></tr></thead>
+    <tbody>
+      <tr><td><b>Gosport</b>, Hampshire<br><span class="meta">4.–6. Okt.</span></td><td>149 Menschen landeten am Hafen Haslar. Etwa 350 Demonstranten versammelten sich, und die Polizei erließ Anordnungen für die ganze Stadt. Ein Mann wurde später angeklagt.</td><td><a href="https://www.portsmouth.co.uk/news/crime/gosport-migrants-police-bring-in-dispersal-order-all-town-possible-boat-landing-9265157" target="_blank" rel="noopener">Portsmouth News</a>, <a href="https://www.itv.com/news/meridian/2026-10-06/man-charged-after-gosport-protest-against-arrival-of-small-boat-migrants" target="_blank" rel="noopener">ITV Meridian</a></td></tr>
+      <tr><td><b>Dover</b>, Kent<br><span class="meta">10. Aug.</span></td><td>Ein Rekord von 230 Menschen kam auf einem einzigen „Mega-Schlauchboot“. Der vorherige Rekord im Juli lag bei 165.</td><td><a href="https://www.kentonline.co.uk/dover/news/record-230-migrants-arrive-in-kent-on-single-mega-dinghy-343735/" target="_blank" rel="noopener">KentOnline</a></td></tr>
+      <tr><td><b>Barnham</b>, Grenze Suffolk/Norfolk<br><span class="meta">24. Okt.</span></td><td>Der ehemalige RAF-Stützpunkt hat 320 Schlafplätze; ein früherer Plan nannte 1.250 alleinstehende Männer. Die Anwohner trafen sich am 24. Oktober, um über das weitere Vorgehen zu entscheiden; der West Suffolk Council lehnt den Plan ab.</td><td><a href="https://hellorayo.co.uk/hits-radio/norfolk/news/barnham-residents-to-decide-next-steps-in-raf-asylum-accommodation-campaign" target="_blank" rel="noopener">Hits Radio Norfolk</a></td></tr>
+      <tr><td><b>Linton-on-Ouse</b>, North Yorkshire<br><span class="meta">19. Okt.</span></td><td>Geplant sind bis zu 1.200 Menschen; Aktivisten beziffern die Kosten auf £270 Mio.</td><td><a href="https://londonlovesbusiness.com/end-the-hotels-open-the-chequebook-as-270m-asylum-plan-puts-labours-promise-to-save-billions-under-fire/" target="_blank" rel="noopener">London Loves Business</a>, <a href="https://gbnews.com/news/migrant-crisis-taxpayers-270million-bill-asylum-centre-linton-on-ouse-yorkshire" target="_blank" rel="noopener">GB News</a></td></tr>
+      <tr><td><b>Piddington / Bicester</b>, Oxfordshire<br><span class="meta">Jul. – Okt.</span></td><td>Etwa 1.250 alleinstehende Männer sollen in ein ehemaliges Lager des Verteidigungsministeriums ziehen. Die Dorfbewohner veranstalteten ein Protest-Picknick und erwägen eine symbolische „Unabhängigkeits“-Abstimmung.</td><td><a href="https://oxforddaily.co.uk/local/bicester/piddington-picnic-protest-over-mod-asylum-centre-plans-in-oxfordshire-2026/" target="_blank" rel="noopener">Oxford Daily</a>, <a href="https://www.infrastructure-now.co.uk/article/498631/villagers-to-take-bicester-mod-asylum-plan-to-high-court" target="_blank" rel="noopener">Infrastructure Now</a></td></tr>
+      <tr><td><b>Leverington / Wisbech</b>, Cambridgeshire<br><span class="meta">13. Okt.</span></td><td>Auf einem ehemaligen Gelände für betreutes Wohnen sollen 26 Mütter mit Babys untergebracht werden; der örtliche Abgeordnete sagt, im Bezirk seien 205 Menschen geplant. Der Fenland District Council lehnt dies ab, und Anwohner protestierten.</td><td><a href="https://www.ghanamma.com/2026/10/13/could-200-asylum-seekers-be-housed-in-fenland/" target="_blank" rel="noopener">BBC (Nachdruck)</a></td></tr>
+      <tr><td><b>Llandudno</b>, Nordwales<br><span class="meta">Sep. – Okt.</span></td><td>Das Home Office plant, Asylsuchende in zwei Gebäuden unterzubringen. Der Conwy County Council und lokale Ratsmitglieder von Reform UK sind dagegen.</td><td><a href="https://nation.cymru/news/reform-councillors-write-to-minister-over-asylum-seeker-plans/" target="_blank" rel="noopener">Nation.Cymru</a>, <a href="https://baysideradio.co.uk/news/council-tells-home-office-it-opposes-llandudno-asylum-plans-12861" target="_blank" rel="noopener">Bayside Radio</a></td></tr>
+      <tr><td><b>Falkirk</b>, Schottland<br><span class="meta">1. Okt.</span></td><td>Das Cladhan Hotel schließt endgültig. Es war 2025 Schauplatz wiederholter Proteste, und einmal wurde ein Ziegelstein durch ein Fenster geworfen.</td><td><a href="https://news.stv.tv/east-central/asylum-seeker-hotel-in-falkirk-which-attracted-anti-immigration-protests-to-close" target="_blank" rel="noopener">STV News</a></td></tr>
+      <tr><td><b>Brighton &amp; Hove</b><br><span class="meta">Sep.</span></td><td>Der Ratsvorsitzende schrieb an den Minister und bat um eine Überprüfung der Schließung eines Asylhotels und der lokalen Asylregelungen.</td><td><a href="https://www.brighton-hove.gov.uk/news/2026/leader-asks-review-local-asylum-arrangements" target="_blank" rel="noopener">Brighton &amp; Hove City Council</a></td></tr>
+      <tr><td><b>Epping</b>, Essex<br><span class="meta">12. Juni – 11. Juli</span></td><td>Das Bell Hotel, Ausgangspunkt der Protestwelle 2025, wurde geschlossen. Der Rat kritisierte das Home Office wegen zu später Benachrichtigung.</td><td><a href="https://www.eppingforestdc.gov.uk/home-office-confirms-end-of-contract-with-bell-hotel/" target="_blank" rel="noopener">Epping Forest District Council</a></td></tr>
+      <tr><td><b>West Northamptonshire</b><br><span class="meta">9. Apr.</span></td><td>Der Ratsvorsitzende forderte feste Schließungstermine für drei Asylhotels im Gebiet.</td><td><a href="https://www.westnorthants.gov.uk/news/council-leader-demands-home-secretary-confirms-closure-dates-asylum-hotels-west-northants" target="_blank" rel="noopener">West Northants Council</a></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="sources">
+  <p class="kicker">Selbst prüfen</p>
+  <h2>Quellen</h2>
+  <ol class="srcs">
+    <li><a href="https://gov.uk/government/publications/migrants-detected-crossing-the-english-channel-in-small-boats" target="_blank" rel="noopener">Home Office – tägliche Kleinboot-Daten</a></li>
+    <li><a href="https://www.deported.co.uk/small-boats/" target="_blank" rel="noopener">Deported.co.uk – täglicher Tracker auf Basis von Home-Office-Daten</a></li>
+    <li><a href="https://www.gov.uk/government/statistics/immigration-system-statistics-year-ending-june-2026" target="_blank" rel="noopener">Home Office – Quartalsstatistik, Juni 2026</a></li>
+    <li><a href="https://www.itv.com/news/2026-08-27/number-of-asylum-seekers-housed-temporarily-in-uk-hotels-down-50-from-last-year" target="_blank" rel="noopener">ITV – Hotels und Rückstau</a></li>
+    <li><a href="https://freemovement.org.uk/latest-immigration-statistics-immigration-asylum-and-citizenship-numbers-all-fall/" target="_blank" rel="noopener">Free Movement – Statistikanalyse</a></li>
+    <li><a href="https://www.lexisnexis.co.uk/legal/news/home-office-publishes-updated-data-on-returns-from-the-uk-between-july-2024-july-2026" target="_blank" rel="noopener">LexisNexis – Rückführungsdaten</a></li>
+    <li><a href="https://www.lbc.co.uk/article/asylum-seekers-temporary-hotels-down-5HjdgZp_2" target="_blank" rel="noopener">LBC – Asylausgaben</a></li>
+    <li><a href="https://www.highland.gov.uk/housing/asylum" target="_blank" rel="noopener">Highland Council – Unterstützungssätze</a></li>
+    <li><a href="https://fullfact.org/immigration/stirling-council-asylum-support-correction/" target="_blank" rel="noopener">Full Fact – Satz bei Unterbringung mit Verpflegung</a></li>
+    <li><a href="https://www.itv.com/news/2026-06-29/asylum-seekers-to-pay-up-to-10k-towards-cost-of-accommodation-and-support" target="_blank" rel="noopener">ITV – Kosten pro Nacht, Rückzahlung von £10.000</a></li>
+    <li><a href="https://www.lbc.co.uk/article/asylum-claims-cost-taxpayer-19k-5HjdcQL_2/" target="_blank" rel="noopener">LBC – Kosten pro Antrag</a></li>
+    <li><a href="https://www.gov.uk/government/publications/immigration-and-asylum-bill-2026-factsheets/immigration-and-asylum-bill-overarching-factsheet" target="_blank" rel="noopener">GOV.UK – Faktenblatt zum Gesetz</a></li>
+    <li><a href="https://bills.freemovement.org.uk/?clause=18" target="_blank" rel="noopener">Free Movement – Regeländerungen 2026</a></li>
+    <li><a href="https://westminsterbrief.co.uk/archive/pq/120994" target="_blank" rel="noopener">Parlamentarische Anfrage – ausländische Straftäter in Freiheit</a></li>
+    <li><a href="https://westminsterbrief.co.uk/archive/pq/115572" target="_blank" rel="noopener">Parlamentarische Anfrage – Straftaten mit Todesfolge</a></li>
+    <li><a href="https://www.parallelparliament.co.uk/question/29144/offenders-deportation" target="_blank" rel="noopener">Parlamentarische Anfrage – Programm zur vorzeitigen Abschiebung</a></li>
+    <li><a href="https://migrationobservatory.ox.ac.uk/resources/commentaries/migrant-convictions-and-prison-population/" target="_blank" rel="noopener">Migration Observatory – Verurteilungen und Gefängnispopulation</a></li>
+    <li><a href="https://www.lexisnexis.co.uk/legal/news/migration-observatory-publishes-briefing-on-migrants-crime-in-the-uk" target="_blank" rel="noopener">Migration Observatory – Migration und Kriminalität, 2026</a></li>
+    <li><a href="https://fullfact.org/immigration/conservative-small-boat-crime-analysis/" target="_blank" rel="noopener">Full Fact – Kleinboot-Ankömmlinge und Gefängnis</a></li>
+    <li><a href="https://www.itv.com/news/2026-09-24/channel-crossings-busiest-day-for-2026-with-781-arrivals-recorded" target="_blank" rel="noopener">ITV – 24. September</a></li>
+    <li><a href="https://www.kentonline.co.uk/news/national/two-dead-as-french-authorities-respond-to-two-separate-migrant-boat-incidents-172568/" target="_blank" rel="noopener">KentOnline – zwei Tote, 4. Oktober</a></li>
+    <li><a href="https://leadstories.com/hoax-alert/2026/10/fact-check-photo-does-not-show-that-kent-police-installed-signal-jammer-at-dover-protests.html" target="_blank" rel="noopener">Lead Stories – Faktencheck zu Störsendern in Dover</a></li>
+    <li><a href="https://www.gov.uk/government/news/home-secretary-threatens-eritrea-with-visa-penalties" target="_blank" rel="noopener">GOV.UK – Visa-Sanktionen gegen Eritrea</a></li>
+    <li><a href="https://yougov.com/en-gb/articles/55822-voting-intention-25-26-october-2026-lab-27-con-22-ref-20-ld-11-grn-10" target="_blank" rel="noopener">YouGov – Wahlabsicht, 25.–26. Okt.</a></li>
+    <li><a href="https://www.ibtimes.co.uk/uk-charities-refugee-sponsorship-routes-applications-1828988" target="_blank" rel="noopener">IBTimes – neue Flüchtlingswege</a></li>
+  </ol>
+</section>
+
+</div>
+<div id="v-analysis" hidden>
+<nav class="sub" aria-label="Analysen">
+  <a href="#a-eritrea">Eritrea</a><a href="#a-economy">Wirtschaft</a><a href="#a-national">Nationale Politik</a><a href="#a-localpol">Lokalpolitik</a><a href="#a-safety">Sicherheitsgefühl</a>
+</nav>
+
+<article class="an" id="a-eritrea">
+  <p class="kicker">Analyse 1 · Herkunftsland</p>
+  <h2>Warum kommen die meisten aus Eritrea?</h2>
+  <p class="lede">Die Gründe, Eritrea zu verlassen, haben sich seit Jahrzehnten nicht geändert. Geändert haben sich 2024–25 die Routen und Alternativen, und das Vereinigte Königreich wurde zu einem besonders attraktiven Ziel.</p>
+  <div class="facts">
+    <div><b>7.602</b><span>eritreische Kleinboot-Ankömmlinge 2025, 19 % der Gesamtzahl</span></div>
+    <div><b>×2+</b><span>Anstieg gegenüber 2024</span></div>
+    <div><b>87%</b><span>Anerkennungsquote bei Erstentscheidungen 2024–25 (2021–23: 96–99 %)</span></div>
+  </div>
+  <h3>Warum Menschen gehen</h3>
+  <p>Eritreas verpflichtender Nationaldienst hat kein echtes Ende, und viele bleiben jahrzehntelang darin. Human Rights Watch nennt ihn Zwangsarbeit; ein UN-Ermittler berichtete von Folter und sexueller Gewalt während des Dienstes, und Dienstverweigerer sowie ihre Familien werden bestraft. Die UN schätzen, dass mehr als 10.000 Menschen willkürlich inhaftiert sind, und es gibt keine unabhängige Presse. Das Mixed Migration Centre berichtete 2025, die Abwanderung sei nicht nennenswert zurückgegangen und „die Grundursachen bleiben unverändert“.</p>
+  <h3>Was sich 2024–25 geändert hat</h3>
+  <p>Viele Eritreer blieben früher im Sudan und in Äthiopien. Der Krieg im Sudan und Konflikte in Äthiopien machten diese Zufluchtsorte und Routen gefährlich. Ostlibyen verbot eritreischen Staatsangehörigen die Einreise, und Schleppernetzwerke wurden räuberischer. Kanada setzte neue private Patenschaftsregistrierungen für 2024–25 aus, die viele vom Weiterziehen abgehalten hatten. Die Ankünfte von Eritreern im zentralen Mittelmeer fielen bis 2024 um fast 90 %, stiegen dann Anfang 2025 wieder stark an.</p>
+  <h3>Warum das Vereinigte Königreich</h3>
+  <p>Die britische Anerkennungsquote liegt weit über dem Durchschnitt, und Rückführungen sind praktisch unmöglich: Eritrea stellte im März 2026 keine Notreisedokumente mehr aus, die für Abschiebungen nötig sind. Am 15. Oktober drohte die Innenministerin Asmara mit einem Visa-Verbot; Eritrea erklärte, es werde unter Druck nicht verhandeln. Seit 2014 haben mehr als 35.000 Eritreer im Vereinigten Königreich Asyl beantragt, und eine etablierte Gemeinschaft zieht spätere Ankömmlinge an. Dieser letzte Punkt ist ein allgemeiner Befund der Migrationsforschung; eine Umfrage speziell zum Vereinigten Königreich haben wir nicht gefunden.</p>
+  <div class="verdict"><b>Fazit</b>Der britische Druck dürfte nur begrenzte Wirkung haben: Wie das Migration Observatory feststellt, können anerkannte Flüchtlinge ohnehin nicht zurückgeschickt werden. Die Zahlen hängen eher von den Kriegen südlich der Sahara und von Neuansiedlungsmöglichkeiten ab.</div>
+  <div class="asrc">Quellen: <a href="https://www.gov.uk/government/statistics/immigration-system-statistics-year-ending-december-2025/how-many-people-come-to-the-uk-via-illegal-entry-routes" target="_blank" rel="noopener">Home Office</a> · <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10590/" target="_blank" rel="noopener">Commons Library</a> · <a href="https://www.hrw.org/news/2026/06/15/eritrea-un-expert-remains-lifeline-as-grave-abuses-continue" target="_blank" rel="noopener">HRW</a> · <a href="https://reliefweb.int/report/eritrea/shifting-protection-experiences-displaced-eritreans-mmc-research-report-may-2025" target="_blank" rel="noopener">MMC</a> · <a href="https://www.newarab.com/news/eritrea-says-will-not-engage-uk-home-office-under-threat" target="_blank" rel="noopener">The New Arab</a> · <a href="https://www.ibtimes.co.uk/uk-threatens-eritrea-over-returns-cooperation-1825839" target="_blank" rel="noopener">IBTimes</a> · <a href="https://www.gov.uk/government/news/home-secretary-threatens-eritrea-with-visa-penalties" target="_blank" rel="noopener">GOV.UK</a> · <a href="https://westminsterbrief.co.uk/archive/pq/HL8531" target="_blank" rel="noopener">HL8531</a></div>
+</article>
+
+<article class="an" id="a-economy">
+  <p class="kicker">Analyse 2 · Die britische Wirtschaft</p>
+  <h2>Was es kostet und was es einbringen könnte</h2>
+  <p class="lede">Die Asylkosten sind im Vergleich zu den gesamten Staatsausgaben klein, aber innerhalb des Budgets des Home Office groß, und sie wurden jahrelang schlecht geplant. Der größte Posten ist nicht das Geld für die Antragsteller, sondern die Unterbringung.</p>
+  <div class="facts">
+    <div><b>£4,36 Mrd.</b><span>Asylausgaben des Home Office 2025–26 (Höchststand: £5,4 Mrd., 2023–24)</span></div>
+    <div><b>×10</b><span>Anstieg seit 2011–12 (damals £538 Mio.)</span></div>
+    <div><b>76%</b><span>der Unterbringungskosten entfielen auf Hotels (2024–25)</span></div>
+  </div>
+  <h3>Wohin das Geld fließt</h3>
+  <p>Das wöchentliche Bargeld der Antragsteller (£49,18, in Hotels £9,95) liegt real 35 % niedriger als im Jahr 2000. Die Unterbringung treibt die Kosten: Eine Hotelnacht kostet etwa £144 pro Person, eine Wohnung in der Verteilung etwa £23. 2024–25 entfielen 76 % der Unterbringungskosten auf Hotels, in denen rund ein Drittel der Antragsteller lebte. Deshalb senkten schnellere Entscheidungen und Hotelschließungen die Ausgaben, die seit 2023–24 um etwa £1 Mrd. gefallen sind.</p>
+  <h3>Planungsversagen und das Entwicklungsbudget</h3>
+  <p>Laut IFS plante das Home Office zwischen 2021–22 und 2023–24 Ausgaben von £0,3 Mrd. und gab tatsächlich £7,9 Mrd. aus; die Lücke wurde aus der Reserve des Finanzministeriums gedeckt. Ein Teil der Kosten belastet das Entwicklungshilfebudget: 2023 flossen £4,3 Mrd. bzw. 28 % der britischen Entwicklungshilfe in die Unterstützung von Flüchtlingen im Inland, Geld, das direkt aus Programmen im Ausland abgezogen wurde.</p>
+  <h3>Der Arbeitsmarkt</h3>
+  <p>Antragsteller dürfen in der Regel 12 Monate lang nicht arbeiten, danach nur in Mangelberufen. Von den anerkannten Flüchtlingen arbeiteten ein Jahr nach der Entscheidung nur etwa 20 % und nach fünf Jahren etwa die Hälfte. Die Beschäftigung von Frauen ist deutlich niedriger, und die meisten Jobs sind schlecht bezahlt. Eine Schätzung des Center for Global Development von 2026 beziffert den Wert einer Arbeitserlaubnis nach sechs Monaten auf etwa £294 Mio. pro Jahrgang an Einsparungen und Steuern, rund das 3,5-Fache dessen, was die geplante Rückzahlungsgebühr von £10.000 einbringen würde.</p>
+  <div class="verdict"><b>Fazit</b>Asyl macht etwa 0,3 % der gesamten Staatsausgaben aus. In der wirtschaftlichen Debatte geht es daher um Effizienz: wie schnell entschieden wird, wo die Menschen während des Wartens leben und wann sie arbeiten dürfen. Schätzungen zeigen bei diesen Stellschrauben große Einsparungen, bei den Einnahmen aus „härteren“ Maßnahmen dagegen kleine.</div>
+  <div class="asrc">Quellen: <a href="https://migrationobservatory.ox.ac.uk/resources/briefings/asylum-in-the-uk/" target="_blank" rel="noopener">Migration Observatory</a> · <a href="https://ifs.org.uk/articles/home-office-budgeting-and-asylum-overspends" target="_blank" rel="noopener">IFS</a> · <a href="https://icai.independent.gov.uk/use-of-the-aid-budget-to-host-refugees-in-the-uk-rises-to-4-3bn/" target="_blank" rel="noopener">ICAI</a> · <a href="https://www.cgdev.org/blog/asking-uk-asylum-seekers-work-would-net-three-point-five-times-more-new-10000-pounds-charge" target="_blank" rel="noopener">CGD</a> · <a href="https://www.lbc.co.uk/politics/uk-politics/asylum-accommodation-treble-expected-price-costing-nearly-155-billion-ten/" target="_blank" rel="noopener">NAO / LBC</a> · <a href="https://www.lbc.co.uk/article/asylum-seekers-temporary-hotels-down-5HjdgZp_2" target="_blank" rel="noopener">LBC</a></div>
+</article>
+
+<article class="an" id="a-national">
+  <p class="kicker">Analyse 3 · Nationale Politik</p>
+  <h2>Sinkende Zahlen, hohe Spannung</h2>
+  <p class="lede">Fast alle Migrationskennzahlen sind 2026 gesunken, das politische Gewicht des Themas aber nicht. In Westminster ist Migration das Thema, bei dem Regierungen die meisten Wähler verlieren.</p>
+  <div class="facts">
+    <div><b>21%</b><span>der Briten nennen Einwanderung als größtes Problem des Landes, der höchste Wert unter 107 von Gallup befragten Ländern</span></div>
+    <div><b>1.453</b><span>Ratsmitglieder und 14 Räte gewann Reform UK im Mai 2026</span></div>
+    <div><b>27 / 22 / 20</b><span>Labour / Konservative / Reform, YouGov, 25.–26. Okt.</span></div>
+  </div>
+  <h3>Der Aufstieg von Reform und die Antwort der Regierung</h3>
+  <p>Reform UK führte mehr als ein Jahr lang die Umfragen an. Laut YouGov zählen 86 % ihrer Anhänger Einwanderung zu den wichtigsten Themen, gegenüber 42 % der Bevölkerung. Bei den Kommunalwahlen im Mai verlor Labour 1.496 Ratssitze; Keir Starmer trat im Juni zurück, und Andy Burnham wurde im Juli Premierminister. Burnham behielt Shabana Mahmood als Innenministerin, und die Regierung verschärfte ihren Kurs, statt ihn abzumildern: Die gesetzliche Pflicht zur Unterstützung wurde abgeschafft, der Schutz auf 30 Monate verkürzt, ein Gesetz mit Rückzahlung und einer engeren Definition des Familienlebens liegt im Parlament, und Eritrea wurde mit einem Visa-Verbot bedroht.</p>
+  <h3>Zahlen gegen Stimmung</h3>
+  <p>Die Regierung verweist auf Ergebnisse: 43 % weniger Kleinboot-Ankünfte, halb so viele Menschen in Hotels, der kleinste Rückstau seit 2019 und mehr Rückführungen. Konservative und Reform sagen, das reiche nicht aus („sie werden die Boote nie stoppen“), während Menschenrechtsgruppen sagen, die Maßnahmen gingen zulasten der Flüchtlinge. Gallups Daten zeigen, dass der Anteil im Ausland Geborener im Vereinigten Königreich nicht höher ist als in Norwegen oder den Niederlanden, die Sorge aber viel stärker. Die Stimmung der Öffentlichkeit wird neben Zahlen auch von sichtbaren Signalen geprägt: Hotels, Videos von Landungen und aufsehenerregende Verbrechen.</p>
+  <h3>Vertrauen</h3>
+  <p>Im Mai genoss Reform bei Einwanderung das meiste Vertrauen (38 %), vor Labour (22 %) und den Konservativen (16 %). In den YouGov-Umfragen im Oktober lag Labour knapp vorn, und in der jüngsten (25.–26. Oktober) fiel Reform auf 20 %, den niedrigsten Wert seit dem Neustart der Erhebung im Januar 2025. Das deutet darauf hin, dass die Unterstützung für Reform nicht ganz stabil ist: Nur 29 % ihrer jetzigen Wähler würden keine andere Partei in Betracht ziehen.</p>
+  <div class="verdict"><b>Fazit</b>Die Regierung versucht, Wähler auf Reforms eigenem Terrain zurückzugewinnen, und das gelingt bisher teilweise. Das Risiko ist, dass jede neue Verschärfung die Botschaft verstärkt, Migration sei das wichtigste Thema, und bei diesem Thema halten die Wähler Reform weiterhin für am glaubwürdigsten.</div>
+  <div class="asrc">Quellen: <a href="https://news.gallup.com/poll/701990/leads-world-concern-migration.aspx" target="_blank" rel="noopener">Gallup</a> · <a href="https://yougov.com/en-gb/articles/55153-big-yougov-voter-study-2026-how-solid-is-reform-uks-rise" target="_blank" rel="noopener">YouGov</a> · <a href="https://tbmag.co.uk/uk-local-elections-2026-reform-labour-results-analysis/" target="_blank" rel="noopener">TB Mag – Wahlen</a> · <a href="https://www.wunc.org/2026-07-20/andy-burnham-becomes-u-k-prime-minister-after-starmer-resigns" target="_blank" rel="noopener">NPR</a> · <a href="https://www.itv.com/news/2026-08-27/number-of-asylum-seekers-housed-temporarily-in-uk-hotels-down-50-from-last-year" target="_blank" rel="noopener">ITV</a> · <a href="https://britpolls.co.uk/issues/immigration/" target="_blank" rel="noopener">BritPolls</a></div>
+</article>
+
+<article class="an" id="a-localpol">
+  <p class="kicker">Analyse 4 · Lokalpolitik</p>
+  <h2>In London entschieden, im Dorf gespürt</h2>
+  <p class="lede">Das Home Office entscheidet, wo Asylsuchende wohnen; die Gemeinden müssen mit den Folgen umgehen. Mit der Schließung der Hotels verlagert sich der Konflikt von den Städten in die Dörfer.</p>
+  <div class="facts">
+    <div><b>0</b><span>Mitspracherecht haben Gemeinden bei der Wahl der Hotels durch das Home Office</span></div>
+    <div><b>≈1.250</b><span>Menschen in den Plänen bei Piddington und Barnham</span></div>
+    <div><b>&lt;160</b><span>Hotels übrig, von etwa 400 auf dem Höhepunkt</span></div>
+  </div>
+  <h3>Begrenzte Befugnisse</h3>
+  <p>Die Unterbringung läuft über nationale Verträge, und das Home Office wählt Hotels und Betreiber aus. Reform UK gewann 2025 zehn Räte und versprach, „jedes Machtinstrument“ einzusetzen, um Hotels zu stoppen, doch die Mittel sind begrenzt, meist Bau- und Nutzungsänderungsregeln. In Epping untersagte der High Court im August 2025 vorübergehend die Nutzung des Bell Hotel, doch das Berufungsgericht hob die Entscheidung auf. Das Hotel schloss im Juli 2026 schließlich auf Entscheidung des Home Office selbst.</p>
+  <h3>Die neue Frontlinie: Militärgelände und ländliche Immobilien</h3>
+  <p>Die Regierung ersetzt Hotels durch große, einfache Anlagen, meist neben kleinen Dörfern: Barnham, Piddington, Linton-on-Ouse (700 Einwohner, bis zu 1.200 Asylsuchende). In Barnham hat das Home Office einen Antrag auf „Urgent Crown Development“ gestellt, sodass der Plan nicht von einer lokalen Baugenehmigung abhängt. Der Widerstand geht über Parteigrenzen hinweg: Die Räte von West Suffolk, Fenland, Conwy und West Northamptonshire lehnen ab. Mehrere Dörfer erwägen symbolische „Unabhängigkeitsreferenden“ ohne rechtliche Wirkung.</p>
+  <h3>Polizei und Gemeinschaft</h3>
+  <p>Die lokale Polizei trägt eine schwere Last. Gosport brauchte eine stadtweite Auflösungsanordnung und verzeichnete 12 Festnahmen. Die Räte erfahren oft als Letzte von Entscheidungen: Epping und West Northamptonshire beschwerten sich beide öffentlich. Die Führung von Brighton &amp; Hove forderte dagegen eine Überprüfung, weil ein Hotel schloss, ein Zeichen dafür, dass die lokalen Ansichten auseinandergehen.</p>
+  <div class="verdict"><b>Fazit</b>Auf lokaler Ebene entscheidet sich, ob zentrale Entscheidungen Legitimität gewinnen oder verlieren. Solange die Räte keine Vorwarnung und kein echtes Mitspracherecht erhalten, dürfte der Konflikt zwischen Dörfern, Polizei und Home Office anhalten, egal welche Partei den Rat führt.</div>
+  <div class="asrc">Quellen: <a href="https://www.localgovernmentlawyer.co.uk/governance/396-governance-news/60834-reform-uk-signals-legal-challenges-against-asylum-hotel-use" target="_blank" rel="noopener">Local Government Lawyer</a> · <a href="https://www.eppingforestdc.gov.uk/home-office-confirms-end-of-contract-with-bell-hotel/" target="_blank" rel="noopener">Epping Forest DC</a> · <a href="https://hellorayo.co.uk/hits-radio/norfolk/news/barnham-residents-to-decide-next-steps-in-raf-asylum-accommodation-campaign" target="_blank" rel="noopener">Hits Radio</a> · <a href="https://oxforddaily.co.uk/local/bicester/piddington-picnic-protest-over-mod-asylum-centre-plans-in-oxfordshire-2026/" target="_blank" rel="noopener">Oxford Daily</a> · <a href="https://londonlovesbusiness.com/end-the-hotels-open-the-chequebook-as-270m-asylum-plan-puts-labours-promise-to-save-billions-under-fire/" target="_blank" rel="noopener">London Loves Business</a> · <a href="https://www.westnorthants.gov.uk/news/council-leader-demands-home-secretary-confirms-closure-dates-asylum-hotels-west-northants" target="_blank" rel="noopener">West Northants</a> · <a href="https://www.portsmouth.co.uk/news/crime/gosport-migrants-police-bring-in-dispersal-order-all-town-possible-boat-landing-9265157" target="_blank" rel="noopener">Portsmouth News</a></div>
+</article>
+
+<article class="an" id="a-safety">
+  <p class="kicker">Analyse 5 · Sicherheitsgefühl</p>
+  <h2>Was Menschen fühlen und was gemessen wird</h2>
+  <p class="lede">Das Sicherheitsgefühl wird von realen Fällen und von Fehlwahrnehmungen zugleich geprägt. Schwere Fälle kommen tatsächlich vor, doch die Öffentlichkeit schätzt den Anteil von Ausländern an der Kriminalität auf etwa das Doppelte der statistischen Realität.</p>
+  <div class="facts">
+    <div><b>25 % vs. 12 %</b><span>geschätzter vs. tatsächlicher Ausländeranteil in der Gefängnispopulation</span></div>
+    <div><b>30 % vs. 15 %</b><span>dasselbe bei Verurteilungen wegen Sexualdelikten</span></div>
+    <div><b>11%</b><span>fühlen sich in der eigenen Umgebung unsicher</span></div>
+  </div>
+  <h3>Fehlwahrnehmungen</h3>
+  <p>Eine Studie des King's College London von 2026 ergab, dass Briten glauben, die meisten Straftaten nähmen zu, obwohl Einbrüche und Fahrzeugdiebstähle seit 2010 etwa halbiert und Handydiebstähle um rund 70 % zurückgegangen sind; Ladendiebstahl ist die Ausnahme. Die Befragten schätzen, dass Ausländer 25 % der Gefangenen ausmachen (tatsächlich: 12 %) und 30 % der wegen Sexualdelikten Verurteilten (tatsächlich: 15 %); Reform-Wähler schätzen 50 %. Wer überschätzt, befürwortet deutlich häufiger härtere Strafen für Einwanderer.</p>
+  <h3>Berechtigte Sorgen</h3>
+  <p>Die Angst ist nicht unbegründet. Ausländer sind unter den wegen Sexualdelikten Verurteilten überrepräsentiert, und schwere Fälle wie die Entführung in Nuneaton, der Übergriff in Crewe oder der Angriff in Hereford lösen zu Recht Besorgnis aus. In vielen Fällen war der Täter ein abgelehnter Antragsteller oder ein Verurteilter, der auf seine Abschiebung wartete, und 19.470 solcher Straftäter leben in Freiheit. Diese Fälle offenbaren oft Systemversagen: Abschiebungen, die nie stattfinden, Antragsteller, die untertauchen, irrtümlich entlassene Häftlinge.</p>
+  <h3>Datenlücken und Gerüchte</h3>
+  <p>Es gibt keine verlässlichen nationalen Daten dazu, ob sich die Kriminalität rund um Asylunterkünfte verändert. Die Polizeibehörden erfassen Vorfälle ohne spezielle Kennzeichnung. Die Polizei von Dorset etwa verzeichnete 2025 286 Vorfälle an Adressen von Asylunterkünften, eine Zahl, die Proteste und Fälle ohne Bewohner einschließt. Gerüchte füllen die Lücke, etwa bei den „Störsendern“ in Gosport. Auch die Sicherheit der Asylsuchenden selbst gehört zum Bild: Ipsos stellte fest, dass 40 % der Briten meinen, die Polizei solle dem Recht auf Protest und der Sicherheit der Hotelbewohner gleiche Priorität einräumen.</p>
+  <div class="verdict"><b>Fazit</b>Ein besseres Sicherheitsgefühl braucht zwei Dinge zugleich: schnelles und sichtbares Handeln bei schweren Fällen, einschließlich Abschiebung, und transparente, regelmäßig veröffentlichte lokale Daten. Ohne Letzteres lassen sich echtes Risiko und übersteigerte Angst nicht unterscheiden.</div>
+  <div class="asrc">Quellen: <a href="https://www.kcl.ac.uk/news/public-perceptions-of-crime-at-odds-with-reality-study-finds" target="_blank" rel="noopener">King's College London</a> · <a href="https://yougov.com/en-gb/articles/54368-perceptions-of-crime" target="_blank" rel="noopener">YouGov</a> · <a href="https://migrationobservatory.ox.ac.uk/resources/commentaries/migrant-convictions-and-prison-population/" target="_blank" rel="noopener">Migration Observatory</a> · <a href="https://westminsterbrief.co.uk/archive/pq/120994" target="_blank" rel="noopener">Parlamentarische Anfrage</a> · <a href="https://www.dorset.police.uk/foi-ai/dorset-police/disclosure-logs/2026-disclosures/asylum-accommodation/" target="_blank" rel="noopener">Dorset Police FOI</a> · <a href="https://www.ipsos.com/en-uk/immigration-tops-britons-concerns-public-divided-whether-it-acceptable-protest-outside-asylum" target="_blank" rel="noopener">Ipsos</a> · <a href="https://leadstories.com/hoax-alert/2026/10/fact-check-photo-does-not-show-that-kent-police-installed-signal-jammer-at-dover-protests.html" target="_blank" rel="noopener">Lead Stories</a></div>
+</article>
+</div>
+
+<footer>Die Zahlen stammen aus den jeweils neuesten amtlichen Veröffentlichungen zum Zeitpunkt der Erstellung; die täglichen Kleinboot-Zahlen sind vorläufig und können korrigiert werden.</footer>
+</div>
+<script>
+(function(){
+  const d=[["2018",299],["2019",1843],["2020",8466],["2021",28526],["2022",45774],["2023",29437],["2024",36816],["2025",41472],["2026*",21869]];
+  const svg=document.getElementById("boats"),W=640,H=300,L=76,R=12,T=24,B=36,max=50000;
+  const ns="http://www.w3.org/2000/svg",cw=(W-L-R)/d.length,y=v=>T+(H-T-B)*(1-v/max);
+  const el=(t,a,txt)=>{const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;svg.appendChild(e);return e};
+  for(let v=0;v<=max;v+=10000){
+    el("line",{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:"var(--line)","stroke-width":1});
+    el("text",{x:L-8,y:y(v)+4,"text-anchor":"end","font-family":"IBM Plex Mono,monospace","font-size":11,fill:"var(--muted)"},v?(v/1000)+" Tsd.":"0");
+  }
+  d.forEach(([yr,v],i)=>{
+    const x=L+i*cw+cw*.18,w=cw*.64,ytd=yr.endsWith("*");
+    el("rect",{x,y:y(v),width:w,height:y(0)-y(v),fill:ytd?"var(--accent)":"var(--sea)",opacity:ytd?1:(yr==="2022"?1:.78)});
+    el("text",{x:x+w/2,y:y(v)-6,"text-anchor":"middle","font-family":"IBM Plex Mono,monospace","font-size":10.5,"font-weight":600,fill:"var(--ink)"},v.toLocaleString("de-DE"));
+    el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","font-family":"IBM Plex Mono,monospace","font-size":11,fill:"var(--muted)"},yr);
+  });
+})();
+</script>
+<script>
+(function(){
+  const W=document.getElementById("v-watch"),A=document.getElementById("v-analysis");
+  const bs=document.querySelectorAll(".tabs button");
+  function show(v,scroll){
+    const an=v==="a";W.hidden=an;A.hidden=!an;
+    bs.forEach(b=>b.setAttribute("aria-selected",String(b.dataset.v===v)));
+    if(scroll)window.scrollTo(0,0);
+  }
+  bs.forEach(b=>b.addEventListener("click",()=>show(b.dataset.v,true)));
+  const h=(location.hash||"").slice(1);
+  if(h==="analysis"||h.startsWith("a-")){show("a");const t=document.getElementById(h);if(t)setTimeout(()=>t.scrollIntoView(),0);}
+})();
+</script>
+
+</body></html>

@@ -1,0 +1,480 @@
+<!doctype html><html lang="hu"><head><meta charset="utf-8"><title>Csatornafigyelő</title><meta name="description" content="Az Egyesült Királyság illegális migrációja hivatalos adatokból: csónakos érkezések, menedékkérelmek, ellátások és költségek, bűnözési statisztikák és bíróság által lezárt ügyek, forrásokkal."><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@600;800&family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: kikötői tábla – számsáv elöl, alatta témaszekciók, a végén ellenőrzött ügyek és források */
+:root{
+  --bg:#eef1f3; --surface:#ffffff; --ink:#14212b; --muted:#566673; --line:#c9d2d9;
+  --accent:#d9811a; --sea:#1f5a7a; --ok:#2e7050; --bad:#a3392b;
+  --f-display:"Big Shoulders Text","Arial Narrow",sans-serif;
+  --f-body:"Literata",Georgia,serif;
+  --f-data:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f171d; --surface:#17222b; --ink:#e4eaee; --muted:#93a3ae; --line:#2c3a45;
+  --accent:#f0a24a; --sea:#6fb1d6; --ok:#6cc495; --bad:#ec8576; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f171d; --surface:#17222b; --ink:#e4eaee; --muted:#93a3ae; --line:#2c3a45;
+  --accent:#f0a24a; --sea:#6fb1d6; --ok:#6cc495; --bad:#ec8576; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16.5px/1.6 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1080px;margin:0 auto}
+a{color:var(--sea)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+header{padding-block:26px 14px;border-bottom:3px solid var(--ink)}
+.logo{font:800 clamp(30px,9vw,76px)/.88 var(--f-display);margin:0;overflow-wrap:anywhere;letter-spacing:.01em;text-transform:uppercase}
+.logo span{color:var(--accent)}
+.tag{margin:10px 0 0;color:var(--muted);max-width:60ch;font-size:15px}
+.stamp{font:600 12px var(--f-data);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:10px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);
+  display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav a{flex:none;font:600 13px var(--f-data);text-decoration:none;color:var(--ink);border:1px solid var(--line);padding:5px 11px;border-radius:99px;background:var(--surface)}
+nav a:hover{border-color:var(--ink)}
+section{padding-block:30px 8px;border-bottom:1px solid var(--line)}
+h2{font:800 clamp(30px,5vw,42px)/1 var(--f-display);text-transform:uppercase;margin:0 0 6px;text-wrap:balance}
+.kicker{font:600 12px var(--f-data);color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin:0 0 4px}
+.lede{color:var(--muted);max-width:65ch;margin:0 0 18px}
+p{max-width:68ch}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:18px}
+.stat{background:var(--surface);padding:14px 16px;min-width:0}
+.stat .n{font:800 38px/1 var(--f-display);font-variant-numeric:tabular-nums}
+.stat .l{font-size:14px;margin-top:6px}
+.stat .d{font:600 12px var(--f-data);margin-top:6px;color:var(--muted)}
+.dn{color:var(--ok)}.up{color:var(--bad)}
+.chart{background:var(--surface);border:1px solid var(--line);padding:14px;overflow-x:auto}
+.chart svg{display:block;width:100%;min-width:520px;height:auto}
+.cap{font:12px var(--f-data);color:var(--muted);margin-top:8px}
+.tbl{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:460px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 12px var(--f-data);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+td.v{font:600 15px var(--f-data);white-space:nowrap;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;align-items:start}
+.two>*{min-width:0}
+.box{background:var(--surface);border-left:4px solid var(--sea);padding:14px 16px;font-size:15px}
+.box.warn{border-left-color:var(--accent)}
+.box h3{font:800 20px var(--f-display);text-transform:uppercase;margin:0 0 6px}
+.box ul{margin:0;padding-left:18px}
+.box li+li{margin-top:6px}
+.cases{display:grid;gap:0}
+.case{padding-block:18px;border-top:1px solid var(--line)}
+.case:first-child{border-top:0}
+.case h3{font:800 24px/1.1 var(--f-display);margin:4px 0 8px;text-wrap:balance}
+.meta{display:flex;gap:8px;flex-wrap:wrap;font:600 12px var(--f-data);color:var(--muted)}
+.pill{border:1px solid currentColor;border-radius:99px;padding:1px 8px}
+.pill.s{color:var(--bad)}
+.feed{list-style:none;margin:0;padding:0}
+.feed li{display:grid;grid-template-columns:76px 1fr;gap:12px;padding-block:12px;border-top:1px solid var(--line)}
+.feed li:first-child{border-top:0}
+.feed time{font:600 13px var(--f-data);color:var(--accent)}
+.feed b{display:block;font-weight:600}
+.feed span{color:var(--muted);font-size:15px}
+.srcs{font-size:14px;columns:2 300px;column-gap:28px;padding-left:18px}
+.srcs li{break-inside:avoid;margin-bottom:6px}
+footer{padding-block:24px 40px;color:var(--muted);font-size:14px}
+@media(max-width:520px){.feed li{grid-template-columns:1fr;gap:2px}}
+.tabs{display:flex;gap:0;margin-top:18px;border:2px solid var(--ink);width:max-content;max-width:100%}
+.tabs button{font:800 18px var(--f-display);text-transform:uppercase;letter-spacing:.03em;background:var(--bg);color:var(--ink);border:0;padding:8px 18px;cursor:pointer}
+.tabs button+button{border-left:2px solid var(--ink)}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+nav.sub a{background:var(--bg)}
+.an{padding-block:34px 18px;border-bottom:1px solid var(--line)}
+.an h3{font:800 22px var(--f-display);text-transform:uppercase;margin:22px 0 6px}
+.an p{margin:0 0 10px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:4px 0 8px}
+.facts div{background:var(--surface);padding:12px 14px;min-width:0}
+.facts b{display:block;font:800 30px/1 var(--f-display);font-variant-numeric:tabular-nums;color:var(--sea)}
+.facts span{display:block;font-size:14px;margin-top:6px}
+.verdict{background:var(--surface);border-left:4px solid var(--accent);padding:12px 16px;margin:20px 0 12px;max-width:72ch}
+.verdict b{display:block;font:600 12px var(--f-data);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:4px}
+.asrc{font:12px/1.7 var(--f-data);color:var(--muted)}
+</style>
+
+<div class="wrap">
+<header>
+  <h1 class="logo">Csatorna<span>figyelő</span></h1>
+  <p class="tag">Az Egyesült Királyság illegális migrációja hivatalos adatokból: csónakos érkezések, menedékkérelmek, ellátások és költségek, bűnözési statisztikák és bíróság által lezárt ügyek, forrásokkal.</p>
+  <div class="stamp">Frissítve: 2026. november 1. · Adatok: Home Office, MoJ, NAO, Migration Observatory · <a href="../" hreflang="en">English</a></div>
+</header>
+
+<div class="tabs" role="tablist"><button type="button" role="tab" data-v="w" aria-selected="true">Figyelő</button><button type="button" role="tab" data-v="a" aria-selected="false" id="elemzesek">Elemzések</button></div>
+<div id="v-watch">
+<nav aria-label="Szekciók">
+  <a href="#szamok">Számok</a><a href="#csonakok">Csónakok</a><a href="#menedek">Menedékjog</a><a href="#ellatas">Ellátás és költség</a><a href="#bunozes">Bűnözés</a><a href="#ugyek">Ügyek</a><a href="#hirek">Hírek</a><a href="#helyi">Helyi hírek</a><a href="#forrasok">Források</a>
+</nav>
+
+<section id="szamok">
+  <p class="kicker">Helyzetkép</p>
+  <h2>A legfontosabb számok</h2>
+  <div class="stats">
+    <div class="stat"><div class="n">21 869</div><div class="l">csónakos érkező 2026-ban (okt. 30-ig)</div><div class="d dn">▼ 41% az előző év azonos időszakához (36 954)</div></div>
+    <div class="stat"><div class="n">85 891</div><div class="l">menedékkérelem a 2026. júniusi 12 hónapban</div><div class="d dn">▼ 21% egy év alatt</div></div>
+    <div class="stat"><div class="n">40 168</div><div class="l">kérelmező vár első döntésre (2026. jún.)</div><div class="d dn">▼ kb. a felére csökkent</div></div>
+    <div class="stat"><div class="n">16 021</div><div class="l">menedékkérő szállodában (2026. jún.)</div><div class="d dn">▼ 50% egy év alatt</div></div>
+    <div class="stat"><div class="n">£4,36 mrd</div><div class="l">Home Office menekültügyi kiadás, 2025–26</div><div class="d dn">▼ 8% az előző évhez</div></div>
+    <div class="stat"><div class="n">39 690</div><div class="l">kiutasítás és visszatérés (12 hó, 2026. júl.)</div><div class="d up">▲ 5% egy év alatt</div></div>
+  </div>
+</section>
+
+<section id="csonakok">
+  <p class="kicker">La Manche-csatorna</p>
+  <h2>Csónakos érkezések</h2>
+  <p class="lede">2018 óta több mint 200 ezer ember érkezett kis hajón. 2026-ban kevesebben jönnek, de egy-egy csónakban többen: az átlag rekordmagas, csónakonként 67 fő körül van, október utolsó hetében pedig kb. 78 (934 fő 12 csónakon).</p>
+  <div class="chart" role="img" aria-label="Éves csónakos érkezések 2018 és 2026 között">
+    <svg id="boats" viewBox="0 0 640 300"></svg>
+  </div>
+  <p class="cap">Home Office éves adatok. 2026: október 30-ig, ideiglenes. A 2022-es csúcs 45 774 fő.</p>
+  <div class="two" style="margin-top:18px">
+    <div class="box">
+      <h3>Kik érkeznek</h3>
+      <ul>
+        <li>A 2025/26-os érkezők 82%-a férfi.</li>
+        <li>2025-ben Eritrea volt a fő kibocsátó ország, kétszer annyi érkezővel, mint 2024-ben.</li>
+        <li>A menedékkérők kb. 40%-a csónakkal jött.</li>
+      </ul>
+    </div>
+    <div class="box warn">
+      <h3>Szeptemberi fordulat</h3>
+      <ul>
+        <li>Szeptember 24-én 781 fő érkezett, ez az év legforgalmasabb napja.</li>
+        <li>Két csónak észrevétlenül ért partot két nap alatt; a belügyminiszter sürgős vizsgálatot rendelt el.</li>
+        <li>Az utolsó ilyen eset előtte 2025 szeptemberében volt.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="menedek">
+  <p class="kicker">Rendszer</p>
+  <h2>Menedékjog és kiutasítás</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Mutató</th><th>Érték</th><th>Megjegyzés</th></tr></thead>
+    <tbody>
+      <tr><td>Elismerési arány (első döntés)</td><td class="v">38%</td><td>Egy éve 48%, a 2022-es csúcson 77% volt.</td></tr>
+      <tr><td>Első döntésre várók</td><td class="v">40 168</td><td>2019 óta a legalacsonyabb. A fellebbezési ügyhátralék viszont tovább nő.</td></tr>
+      <tr><td>Kiutasítás/visszatérés, 2024. júl. – 2026. júl.</td><td class="v">80 286</td><td>Ebből 19 622 kényszerített, 6 103 csónakos érkező.</td></tr>
+      <tr><td>Visszaküldés Franciaországba</td><td class="v">3 310</td><td>A 2025 augusztusától hatályos brit–francia megállapodás alapján, 2026. júniusig.</td></tr>
+      <tr><td>Kitoloncolt külföldi elítéltek</td><td class="v">11 733</td><td>2024. júl. – 2026. júl. között.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="ellatas">
+  <p class="kicker">Ingyenes támogatás</p>
+  <h2>Ellátás és költség</h2>
+  <p class="lede">Menedékjogi támogatást az kap, aki a kérelme elbírálása alatt máskülönben nincstelen lenne. A legtöbb kérelmező az első 12 hónapban nem vállalhat munkát.</p>
+  <div class="two">
+    <div class="tbl"><table>
+      <thead><tr><th>Juttatás</th><th>Összeg</th></tr></thead>
+      <tbody>
+        <tr><td>Heti pénzbeli támogatás, önellátó szálláson (ASPEN-kártyán)</td><td class="v">£49,18 / hét</td></tr>
+        <tr><td>Heti támogatás, ha az étkezést biztosítják (szálloda)</td><td class="v">£9,95 / hét</td></tr>
+        <tr><td>Bútorozott szállás rezsivel</td><td class="v">ingyenes</td></tr>
+        <tr><td>NHS egészségügyi ellátás, iskola a gyerekeknek</td><td class="v">ingyenes</td></tr>
+        <tr><td>Szállás egy főre és éjszakára: szálloda</td><td class="v">£144</td></tr>
+        <tr><td>Szállás egy főre és éjszakára: hosszabb távú lakás</td><td class="v">£23,25</td></tr>
+        <tr><td>Egy menedékkérelem teljes költsége átlagosan</td><td class="v">£18 700</td></tr>
+        <tr><td>Állami támogatásban részesülők</td><td class="v">≈ 93 300 fő</td></tr>
+      </tbody>
+    </table></div>
+    <div class="box">
+      <h3>Mi változott 2026-ban</h3>
+      <ul>
+        <li>Június 2-től megszűnt a támogatás törvényi kötelezettsége; a kormány már csak lehetőségként nyújtja.</li>
+        <li>Aki illegálisan dolgozik, elveszítheti a támogatást.</li>
+        <li>A március 2. után beadott kérelmeknél a védelem 5 év helyett 30 hónapra szól.</li>
+        <li>A parlament előtt lévő törvényjavaslat szerint a később keresőképes menekülteknek kb. £10 000-t vissza kell fizetniük.</li>
+        <li>A kormány 2029-ig minden menekültszállót bezárna; jelenleg 160 alatt vannak, a csúcson kb. 400 volt.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="bunozes">
+  <p class="kicker">Hivatalos statisztika</p>
+  <h2>Bűnözés</h2>
+  <p class="lede">A brit statisztikák állampolgárság szerint mérnek, nem menekültstátusz szerint. Arról, hogy a csónakos érkezők közül hányan kerülnek börtönbe, nincs megbízható nyilvános adat.</p>
+  <div class="two">
+    <div class="tbl"><table>
+      <thead><tr><th>Külföldi elkövetők</th><th>Szám</th></tr></thead>
+      <tbody>
+        <tr><td>Külföldi állampolgárok a börtönnépességben</td><td class="v">≈ 12%</td></tr>
+        <tr><td>Kitoloncolásra váró, szabadlábon lévő külföldi elítéltek (2025 végén)</td><td class="v">19 470</td></tr>
+        <tr><td>Halált okozó bűncselekmény miatt ülő külföldiek (2025. jún.)</td><td class="v">989</td></tr>
+        <tr><td>Korai kitoloncolásra jogosulhatók a börtönben (2026. jún.)</td><td class="v">≈ 4 800</td></tr>
+      </tbody>
+    </table></div>
+    <div class="box warn">
+      <h3>Összevetés és háttér</h3>
+      <ul>
+        <li>A Migration Observatory szerint életkorra korrigálva a külföldiek a börtönökben kissé alulreprezentáltak, mert a migránsok átlagosan fiatalabbak.</li>
+        <li>Szexuális bűncselekményeknél a külföldiek az elítéltek között felülreprezentáltak.</li>
+        <li>A kutatások nem találtak összefüggést a migránsok aránya és az erőszakos bűnözés között. Egy tanulmány szerint a menedékkérők arányának 1 százalékpontos növekedése 1,1%-kal több vagyon elleni bűncselekménnyel járt.</li>
+        <li>A legtöbb bűncselekmény sosem végződik elítéléssel, így a valódi elkövetési arányok egyik csoportnál sem ismertek.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="ugyek">
+  <p class="kicker">Csak jogerősen elítélt ügyek</p>
+  <h2>Ellenőrzött ügyek</h2>
+  <p class="lede">Itt csak olyan ügy szerepel, amelyben a bíróság már ítéletet hozott, és amelyről megbízható országos vagy helyi lap beszámolt. A gyanúsítottak és a folyamatban lévő perek nem kerülnek ide.</p>
+  <div class="cases">
+    <article class="case">
+      <div class="meta"><span class="pill s">Terrorcselekmény előkészítése</span><span>London</span><span>Ítélet: 2026. okt. 5.</span></div>
+      <h3>Életfogytiglan az izraeli nagykövetség elleni késes támadási kísérletért</h3>
+      <p>A 34 éves, kuvaiti születésű Abdullah Albadri 2025 áprilisában két késsel próbált bemászni a kensingtoni nagykövetség kerítésén, de a fegyveres rendőrök elfogták. Az Old Bailey legalább 20 év letöltendőt szabott ki. Kétszer érkezett csónakon (2021-ben és 2025-ben), és menedékkérelmét elutasították.</p>
+      <div class="meta">Források: <a href="https://www.irishnews.com/news/uk/failed-asylum-seeker-who-attempted-attack-on-israeli-embassy-jailed-for-life-JPCI2EF7XJORBLIU4VF75BH42A/" target="_blank" rel="noopener">PA / Irish News</a> · <a href="https://www.arabnews.pk/middle-east/kuwaiti-jailed-for-life-in-uk-over-bid-to-attack-israeli-embassy-3003251" target="_blank" rel="noopener">AFP / Arab News</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Nemi erőszak kísérlete</span><span>Hereford</span><span>Ítélet: 2026. október</span></div>
+      <h3>Hat év börtön egy éjszakai támadásért</h3>
+      <p>A 31 éves Mehmet Bulut egy aluljárónál követett, majd megtámadott egy nőt; a támadást térfigyelő kamera rögzítette. 2022-ben érkezett csónakon, menedékkérelmét együttműködés hiányában visszavonták, és eltűnt a hatóságok elől. Beismerte a vádat, a Worcester Crown Court veszélyes elkövetőnek minősítette. Kitoloncolás vár rá.</p>
+      <div class="meta">Források: <a href="https://uk.news.yahoo.com/failed-asylum-seeker-arrived-small-114900890.html" target="_blank" rel="noopener">Yahoo News UK</a> · <a href="https://discover.swns.com/2026/10/small-boat-migrant-who-tried-to-rape-woman-jailed/" target="_blank" rel="noopener">SWNS</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Szexuális zaklatás</span><span>Crewe</span><span>Ítélet: 2026. okt. 12.</span></div>
+      <h3>15 hét egy 15 éves lány zaklatásáért</h3>
+      <p>A 26 éves Taha Derwish 2025 szeptemberében egy csoport tinédzser lányt zaklatott, és egyiküket fogdosta, bár tudta, hogy 15 évesek. Tíz percen belül letartóztatták. Elutasított menedékkérelme ellen fellebbezett, és egy crewe-i szállodában lakott. Nem világos, hogy azonnal kitoloncolják-e.</p>
+      <div class="meta">Források: <a href="https://www.aol.co.uk/articles/asylum-seeker-jailed-sexually-assaulting-163816000.html" target="_blank" rel="noopener">BBC / AOL</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Embercsempész csónak vezetése</span><span>Canterbury</span><span>Ítélet: 2026. szept. 18.</span></div>
+      <h3>Két év három hónap a túlzsúfolt csónak kormányzásáért</h3>
+      <p>A 19 éves dél-szudáni Chan Mathok Atak 2026 júliusában legalább 90 percig kormányozta a nagyjából 14 méteres dinghyt, amelyen 165 ember utazott, köztük 31 gyerek. Az első ítéletek egyike a januárban bevezetett, mások életének veszélyeztetését büntető törvény alapján. Beismerte a vádat; a bíró szerint büntetése után automatikus kitoloncolás várhat rá.</p>
+      <div class="meta">Forrás: <a href="https://www.aljazeera.com/news/2026/9/19/uk-jails-teen-asylum-seeker-for-steering-overcrowded-channel-migrant-boat" target="_blank" rel="noopener">Al Jazeera</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Gyermekrablás és nemi erőszak</span><span>Nuneaton</span><span>Ítélet: 2026. március</span></div>
+      <h3>15 év egy 12 éves lány elrablásáért és megerőszakolásáért</h3>
+      <p>A 23 éves afgán Ahmad Mulakhilt a Warwick Crown Court ítélte el. Az ügy 2025 nyarán tüntetéseket váltott ki Nuneatonban. A vele együtt vádolt másik afgán férfit felmentették.</p>
+      <div class="meta">Források: <a href="https://uk.news.yahoo.com/afghan-asylum-seeker-convicted-abducting-161158724.html" target="_blank" rel="noopener">Yahoo News UK</a> · <a href="https://www.hellorayo.co.uk/absolute-radio/uk/news/asylum-seeker-nuneaton-rape-sentenced" target="_blank" rel="noopener">Rayo / Absolute Radio</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Szexuális erőszak</span><span>Margate, Kent</span><span>Ítélet: 2025. dec. 18.</span></div>
+      <h3>Kilenc év a tengerparti sétányon elkövetett támadásért</h3>
+      <p>A 24 éves eritreai Amer Mohammed, aki egy cliftonville-i menekültszállón lakott, 2024 augusztusában hajnalban támadt meg egy egyedül sétáló nőt. Az esküdtszék tíznapos tárgyalás után mondta ki bűnösnek; a Canterbury Crown Court szabta ki a büntetést.</p>
+      <div class="meta">Forrás: <a href="https://www.kentonline.co.uk/thanet/news/asylum-seeker-staying-in-kent-hotel-jailed-after-seafront-se-334126/" target="_blank" rel="noopener">KentOnline</a></div>
+    </article>
+    <article class="case">
+      <div class="meta"><span class="pill s">Emberölés</span><span>Derby</span><span>Ítélet: 2025. október</span></div>
+      <h3>Életfogytiglan egy bankfiókban elkövetett gyilkosságért</h3>
+      <p>Haybe Cabdiraxmaan Nur 2025 májusában egy derbyi Lloyds-fiókban indíték nélkül szíven szúrta a 37 éves Gurvinder Johalt. 2024 októberében érkezett csónakon, menedékkérelmét 2025 januárjában elutasították. Legalább 25 évet kell letöltenie.</p>
+      <div class="meta">Források: <a href="https://www.judiciary.uk/wp-content/uploads/2025/10/Nur-sentencing-remarks.pdf" target="_blank" rel="noopener">Ítéleti indoklás (judiciary.uk)</a> · <a href="https://www.lbc.co.uk/crime/small-boat-migrant-jailed-for-life/" target="_blank" rel="noopener">LBC</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="hirek">
+  <p class="kicker">Politika és döntések</p>
+  <h2>Hírfolyam</h2>
+  <ul class="feed">
+    <li><time>okt. 30.</time><div><b>Az idei csónakos érkezők száma elérte a 21 869-et</b><span>41%-kal kevesebb, mint 2025 azonos időszakában (36 954). Az utolsó hét napban 934 ember érkezett 12 csónakon, csónakonként átlagosan 78.</span></div></li>
+    <li><time>okt. 29.</time><div><b>Új, korlátozott menekültútvonalak civil szervezeteknek</b><span>A Home Office megnyitotta a jelentkezést a közösségi szponzorációs és a menekült-tanulmányi útvonalra; az első érkezőket 2027 őszére várják, a munkáltatói útvonal 2027 tavaszán követi. Suella Braverman szerint rosszul fog végződni, a Restore Britain vezetője pedig azt mondta, hogy pártja kormányra kerülve kitoloncolna mindenkit, aki ezen az úton érkezik.</span></div></li>
+    <li><time>okt. 26.</time><div><b>A Reform UK 20%-on a legfrissebb YouGov-mérésben</b><span>Ez a legalacsonyabb érték a YouGov követőjének 2025 januári újraindulása óta. Munkáspárt 27%, konzervatívok 22%.</span></div></li>
+    <li><time>okt. 19.</time><div><b>£270 milliós becslés a Linton-on-Ouse-i táborra</b><span>A volt RAF-bázisra legfeljebb 1200 embert költöztetnének egy 700 fős falu mellé. A költséget a helyi kampánycsoport számolta, független ellenőrzés nélkül.</span></div></li>
+    <li><time>okt. 15.</time><div><b>Vízumtilalommal fenyegették Eritreát a visszafogadás megtagadása miatt</b><span>A belügyminiszter szerint minden eritreai vízumot blokkolnak, ha az ország nem fogadja vissza azokat az állampolgárait, akiknek nincs joguk a UK-ban maradni. A tisztviselők gyorsított vízumügyintézését már megszüntették.</span></div></li>
+    <li><time>okt. 8.</time><div><b>Megjelent a menekültügyi törvény tájékoztatója</b><span>Új független fellebbviteli hatóság, egységes védelmi státusz és a támogatás visszafizettetése. 2021 óta több mint 460 ezer ember kért menedéket.</span></div></li>
+        <li><time>okt. 5.</time><div><b>Életfogytiglan Abdullah Albadrinak</b><span>A nagykövetség elleni támadási kísérlet elkövetője legalább 20 évet tölt.</span></div></li>
+    <li><time>okt. 4.</time><div><b>Gosport: rendőri rendelet az egész városra, 149 érkező</b><span>Szétoszlatási rendelet, kijelölt tüntetési hely és arcot eltakaró viselet tilalma, 12 letartóztatás. Nem volt teljes lezárás, és a jelzavarós állítás egy régi, Doverhez kötött fotón alapult. Ugyanazon a napon két ember meghalt egy Berckből induló csónakon.</span></div></li>
+    <li><time>szept. 24.</time><div><b>781 érkező egy nap alatt</b><span>Az év legforgalmasabb napja, egyúttal két észrevétlen partraszállás miatt vizsgálat indult.</span></div></li>
+    <li><time>aug. 27.</time><div><b>Negyedéves statisztika: minden mutató csökken</b><span>Kevesebb kérelem, feleannyi szállodai elhelyezett, a döntésre várók száma 2019 óta a legalacsonyabb.</span></div></li>
+    <li><time>aug. 24.</time><div><b>Két év alatt 80 ezer kiutasítás és visszatérés</b><span>A visszatérések 52%-kal nőttek az előző kétéves időszakhoz képest.</span></div></li>
+    <li><time>jún. 30.</time><div><b>Benyújtották az Immigration and Asylum Billt</b><span>Szűkebb családi élet fogalom a kitoloncolási ügyekben és kb. £10 000-os visszafizetési kötelezettség. A konzervatívok és a Reform UK is bírálja.</span></div></li>
+  </ul>
+</section>
+
+<section id="helyi">
+  <p class="kicker">Megyei és városi lapok</p>
+  <h2>Helyi hírek</h2>
+  <p class="lede">A helyi sajtó azt mutatja, ahol a nemzeti politika a gyakorlatban landol: a szállók bezárását, a katonai bázisokra tervezett táborokat és a lakossági ellenállást.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Hely</th><th>Mi történt</th><th>Forrás</th></tr></thead>
+    <tbody>
+      <tr><td><b>Gosport</b>, Hampshire<br><span class="meta">okt. 4–6.</span></td><td>149 migráns ért partot a Haslar kikötőben. Kb. 350 tüntető gyűlt össze, a rendőrség rendeletet hozott az egész városra. Később vádat emeltek egy férfi ellen.</td><td><a href="https://www.portsmouth.co.uk/news/crime/gosport-migrants-police-bring-in-dispersal-order-all-town-possible-boat-landing-9265157" target="_blank" rel="noopener">Portsmouth News</a>, <a href="https://www.itv.com/news/meridian/2026-10-06/man-charged-after-gosport-protest-against-arrival-of-small-boat-migrants" target="_blank" rel="noopener">ITV Meridian</a></td></tr>
+      <tr><td><b>Dover</b>, Kent<br><span class="meta">aug. 10.</span></td><td>Rekordszámú, 230 ember érkezett egyetlen „mega-dinghyn”. Az előző rekord júliusban 165 fő volt.</td><td><a href="https://www.kentonline.co.uk/dover/news/record-230-migrants-arrive-in-kent-on-single-mega-dinghy-343735/" target="_blank" rel="noopener">KentOnline</a></td></tr>
+      <tr><td><b>Barnham</b>, Suffolk/Norfolk határa<br><span class="meta">okt. 24.</span></td><td>A volt RAF-bázison 320 férőhely van, egy korábbi terv 1250 egyedülálló férfit említ. A falu október 24-én ülésezett a további lépésekről; a West Suffolk Council ellenzi a tervet.</td><td><a href="https://hellorayo.co.uk/hits-radio/norfolk/news/barnham-residents-to-decide-next-steps-in-raf-asylum-accommodation-campaign" target="_blank" rel="noopener">Hits Radio Norfolk</a></td></tr>
+      <tr><td><b>Linton-on-Ouse</b>, North Yorkshire<br><span class="meta">okt. 19.</span></td><td>Legfeljebb 1200 fős tábor terve; a helyiek szerint £270 millióba kerülne.</td><td><a href="https://londonlovesbusiness.com/end-the-hotels-open-the-chequebook-as-270m-asylum-plan-puts-labours-promise-to-save-billions-under-fire/" target="_blank" rel="noopener">London Loves Business</a>, <a href="https://gbnews.com/news/migrant-crisis-taxpayers-270million-bill-asylum-centre-linton-on-ouse-yorkshire" target="_blank" rel="noopener">GB News</a></td></tr>
+      <tr><td><b>Piddington / Bicester</b>, Oxfordshire<br><span class="meta">júl. – okt.</span></td><td>A volt MoD-raktárba kb. 1250 egyedülálló férfit költöztetnének. A falu piknikes tüntetést tartott, és jelképes „függetlenségi” népszavazást fontolgat.</td><td><a href="https://oxforddaily.co.uk/local/bicester/piddington-picnic-protest-over-mod-asylum-centre-plans-in-oxfordshire-2026/" target="_blank" rel="noopener">Oxford Daily</a>, <a href="https://www.infrastructure-now.co.uk/article/498631/villagers-to-take-bicester-mod-asylum-plan-to-high-court" target="_blank" rel="noopener">Infrastructure Now</a></td></tr>
+      <tr><td><b>Leverington / Wisbech</b>, Cambridgeshire<br><span class="meta">okt. 13.</span></td><td>Egy volt idősotthonba 26 anyát és csecsemőt helyeznének el; a képviselő szerint a körzetbe összesen 205 főt terveznek. A Fenland District Council ellenzi, a lakók tüntettek.</td><td><a href="https://www.ghanamma.com/2026/10/13/could-200-asylum-seekers-be-housed-in-fenland/" target="_blank" rel="noopener">BBC (átvétel)</a></td></tr>
+      <tr><td><b>Llandudno</b>, Észak-Wales<br><span class="meta">szept. – okt.</span></td><td>A Home Office két ingatlanban szállásolna el menedékkérőket. A Conwy megyei önkormányzat és a Reform UK helyi képviselői is tiltakoznak.</td><td><a href="https://nation.cymru/news/reform-councillors-write-to-minister-over-asylum-seeker-plans/" target="_blank" rel="noopener">Nation.Cymru</a>, <a href="https://baysideradio.co.uk/news/council-tells-home-office-it-opposes-llandudno-asylum-plans-12861" target="_blank" rel="noopener">Bayside Radio</a></td></tr>
+      <tr><td><b>Falkirk</b>, Skócia<br><span class="meta">okt. 1.</span></td><td>Véglegesen bezár a Cladhan Hotel, amely 2025-ben többször tüntetések helyszíne volt (egyszer egy téglát is bedobtak az ablakon).</td><td><a href="https://news.stv.tv/east-central/asylum-seeker-hotel-in-falkirk-which-attracted-anti-immigration-protests-to-close" target="_blank" rel="noopener">STV News</a></td></tr>
+      <tr><td><b>Brighton & Hove</b><br><span class="meta">szept.</span></td><td>A városi vezetés levélben kérte a minisztert, hogy vizsgálja felül egy menekültszálló bezárását és a helyi elhelyezési rendet.</td><td><a href="https://www.brighton-hove.gov.uk/news/2026/leader-asks-review-local-asylum-arrangements" target="_blank" rel="noopener">Brighton & Hove City Council</a></td></tr>
+      <tr><td><b>Epping</b>, Essex<br><span class="meta">jún. 12. – júl. 11.</span></td><td>Bezárt a Bell Hotel, a 2025-ös országos tüntetéshullám kiindulópontja. A tanács bírálta a Home Office kései tájékoztatását.</td><td><a href="https://www.eppingforestdc.gov.uk/home-office-confirms-end-of-contract-with-bell-hotel/" target="_blank" rel="noopener">Epping Forest District Council</a></td></tr>
+      <tr><td><b>West Northamptonshire</b><br><span class="meta">ápr. 9.</span></td><td>A tanács vezetője pontos bezárási dátumokat követelt a megye három menekültszállójára.</td><td><a href="https://www.westnorthants.gov.uk/news/council-leader-demands-home-secretary-confirms-closure-dates-asylum-hotels-west-northants" target="_blank" rel="noopener">West Northants Council</a></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="forrasok">
+  <p class="kicker">Ellenőrizhetőség</p>
+  <h2>Források</h2>
+  <ol class="srcs">
+    <li><a href="https://gov.uk/government/publications/migrants-detected-crossing-the-english-channel-in-small-boats" target="_blank" rel="noopener">Home Office – napi csónakos adatok</a></li>
+    <li><a href="https://www.deported.co.uk/small-boats/" target="_blank" rel="noopener">Deported.co.uk – napi követés Home Office adatokból</a></li>
+    <li><a href="https://www.gov.uk/government/statistics/immigration-system-statistics-year-ending-june-2026" target="_blank" rel="noopener">Home Office – negyedéves statisztika, 2026. június</a></li>
+    <li><a href="https://www.itv.com/news/2026-08-27/number-of-asylum-seekers-housed-temporarily-in-uk-hotels-down-50-from-last-year" target="_blank" rel="noopener">ITV – szállodák és ügyhátralék</a></li>
+    <li><a href="https://freemovement.org.uk/latest-immigration-statistics-immigration-asylum-and-citizenship-numbers-all-fall/" target="_blank" rel="noopener">Free Movement – statisztikai elemzés</a></li>
+    <li><a href="https://www.lexisnexis.co.uk/legal/news/home-office-publishes-updated-data-on-returns-from-the-uk-between-july-2024-july-2026" target="_blank" rel="noopener">LexisNexis – kiutasítási adatok</a></li>
+    <li><a href="https://www.lbc.co.uk/article/asylum-seekers-temporary-hotels-down-5HjdgZp_2" target="_blank" rel="noopener">LBC – menekültügyi kiadások</a></li>
+    <li><a href="https://www.highland.gov.uk/housing/asylum" target="_blank" rel="noopener">Highland Council – támogatási összegek</a></li>
+    <li><a href="https://fullfact.org/immigration/stirling-council-asylum-support-correction/" target="_blank" rel="noopener">Full Fact – étkezéses szállás heti összege</a></li>
+    <li><a href="https://www.itv.com/news/2026-06-29/asylum-seekers-to-pay-up-to-10k-towards-cost-of-accommodation-and-support" target="_blank" rel="noopener">ITV – éjszakai költségek, £10 000-es visszafizetés</a></li>
+    <li><a href="https://www.lbc.co.uk/article/asylum-claims-cost-taxpayer-19k-5HjdcQL_2/" target="_blank" rel="noopener">LBC – egy kérelem költsége</a></li>
+    <li><a href="https://www.gov.uk/government/publications/immigration-and-asylum-bill-2026-factsheets/immigration-and-asylum-bill-overarching-factsheet" target="_blank" rel="noopener">GOV.UK – törvényjavaslat tájékoztatója</a></li>
+    <li><a href="https://bills.freemovement.org.uk/?clause=18" target="_blank" rel="noopener">Free Movement – 2026-os szabályváltozások</a></li>
+    <li><a href="https://westminsterbrief.co.uk/archive/pq/120994" target="_blank" rel="noopener">Parlamenti kérdés – szabadlábon lévő külföldi elítéltek</a></li>
+    <li><a href="https://westminsterbrief.co.uk/archive/pq/115572" target="_blank" rel="noopener">Parlamenti kérdés – halált okozó bűncselekmények</a></li>
+    <li><a href="https://www.parallelparliament.co.uk/question/29144/offenders-deportation" target="_blank" rel="noopener">Parlamenti kérdés – korai kitoloncolás</a></li>
+    <li><a href="https://migrationobservatory.ox.ac.uk/resources/commentaries/migrant-convictions-and-prison-population/" target="_blank" rel="noopener">Migration Observatory – elítélések és börtönnépesség</a></li>
+    <li><a href="https://www.lexisnexis.co.uk/legal/news/migration-observatory-publishes-briefing-on-migrants-crime-in-the-uk" target="_blank" rel="noopener">Migration Observatory – migráció és bűnözés, 2026</a></li>
+    <li><a href="https://fullfact.org/immigration/conservative-small-boat-crime-analysis/" target="_blank" rel="noopener">Full Fact – csónakos érkezők és börtön</a></li>
+    <li><a href="https://www.itv.com/news/2026-09-24/channel-crossings-busiest-day-for-2026-with-781-arrivals-recorded" target="_blank" rel="noopener">ITV – szeptember 24.</a></li>
+    <li><a href="https://www.gov.uk/government/news/home-secretary-threatens-eritrea-with-visa-penalties" target="_blank" rel="noopener">GOV.UK – eritreai vízumszankciók</a></li>
+    <li><a href="https://yougov.com/en-gb/articles/55822-voting-intention-25-26-october-2026-lab-27-con-22-ref-20-ld-11-grn-10" target="_blank" rel="noopener">YouGov – szavazói szándék, okt. 25–26.</a></li>
+    <li><a href="https://www.ibtimes.co.uk/uk-charities-refugee-sponsorship-routes-applications-1828988" target="_blank" rel="noopener">IBTimes – új menekültútvonalak</a></li>
+  </ol>
+</section>
+
+</div>
+<div id="v-analysis" hidden>
+<nav class="sub" aria-label="Elemzések">
+  <a href="#a-eritrea">Eritrea</a><a href="#a-gazdasag">Gazdaság</a><a href="#a-orszagos">Országos politika</a><a href="#a-helyi">Helyi politika</a><a href="#a-biztonsag">Biztonságérzet</a>
+</nav>
+
+<article class="an" id="a-eritrea">
+  <p class="kicker">Elemzés 1 · Kibocsátó ország</p>
+  <h2>Miért Eritreából jönnek a legtöbben?</h2>
+  <p class="lede">Az otthoni okok évtizedek óta ugyanazok. 2024–25-ben az útvonalak és a lehetőségek változtak meg, és a lánc végén a UK különösen vonzó célponttá vált.</p>
+  <div class="facts">
+    <div><b>7 602</b><span>eritreai csónakos érkező 2025-ben, az összes 19%-a</span></div>
+    <div><b>×2+</b><span>növekedés 2024-hez képest</span></div>
+    <div><b>87%</b><span>elismerési arány 2024–25-ben (2021–23: 96–99%)</span></div>
+  </div>
+  <h3>Miért menekülnek</h3>
+  <p>Eritreában a kötelező nemzeti szolgálatnak gyakorlatilag nincs vége, sokan évtizedekig benne maradnak. A Human Rights Watch kényszermunkának tartja, egy ENSZ-vizsgáló kínzásról és szexuális erőszakról is beszámolt a szolgálat során, a szökevényeket és a családjukat pedig büntetik. Az ENSZ becslése szerint több mint 10 ezer ember van önkényes fogva tartásban, független sajtó nincs. A Mixed Migration Centre 2025-ös jelentése szerint a kivándorlás nem csökkent érdemben, és „a kiváltó okok változatlanok”.</p>
+  <h3>Mi változott 2024–25-ben</h3>
+  <p>Sok eritreai korábban Szudánban és Etiópiában maradt. A szudáni háború és az etiópiai konfliktusok miatt ezek a menedékek és útvonalak veszélyessé váltak. Kelet-Líbia kitiltotta az eritreaiakat, a csempészhálózatok pedig egyre ragadozóbbak lettek. Kanada 2024–25-re felfüggesztette az új magánszponzorált áttelepítési regisztrációkat, amelyek sokakat visszatartottak a továbbindulástól. A Földközi-tenger középső részén az eritreai érkezések 2024-re közel 90%-kal visszaestek, 2025 elején azonban újra meredeken nőttek.</p>
+  <h3>Miért éppen a UK</h3>
+  <p>A brit elismerési arány messze átlag feletti, és a visszaküldés gyakorlatilag lehetetlen: Eritrea 2026 márciusában leállította a kitoloncoláshoz szükséges úti okmányok kiadását. A brit belügyminiszter október 15-én vízumtilalommal fenyegette meg Asmarát, az ország azonban kijelentette, hogy nyomás alatt nem tárgyal. 2014 óta több mint 35 ezer eritreai kért menedéket a UK-ben, a meglévő közösség pedig vonzza az újabb érkezőket. Ez utóbbi a migrációs kutatások általános megállapítása, UK-specifikus felmérést nem találtunk róla.</p>
+  <div class="verdict"><b>Következtetés</b>A brit nyomás hatása valószínűleg korlátozott: a Migration Observatory szerint akit elismernek, azt amúgy sem lehet visszaküldeni. A számok inkább a Szaharától délre zajló háborúktól és az áttelepítési lehetőségektől függnek.</div>
+  <div class="asrc">Források: <a href="https://www.gov.uk/government/statistics/immigration-system-statistics-year-ending-december-2025/how-many-people-come-to-the-uk-via-illegal-entry-routes" target="_blank" rel="noopener">Home Office</a> · <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10590/" target="_blank" rel="noopener">Commons Library</a> · <a href="https://www.hrw.org/news/2026/06/15/eritrea-un-expert-remains-lifeline-as-grave-abuses-continue" target="_blank" rel="noopener">HRW</a> · <a href="https://reliefweb.int/report/eritrea/shifting-protection-experiences-displaced-eritreans-mmc-research-report-may-2025" target="_blank" rel="noopener">MMC</a> · <a href="https://www.newarab.com/news/eritrea-says-will-not-engage-uk-home-office-under-threat" target="_blank" rel="noopener">The New Arab</a> · <a href="https://www.ibtimes.co.uk/uk-threatens-eritrea-over-returns-cooperation-1825839" target="_blank" rel="noopener">IBTimes</a> · <a href="https://www.gov.uk/government/news/home-secretary-threatens-eritrea-with-visa-penalties" target="_blank" rel="noopener">GOV.UK</a> · <a href="https://westminsterbrief.co.uk/archive/pq/HL8531" target="_blank" rel="noopener">HL8531</a></div>
+</article>
+
+<article class="an" id="a-gazdasag">
+  <p class="kicker">Elemzés 2 · Brit gazdaság</p>
+  <h2>Mennyibe kerül, és mit hozhatna?</h2>
+  <p class="lede">A menekültügy költsége a teljes állami költségvetéshez képest kicsi, a Home Office büdzséjén belül viszont nagy, és évekig rosszul tervezték. A legnagyobb tétel nem a kérelmezőknek adott pénz, hanem a szállás.</p>
+  <div class="facts">
+    <div><b>£4,36 mrd</b><span>Home Office menekültügyi kiadás 2025–26-ban (csúcs: £5,4 mrd, 2023–24)</span></div>
+    <div><b>×10</b><span>növekedés 2011–12 óta (akkor £538 m)</span></div>
+    <div><b>76%</b><span>a szállásszerződések költségéből a szállodákra ment (2024–25)</span></div>
+  </div>
+  <h3>Hová megy a pénz</h3>
+  <p>A kérelmezők heti készpénze (£49,18, szállodában £9,95) reálértéken 35%-kal kevesebb, mint 2000-ben. A költséget a szállás viszi el: egy szállodai éjszaka fejenként kb. £144, egy bérelt lakásban kb. £23. 2024–25-ben a szállodák adták a szállásszerződések költségének 76%-át, miközben ott lakott a kérelmezők nagyjából harmada. Ezért csökkentette a költséget a döntések felgyorsítása és a szállodák bezárása: 2023–24 óta a kiadás kb. £1 milliárddal esett.</p>
+  <h3>Tervezési hiba és segélypénz</h3>
+  <p>Az IFS szerint 2021–22 és 2023–24 között a tervezett £0,3 milliárd helyett £7,9 milliárdot költöttek, a túllépést pedig a kincstári tartalékból fedezték. A költség egy része a fejlesztési segélykeretet terheli: 2023-ban £4,3 milliárd, a brit segély 28%-a ment a UK-ban befogadott menekültek ellátására. Ez közvetlenül a külföldi segélyprogramoktól vonja el a pénzt.</p>
+  <h3>Munkaerőpiac</h3>
+  <p>A kérelmezők általában 12 hónapig nem dolgozhatnak, utána is csak hiányszakmákban. Az elismert menekültek közül egy évvel a döntés után csak kb. 20% dolgozott, öt év után nagyjából a fele. A nők aránya jóval alacsonyabb, a munkák többsége pedig alacsony bérű. A Center for Global Development 2026-os számítása szerint ha 6 hónap után dolgozhatnának, az évfolyamonként kb. £294 millió megtakarítást és adót hozna. Ez nagyjából 3,5-szöröse annak, amit a tervezett £10 000-os visszafizetési kötelezettség behajtana.</p>
+  <div class="verdict"><b>Következtetés</b>A teljes állami kiadásnak a menekültügy nagyjából 0,3%-a. A gazdasági vitában ezért a hatékonyság a kérdés: milyen gyorsan születik döntés, hol laknak közben az emberek, és mikor kezdhetnek dolgozni. A becslések ezekben a pontokban nagy, a „szigorító” intézkedések bevételében viszont kicsi megtakarítást mutatnak.</div>
+  <div class="asrc">Források: <a href="https://migrationobservatory.ox.ac.uk/resources/briefings/asylum-in-the-uk/" target="_blank" rel="noopener">Migration Observatory</a> · <a href="https://ifs.org.uk/articles/home-office-budgeting-and-asylum-overspends" target="_blank" rel="noopener">IFS</a> · <a href="https://icai.independent.gov.uk/use-of-the-aid-budget-to-host-refugees-in-the-uk-rises-to-4-3bn/" target="_blank" rel="noopener">ICAI</a> · <a href="https://www.cgdev.org/blog/asking-uk-asylum-seekers-work-would-net-three-point-five-times-more-new-10000-pounds-charge" target="_blank" rel="noopener">CGD</a> · <a href="https://www.lbc.co.uk/politics/uk-politics/asylum-accommodation-treble-expected-price-costing-nearly-155-billion-ten/" target="_blank" rel="noopener">NAO / LBC</a> · <a href="https://www.lbc.co.uk/article/asylum-seekers-temporary-hotels-down-5HjdgZp_2" target="_blank" rel="noopener">LBC</a></div>
+</article>
+
+<article class="an" id="a-orszagos">
+  <p class="kicker">Elemzés 3 · Országos politika</p>
+  <h2>Csökkenő számok, magas feszültség</h2>
+  <p class="lede">2026-ban szinte minden migrációs mutató csökkent, a téma politikai súlya mégsem. Westminsterben a migráció az a terület, ahol a legtöbb szavazót el lehet veszíteni.</p>
+  <div class="facts">
+    <div><b>21%</b><span>a britek közül a migrációt tartja az ország legnagyobb problémájának, a legmagasabb arány a Gallup által vizsgált 107 ország közül</span></div>
+    <div><b>1 453</b><span>önkormányzati képviselőt és 14 tanácsot nyert a Reform UK 2026 májusában</span></div>
+    <div><b>27 / 22 / 20</b><span>Munkáspárt / konzervatívok / Reform, YouGov, okt. 25–26.</span></div>
+  </div>
+  <h3>A Reform felemelkedése és a kormány válasza</h3>
+  <p>A Reform UK több mint egy évig vezette a közvélemény-kutatásokat. A YouGov szerint támogatóinak 86%-a a migrációt a legfontosabb kérdések közé sorolja, a teljes lakosság körében ez 42%. A májusi helyhatósági választáson a Munkáspárt 1 496 képviselőt vesztett, Keir Starmer júniusban lemondott, júliusban Andy Burnham lett a miniszterelnök. Burnham megtartotta Shabana Mahmoodot belügyminiszternek, és a kormány nem enyhített, hanem tovább szigorított. Megszűnt a támogatás törvényi kötelezettsége, a védelem 30 hónapra rövidült, a parlament előtt van a visszafizetést és a szűkebb családi élet fogalmát bevezető törvény, Eritreát pedig vízumtilalommal fenyegették meg.</p>
+  <h3>A számok és a hangulat</h3>
+  <p>A kormány az eredményekre hivatkozik: 43%-kal kevesebb csónakos érkező, feleannyi szállodai elhelyezett, 2019 óta a legkisebb ügyhátralék és több kiutasítás. A konzervatívok és a Reform szerint ez kevés („a csónakokat sosem fogják megállítani”), a jogvédők szerint viszont a szigorítások a menekültek rovására mennek. A Gallup adatai szerint a UK-ban a külföldön születettek aránya nem magasabb, mint Norvégiában vagy Hollandiában, az aggodalom mégis jóval erősebb. A közhangulatot tehát nem csak a számok alakítják, hanem a látható jelek is: a szállodák, a partraszállások videói és a nagy visszhangot kapó bűnügyek.</p>
+  <h3>Bizalom</h3>
+  <p>Májusban a migráció kezelésében a legtöbben a Reformban bíztak (38%), utána a Munkáspártban (22%) és a konzervatívokban (16%). Az októberi YouGov-felmérésekben a Munkáspárt kis előnybe került, a legfrissebb (okt. 25–26.) mérésben pedig a Reform 20%-ra esett, ami a követő 2025 januári újraindulása óta a legalacsonyabb érték. Ez arra utal, hogy a Reform támogatottsága nem teljesen szilárd. Jelenlegi szavazóinak csak 29%-a nem fontolna meg más pártot.</p>
+  <div class="verdict"><b>Következtetés</b>A kormány a Reform témáin próbálja visszaszerezni a szavazókat, és ez eddig részben működik. A kockázat az, hogy minden új szigorítás megerősíti az üzenetet, hogy a migráció a legfontosabb kérdés, és ebben a Reformot tartják a leghitelesebbnek.</div>
+  <div class="asrc">Források: <a href="https://news.gallup.com/poll/701990/leads-world-concern-migration.aspx" target="_blank" rel="noopener">Gallup</a> · <a href="https://yougov.com/en-gb/articles/55153-big-yougov-voter-study-2026-how-solid-is-reform-uks-rise" target="_blank" rel="noopener">YouGov</a> · <a href="https://tbmag.co.uk/uk-local-elections-2026-reform-labour-results-analysis/" target="_blank" rel="noopener">TB Mag – választás</a> · <a href="https://www.wunc.org/2026-07-20/andy-burnham-becomes-u-k-prime-minister-after-starmer-resigns" target="_blank" rel="noopener">NPR</a> · <a href="https://www.itv.com/news/2026-08-27/number-of-asylum-seekers-housed-temporarily-in-uk-hotels-down-50-from-last-year" target="_blank" rel="noopener">ITV</a> · <a href="https://britpolls.co.uk/issues/immigration/" target="_blank" rel="noopener">BritPolls</a></div>
+</article>
+
+<article class="an" id="a-helyi">
+  <p class="kicker">Elemzés 4 · Helyi politika</p>
+  <h2>Döntés Londonban, következmény a faluban</h2>
+  <p class="lede">A menedékkérők elhelyezéséről a Home Office dönt, az önkormányzatok kezelik a következményeket. A szállodák bezárásával a konfliktus a városokból a falvakba költözik.</p>
+  <div class="facts">
+    <div><b>0</b><span>beleszólása van a tanácsoknak abba, melyik szállodát használja a Home Office</span></div>
+    <div><b>≈1 250</b><span>fő a Piddington és Barnham melletti tervekben</span></div>
+    <div><b>&lt;160</b><span>szálloda maradt a csúcsidőszak kb. 400-ából</span></div>
+  </div>
+  <h3>Korlátozott hatáskör</h3>
+  <p>Az elhelyezési rendszert országos szerződések irányítják: a szállodákat és az üzemeltetőket a Home Office választja ki. A Reform UK 2025-ben tíz tanácsot szerzett meg, és megígérte, hogy „minden eszközzel” megállítja a szállodákat. Az eszközök azonban szűkek, főleg tervezési és rendeltetésváltozási szabályokra épülnek. Epping esetében a bíróság 2025 augusztusában ideiglenesen megtiltotta a Bell Hotel használatát, a fellebbviteli bíróság azonban hatályon kívül helyezte a döntést. A szálló végül 2026 júliusában a Home Office döntése nyomán zárt be.</p>
+  <h3>Új frontvonal: katonai bázisok és vidéki ingatlanok</h3>
+  <p>A kormány a szállodák helyett nagy, egyszerű telepeket nyit. Ezek jellemzően kis falvak mellett vannak: Barnham, Piddington, Linton-on-Ouse (700 lakos, legfeljebb 1200 menedékkérő). Barnhamnél a Home Office „sürgős korona-fejlesztési” kérelmet nyújtott be, így a terv nem a helyi tervezési döntésen múlik. Az ellenállás pártfüggetlen: a konzervatív vezetésű West Suffolk, a Fenland, a Conwy és a West Northamptonshire tanács egyaránt tiltakozik. Több faluban jelképes „függetlenségi népszavazást” fontolgatnak, aminek jogi hatása nincs.</p>
+  <h3>Rendőrség és közösség</h3>
+  <p>A helyi rendőrségekre nagy teher hárul. Gosportban az egész városra kiterjedő szétoszlatási rendeletet kellett hozni, és 12 embert letartóztattak. A tanácsok gyakran utolsóként értesülnek a döntésekről: Epping és West Northamptonshire is nyilvánosan panaszkodott erre. Brighton & Hove vezetése viszont éppen egy szálló bezárása miatt kért felülvizsgálatot, vagyis a helyi álláspontok sem egyformák.</p>
+  <div class="verdict"><b>Következtetés</b>A helyi szint az, ahol a központi döntések legitimációja eldől. Amíg a tanácsok nem kapnak előzetes tájékoztatást és valódi beleszólást, a falvak, a rendőrség és a Home Office közötti konfliktusok várhatóan folytatódnak, akármelyik párt vezeti a tanácsot.</div>
+  <div class="asrc">Források: <a href="https://www.localgovernmentlawyer.co.uk/governance/396-governance-news/60834-reform-uk-signals-legal-challenges-against-asylum-hotel-use" target="_blank" rel="noopener">Local Government Lawyer</a> · <a href="https://www.eppingforestdc.gov.uk/home-office-confirms-end-of-contract-with-bell-hotel/" target="_blank" rel="noopener">Epping Forest DC</a> · <a href="https://hellorayo.co.uk/hits-radio/norfolk/news/barnham-residents-to-decide-next-steps-in-raf-asylum-accommodation-campaign" target="_blank" rel="noopener">Hits Radio</a> · <a href="https://oxforddaily.co.uk/local/bicester/piddington-picnic-protest-over-mod-asylum-centre-plans-in-oxfordshire-2026/" target="_blank" rel="noopener">Oxford Daily</a> · <a href="https://londonlovesbusiness.com/end-the-hotels-open-the-chequebook-as-270m-asylum-plan-puts-labours-promise-to-save-billions-under-fire/" target="_blank" rel="noopener">London Loves Business</a> · <a href="https://www.westnorthants.gov.uk/news/council-leader-demands-home-secretary-confirms-closure-dates-asylum-hotels-west-northants" target="_blank" rel="noopener">West Northants</a> · <a href="https://www.portsmouth.co.uk/news/crime/gosport-migrants-police-bring-in-dispersal-order-all-town-possible-boat-landing-9265157" target="_blank" rel="noopener">Portsmouth News</a></div>
+</article>
+
+<article class="an" id="a-biztonsag">
+  <p class="kicker">Elemzés 5 · Biztonságérzet</p>
+  <h2>Amit érzünk, és amit mérnek</h2>
+  <p class="lede">A biztonságérzetet valódi esetek és tévhitek együtt alakítják. A súlyos ügyek ténylegesen megtörténnek, de a közvélemény a külföldiek szerepét a statisztikai valóság kétszeresére becsüli.</p>
+  <div class="facts">
+    <div><b>25% vs 12%</b><span>a külföldiek becsült és tényleges aránya a börtönökben</span></div>
+    <div><b>30% vs 15%</b><span>ugyanez a szexuális bűncselekmények elítéltjeinél</span></div>
+    <div><b>11%</b><span>érzi magát nem biztonságban a saját környékén</span></div>
+  </div>
+  <h3>Tévhitek</h3>
+  <p>A King's College 2026-os felmérése szerint a britek a legtöbb bűncselekményről azt hiszik, hogy szaporodik, pedig 2010 óta a lakásbetörések és a járműlopások kb. a felére, a mobiltelefon-lopások kb. 70%-kal estek. Kivétel a bolti lopás. A külföldiek arányát a börtönökben a megkérdezettek átlagosan 25%-ra becsülik, a valóság 12%. A szexuális bűncselekményeknél a becslés 30%, a valóság 15%, a Reform-szavazók átlagos tippje pedig 50%. Aki túlbecsüli az arányokat, jóval nagyobb arányban támogatja a bevándorlókra kiszabott szigorúbb büntetéseket.</p>
+  <h3>Valódi okok az aggodalomra</h3>
+  <p>A félelem nem alaptalan. A külföldiek valóban felülreprezentáltak a szexuális bűncselekmények elítéltjei között, és egy-egy súlyos eset, mint a nuneatoni gyermekrablás, a crewe-i zaklatás vagy a herefordi támadás, joggal kelt riadalmat. Sok ügyben ráadásul az elkövető elutasított kérelmező vagy kitoloncolásra váró elítélt volt; ilyenből 19 470 él szabadlábon. Az ilyen esetek gyakran a rendszer kudarcát mutatják: a kitoloncolás elmaradását, a hatóságok elől eltűnt kérelmezőket, a tévedésből szabadon engedett elítélteket.</p>
+  <h3>Adathiány és pletyka</h3>
+  <p>Arról, hogy a menekültszállók környékén változik-e a bűnözés, nincs megbízható országos adat. A rendőrségek külön jelölés nélkül rögzítik az eseteket. A dorseti rendőrség például 2025-ben 286 bejelentést rögzített a menekültszállók címein, ebben azonban a tüntetések és a nem lakók ügyei is benne vannak. Az adathiányt a pletykák töltik ki, ahogy a gosporti „jelzavarók” esetében is. A biztonságérzet a menedékkérőket is érinti: az Ipsos szerint a britek 40%-a azt tartja helyesnek, ha a rendőrség egyformán védi a tüntetési jogot és a szállók lakóit.</p>
+  <div class="verdict"><b>Következtetés</b>A biztonságérzet javításához két dolog kellene egyszerre: a súlyos esetek gyors és látható kezelése, beleértve a kitoloncolást, és átlátható, rendszeresen közzétett helyi adat. Az utóbbi nélkül a valódi kockázat és a felnagyított félelem nem választható szét.</div>
+  <div class="asrc">Források: <a href="https://www.kcl.ac.uk/news/public-perceptions-of-crime-at-odds-with-reality-study-finds" target="_blank" rel="noopener">King's College London</a> · <a href="https://yougov.com/en-gb/articles/54368-perceptions-of-crime" target="_blank" rel="noopener">YouGov</a> · <a href="https://migrationobservatory.ox.ac.uk/resources/commentaries/migrant-convictions-and-prison-population/" target="_blank" rel="noopener">Migration Observatory</a> · <a href="https://westminsterbrief.co.uk/archive/pq/120994" target="_blank" rel="noopener">Parlamenti kérdés</a> · <a href="https://www.dorset.police.uk/foi-ai/dorset-police/disclosure-logs/2026-disclosures/asylum-accommodation/" target="_blank" rel="noopener">Dorset Police FOI</a> · <a href="https://www.ipsos.com/en-uk/immigration-tops-britons-concerns-public-divided-whether-it-acceptable-protest-outside-asylum" target="_blank" rel="noopener">Ipsos</a> · <a href="https://leadstories.com/hoax-alert/2026/10/fact-check-photo-does-not-show-that-kent-police-installed-signal-jammer-at-dover-protests.html" target="_blank" rel="noopener">Lead Stories</a></div>
+</article>
+</div>
+
+<footer>A számok a megjelöléskori legfrissebb hivatalos kiadásokból származnak; a napi csónakos adatok ideiglenesek és utólag módosulhatnak.</footer>
+</div>
+
+<script>
+(function(){
+  const d=[["2018",299],["2019",1843],["2020",8466],["2021",28526],["2022",45774],["2023",29437],["2024",36816],["2025",41472],["2026*",21869]];
+  const svg=document.getElementById("boats"),W=640,H=300,L=76,R=12,T=24,B=36,max=50000;
+  const ns="http://www.w3.org/2000/svg",cw=(W-L-R)/d.length,y=v=>T+(H-T-B)*(1-v/max);
+  const el=(t,a,txt)=>{const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;svg.appendChild(e);return e};
+  for(let v=0;v<=max;v+=10000){
+    el("line",{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:"var(--line)","stroke-width":1});
+    el("text",{x:L-8,y:y(v)+4,"text-anchor":"end","font-family":"IBM Plex Mono,monospace","font-size":11,fill:"var(--muted)"},v?(v/1000)+" ezer":"0");
+  }
+  d.forEach(([yr,v],i)=>{
+    const x=L+i*cw+cw*.18,w=cw*.64,ytd=yr.endsWith("*");
+    el("rect",{x,y:y(v),width:w,height:y(0)-y(v),fill:ytd?"var(--accent)":"var(--sea)",opacity:ytd?1:(yr==="2022"?1:.78)});
+    el("text",{x:x+w/2,y:y(v)-6,"text-anchor":"middle","font-family":"IBM Plex Mono,monospace","font-size":10.5,"font-weight":600,fill:"var(--ink)"},v.toLocaleString("hu-HU"));
+    el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","font-family":"IBM Plex Mono,monospace","font-size":11,fill:"var(--muted)"},yr);
+  });
+})();
+</script>
+<script>
+(function(){
+  const W=document.getElementById("v-watch"),A=document.getElementById("v-analysis");
+  const bs=document.querySelectorAll(".tabs button");
+  function show(v,scroll){
+    const an=v==="a";W.hidden=an;A.hidden=!an;
+    bs.forEach(b=>b.setAttribute("aria-selected",String(b.dataset.v===v)));
+    if(scroll)window.scrollTo(0,0);
+  }
+  bs.forEach(b=>b.addEventListener("click",()=>show(b.dataset.v,true)));
+  const h=(location.hash||"").slice(1);
+  if(h==="elemzesek"||h.startsWith("a-")){show("a");const t=document.getElementById(h);if(t)setTimeout(()=>t.scrollIntoView(),0);}
+})();
+</script>
+
+</body></html>

@@ -366,7 +366,7 @@
     },
     {
       "id": "bbc-news-gb",
-      "name": "BBC News (élő)",
+      "name": "BBC News (live)",
       "country": "GB",
       "category": "news",
       "languages": "en",
@@ -378,7 +378,7 @@
     },
     {
       "id": "itvx",
-      "name": "ITVX (ITV1, ITV2, ITV3, ITV4 élő)",
+      "name": "ITVX (ITV1, ITV2, ITV3, ITV4 live)",
       "country": "GB",
       "category": "public",
       "languages": "en",
@@ -570,7 +570,7 @@
     },
     {
       "id": "franceinfo-tv",
-      "name": "franceinfo (élő)",
+      "name": "franceinfo (live)",
       "country": "FR",
       "category": "news",
       "languages": "fr",
@@ -618,7 +618,7 @@
     },
     {
       "id": "mediaset-infinity",
-      "name": "Mediaset Infinity+ (ingyenes élő csatornák)",
+      "name": "Mediaset Infinity+ (free live channels)",
       "country": "IT",
       "category": "commercial_free",
       "languages": "it",
@@ -810,7 +810,7 @@
     },
     {
       "id": "nasa-plus",
-      "name": "NASA+ (élő közvetítések)",
+      "name": "NASA+ (live events)",
       "country": "US",
       "category": "public",
       "languages": "en",
@@ -822,7 +822,7 @@
     },
     {
       "id": "nasa-youtube",
-      "name": "NASA (hivatalos YouTube-csatorna, élő közvetítések)",
+      "name": "NASA (official YouTube channel, live streams)",
       "country": "US",
       "category": "public",
       "languages": "en",
@@ -990,7 +990,7 @@
     },
     {
       "id": "sky-news",
-      "name": "Sky News (élő)",
+      "name": "Sky News (live)",
       "country": "GLOBAL",
       "category": "news",
       "languages": "en",
@@ -1050,7 +1050,7 @@
     },
     {
       "id": "plex-live",
-      "name": "Plex (ingyenes élő TV)",
+      "name": "Plex (free live TV)",
       "country": "GLOBAL",
       "category": "fast",
       "languages": "multi",
@@ -1062,7 +1062,7 @@
     },
     {
       "id": "rakuten-tv",
-      "name": "Rakuten TV (ingyenes csatornák)",
+      "name": "Rakuten TV (free channels)",
       "country": "GLOBAL",
       "category": "fast",
       "languages": "multi",

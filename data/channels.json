@@ -1,113 +1,860 @@
 {
   "countries": [
-    { "code": "GLOBAL", "name": "Globális", "name_en": "Global" },
-    { "code": "GB", "name": "Egyesült Királyság", "name_en": "United Kingdom" },
-    { "code": "IE", "name": "Írország", "name_en": "Ireland" },
-    { "code": "DE", "name": "Németország", "name_en": "Germany" },
-    { "code": "AT", "name": "Ausztria", "name_en": "Austria" },
-    { "code": "CH", "name": "Svájc", "name_en": "Switzerland" },
-    { "code": "FR", "name": "Franciaország", "name_en": "France" },
-    { "code": "IT", "name": "Olaszország", "name_en": "Italy" },
-    { "code": "ES", "name": "Spanyolország", "name_en": "Spain" },
-    { "code": "PT", "name": "Portugália", "name_en": "Portugal" },
-    { "code": "NL", "name": "Hollandia", "name_en": "Netherlands" },
-    { "code": "BE", "name": "Belgium", "name_en": "Belgium" },
-    { "code": "SE", "name": "Svédország", "name_en": "Sweden" },
-    { "code": "NO", "name": "Norvégia", "name_en": "Norway" },
-    { "code": "DK", "name": "Dánia", "name_en": "Denmark" },
-    { "code": "FI", "name": "Finnország", "name_en": "Finland" },
-    { "code": "PL", "name": "Lengyelország", "name_en": "Poland" },
-    { "code": "CZ", "name": "Csehország", "name_en": "Czechia" },
-    { "code": "HU", "name": "Magyarország", "name_en": "Hungary" },
-    { "code": "US", "name": "Egyesült Államok", "name_en": "United States" },
-    { "code": "CA", "name": "Kanada", "name_en": "Canada" },
-    { "code": "BR", "name": "Brazília", "name_en": "Brazil" },
-    { "code": "AU", "name": "Ausztrália", "name_en": "Australia" },
-    { "code": "JP", "name": "Japán", "name_en": "Japan" },
-    { "code": "KR", "name": "Dél-Korea", "name_en": "South Korea" },
-    { "code": "QA", "name": "Katar", "name_en": "Qatar" }
+    {
+      "code": "GLOBAL",
+      "name_en": "Global"
+    },
+    {
+      "code": "GB",
+      "name_en": "United Kingdom"
+    },
+    {
+      "code": "IE",
+      "name_en": "Ireland"
+    },
+    {
+      "code": "DE",
+      "name_en": "Germany"
+    },
+    {
+      "code": "AT",
+      "name_en": "Austria"
+    },
+    {
+      "code": "CH",
+      "name_en": "Switzerland"
+    },
+    {
+      "code": "FR",
+      "name_en": "France"
+    },
+    {
+      "code": "IT",
+      "name_en": "Italy"
+    },
+    {
+      "code": "ES",
+      "name_en": "Spain"
+    },
+    {
+      "code": "PT",
+      "name_en": "Portugal"
+    },
+    {
+      "code": "NL",
+      "name_en": "Netherlands"
+    },
+    {
+      "code": "BE",
+      "name_en": "Belgium"
+    },
+    {
+      "code": "SE",
+      "name_en": "Sweden"
+    },
+    {
+      "code": "NO",
+      "name_en": "Norway"
+    },
+    {
+      "code": "DK",
+      "name_en": "Denmark"
+    },
+    {
+      "code": "FI",
+      "name_en": "Finland"
+    },
+    {
+      "code": "PL",
+      "name_en": "Poland"
+    },
+    {
+      "code": "CZ",
+      "name_en": "Czechia"
+    },
+    {
+      "code": "HU",
+      "name_en": "Hungary"
+    },
+    {
+      "code": "US",
+      "name_en": "United States"
+    },
+    {
+      "code": "CA",
+      "name_en": "Canada"
+    },
+    {
+      "code": "BR",
+      "name_en": "Brazil"
+    },
+    {
+      "code": "AU",
+      "name_en": "Australia"
+    },
+    {
+      "code": "JP",
+      "name_en": "Japan"
+    },
+    {
+      "code": "KR",
+      "name_en": "South Korea"
+    },
+    {
+      "code": "QA",
+      "name_en": "Qatar"
+    }
   ],
   "platforms": [
-    { "id": "official", "name": "Hivatalos weboldal / app", "description": "A csatorna vagy műsorszolgáltató saját, ingyenes élő adása." },
-    { "id": "pluto", "name": "Pluto TV", "description": "Ingyenes, reklámtámogatott (FAST) szolgáltatás." },
-    { "id": "samsung", "name": "Samsung TV Plus", "description": "Ingyenes, reklámtámogatott (FAST) szolgáltatás." },
-    { "id": "tubi", "name": "Tubi", "description": "Ingyenes, reklámtámogatott szolgáltatás." },
-    { "id": "roku", "name": "The Roku Channel", "description": "Ingyenes, reklámtámogatott szolgáltatás." },
-    { "id": "plex", "name": "Plex", "description": "Ingyenes, reklámtámogatott élő TV." },
-    { "id": "rakuten", "name": "Rakuten TV", "description": "Ingyenes, reklámtámogatott csatornák több európai országban." }
+    {
+      "id": "official",
+      "name": "Hivatalos weboldal / app"
+    },
+    {
+      "id": "pluto",
+      "name": "Pluto TV"
+    },
+    {
+      "id": "samsung",
+      "name": "Samsung TV Plus"
+    },
+    {
+      "id": "tubi",
+      "name": "Tubi"
+    },
+    {
+      "id": "roku",
+      "name": "The Roku Channel"
+    },
+    {
+      "id": "plex",
+      "name": "Plex"
+    },
+    {
+      "id": "rakuten",
+      "name": "Rakuten TV"
+    }
   ],
   "channels": [
-    { "id": "bbc-iplayer", "name": "BBC iPlayer (BBC One, Two, Four, News, Parliament, CBBC, CBeebies)", "country": "GB", "category": "public", "languages": "en", "platform": "official", "url": "https://www.bbc.co.uk/iplayer", "access": "free_account", "geo": "national", "note": "Ingyenes regisztráció kell, és az élő adás az Egyesült Királyságban TV-licenc-köteles." },
-    { "id": "bbc-news-gb", "name": "BBC News (élő)", "country": "GB", "category": "news", "languages": "en", "platform": "official", "url": "https://www.bbc.co.uk/iplayer/live/bbcnews", "access": "free_account", "geo": "national", "note": "Az Egyesült Királyságon kívül a nemzetközi BBC News elérhető külön, lásd a Globális csoportot." },
-    { "id": "itvx", "name": "ITVX (ITV1, ITV2, ITV3, ITV4 élő)", "country": "GB", "category": "public", "languages": "en", "platform": "official", "url": "https://www.itv.com/watch", "access": "free_account", "geo": "national", "note": "Reklámtámogatott, ingyenes regisztrációval." },
-    { "id": "channel4", "name": "Channel 4", "country": "GB", "category": "public", "languages": "en", "platform": "official", "url": "https://www.channel4.com", "access": "free_account", "geo": "national", "note": "Ingyenes regisztrációval élőben is nézhető." },
-    { "id": "channel5", "name": "Channel 5 (My5)", "country": "GB", "category": "public", "languages": "en", "platform": "official", "url": "https://www.channel5.com", "access": "free_account", "geo": "national", "note": "Ingyenes regisztrációval élőben is nézhető." },
-    { "id": "s4c", "name": "S4C", "country": "GB", "category": "public", "languages": "cy,en", "platform": "official", "url": "https://www.s4c.cymru", "access": "free", "geo": "national", "note": "Walesi nyelvű közszolgálati csatorna." },
-
-    { "id": "rte-player", "name": "RTÉ Player (RTÉ One, RTÉ2, RTÉ News Now)", "country": "IE", "category": "public", "languages": "en,ga", "platform": "official", "url": "https://www.rte.ie/player", "access": "free_account", "geo": "national", "note": "Ingyenes regisztrációval, Írországban." },
-    { "id": "tg4", "name": "TG4", "country": "IE", "category": "public", "languages": "ga", "platform": "official", "url": "https://www.tg4.ie", "access": "free", "geo": "national", "note": "Ír nyelvű közszolgálati csatorna." },
-
-    { "id": "ard-mediathek", "name": "ARD Mediathek (Das Erste, tagesschau24, ARD alpha és regionális adók)", "country": "DE", "category": "public", "languages": "de", "platform": "official", "url": "https://www.ardmediathek.de", "access": "free", "geo": "national", "note": "Egyes tartalmak külföldön jogok miatt nem érhetők el." },
-    { "id": "zdf", "name": "ZDFmediathek (ZDF, ZDFinfo, ZDFneo)", "country": "DE", "category": "public", "languages": "de", "platform": "official", "url": "https://www.zdf.de", "access": "free", "geo": "national", "note": "Regisztráció nélkül nézhető, de egyes tartalmak területhez kötöttek." },
-    { "id": "3sat", "name": "3sat", "country": "DE", "category": "public", "languages": "de", "platform": "official", "url": "https://www.3sat.de", "access": "free", "geo": "national", "note": "ZDF, ORF, SRF és ARD közös kulturális csatornája." },
-    { "id": "phoenix", "name": "phoenix", "country": "DE", "category": "news", "languages": "de", "platform": "official", "url": "https://www.phoenix.de", "access": "free", "geo": "national", "note": "Esemény- és dokumentumcsatorna, parlamenti közvetítésekkel." },
-    { "id": "arte", "name": "ARTE", "country": "FR", "category": "public", "languages": "fr,de,en,es,pl,it", "platform": "official", "url": "https://www.arte.tv", "access": "free", "geo": "national", "note": "Francia-német kulturális csatorna, több nyelven. Az élő adás elérhetősége országonként eltérhet." },
-
-    { "id": "orf-on", "name": "ORF ON (ORF 1, ORF 2, ORF III)", "country": "AT", "category": "public", "languages": "de", "platform": "official", "url": "https://on.orf.at", "access": "free", "geo": "national", "note": "Jogok miatt egyes adások csak Ausztriában nézhetők." },
-    { "id": "srf-play", "name": "SRF Play (SRF 1, SRF zwei, SRF info)", "country": "CH", "category": "public", "languages": "de", "platform": "official", "url": "https://www.srf.ch/play/tv", "access": "free", "geo": "national", "note": "Svájci német nyelvű közszolgálati csatornák." },
-    { "id": "rts-play", "name": "RTS Play", "country": "CH", "category": "public", "languages": "fr", "platform": "official", "url": "https://www.rts.ch/play/tv", "access": "free", "geo": "national", "note": "Svájci francia nyelvű közszolgálati csatornák." },
-    { "id": "rsi-play", "name": "RSI Play", "country": "CH", "category": "public", "languages": "it", "platform": "official", "url": "https://www.rsi.ch/play/tv", "access": "free", "geo": "national", "note": "Svájci olasz nyelvű közszolgálati csatornák." },
-
-    { "id": "france-tv", "name": "France.tv (France 2, 3, 4, 5, franceinfo)", "country": "FR", "category": "public", "languages": "fr", "platform": "official", "url": "https://www.france.tv", "access": "free", "geo": "national", "note": "Ingyenes, de egyes közvetítések területhez kötöttek." },
-    { "id": "franceinfo-tv", "name": "franceinfo (élő)", "country": "FR", "category": "news", "languages": "fr", "platform": "official", "url": "https://www.francetvinfo.fr/en-direct/tv.html", "access": "free", "geo": "global", "note": "24 órás francia hírcsatorna." },
-    { "id": "tv5monde", "name": "TV5MONDE", "country": "FR", "category": "public", "languages": "fr", "platform": "official", "url": "https://www.tv5monde.com", "access": "free", "geo": "global", "note": "Francia nyelvű nemzetközi közszolgálati csatorna." },
-    { "id": "lcp", "name": "LCP (Assemblée nationale)", "country": "FR", "category": "public", "languages": "fr", "platform": "official", "url": "https://www.lcp.fr", "access": "free", "geo": "national", "note": "Parlamenti csatorna." },
-
-    { "id": "raiplay", "name": "RaiPlay (Rai 1, 2, 3, 4, 5, Rai News 24 és mások)", "country": "IT", "category": "public", "languages": "it", "platform": "official", "url": "https://www.raiplay.it", "access": "free_account", "geo": "national", "note": "Ingyenes regisztrációval; egyes csatornák külföldről nem érhetők el." },
-    { "id": "mediaset-infinity", "name": "Mediaset Infinity+ (ingyenes élő csatornák)", "country": "IT", "category": "commercial_free", "languages": "it", "platform": "official", "url": "https://www.mediasetinfinity.mediaset.it", "access": "free_account", "geo": "national", "note": "Reklámtámogatott, ingyenes regisztrációval, Olaszországban." },
-
-    { "id": "rtve-play", "name": "RTVE Play (La 1, La 2, 24h, Teledeporte)", "country": "ES", "category": "public", "languages": "es", "platform": "official", "url": "https://www.rtve.es/play", "access": "free", "geo": "national", "note": "Egyes tartalmak Spanyolországon kívül nem elérhetők." },
-    { "id": "mitele", "name": "Mitele (Telecinco, Cuatro és mások)", "country": "ES", "category": "commercial_free", "languages": "es", "platform": "official", "url": "https://www.mitele.es", "access": "free_account", "geo": "national", "note": "Reklámtámogatott, ingyenes regisztrációval." },
-    { "id": "rtp-play", "name": "RTP Play", "country": "PT", "category": "public", "languages": "pt", "platform": "official", "url": "https://www.rtp.pt/play", "access": "free", "geo": "national", "note": "Portugál közszolgálati csatornák élő adása." },
-
-    { "id": "npo", "name": "NPO Start (NPO 1, 2, 3, NPO Nieuws)", "country": "NL", "category": "public", "languages": "nl", "platform": "official", "url": "https://www.npostart.nl", "access": "free_account", "geo": "national", "note": "Ingyenes regisztrációval, Hollandiában." },
-    { "id": "vrt-max", "name": "VRT MAX (Één, Canvas, Ketnet)", "country": "BE", "category": "public", "languages": "nl", "platform": "official", "url": "https://www.vrt.be/vrtmax", "access": "free_account", "geo": "national", "note": "Ingyenes regisztráció szükséges." },
-    { "id": "rtbf-auvio", "name": "RTBF Auvio (La Une, La Deux, Tipik)", "country": "BE", "category": "public", "languages": "fr", "platform": "official", "url": "https://auvio.rtbf.be", "access": "free_account", "geo": "national", "note": "Ingyenes regisztráció szükséges." },
-
-    { "id": "svt-play", "name": "SVT Play (SVT1, SVT2, SVT24)", "country": "SE", "category": "public", "languages": "sv", "platform": "official", "url": "https://www.svtplay.se", "access": "free", "geo": "national", "note": "Egyes közvetítések külföldről nem elérhetők." },
-    { "id": "nrk-tv", "name": "NRK TV (NRK1, NRK2, NRK3)", "country": "NO", "category": "public", "languages": "no", "platform": "official", "url": "https://tv.nrk.no", "access": "free", "geo": "national", "note": "Jogok miatt egyes tartalmak csak Norvégiában nézhetők." },
-    { "id": "dr-tv", "name": "DR TV (DR1, DR2)", "country": "DK", "category": "public", "languages": "da", "platform": "official", "url": "https://www.dr.dk/drtv", "access": "free_account", "geo": "national", "note": "Ingyenes regisztrációval, Dániában." },
-    { "id": "yle-areena", "name": "Yle Areena (Yle TV1, TV2, Teema)", "country": "FI", "category": "public", "languages": "fi,sv", "platform": "official", "url": "https://areena.yle.fi", "access": "free", "geo": "national", "note": "A legtöbb tartalom elérhető Finnországon kívül is, de nem mind." },
-
-    { "id": "tvp-vod", "name": "TVP VOD (TVP1, TVP2, TVP Info)", "country": "PL", "category": "public", "languages": "pl", "platform": "official", "url": "https://vod.tvp.pl", "access": "free", "geo": "national", "note": "Lengyel közszolgálati csatornák." },
-    { "id": "ceska-televize", "name": "Česká televize (ČT1, ČT2, ČT24)", "country": "CZ", "category": "public", "languages": "cs", "platform": "official", "url": "https://www.ceskatelevize.cz", "access": "free", "geo": "national", "note": "Egyes közvetítések csak Csehországban nézhetők." },
-    { "id": "mediaklikk", "name": "Médiaklikk (M1, M2, Duna, Duna World)", "country": "HU", "category": "public", "languages": "hu", "platform": "official", "url": "https://www.mediaklikk.hu", "access": "free", "geo": "national", "note": "A magyar közmédia csatornái; egyes sport- és filmtartalmak külföldről korlátozottak lehetnek." },
-
-    { "id": "pbs", "name": "PBS", "country": "US", "category": "public", "languages": "en", "platform": "official", "url": "https://www.pbs.org", "access": "free", "geo": "national", "note": "Az élő adás helyi állomásonként érhető el az Egyesült Államokban." },
-    { "id": "cspan", "name": "C-SPAN", "country": "US", "category": "public", "languages": "en", "platform": "official", "url": "https://www.c-span.org/networks", "access": "free", "geo": "global", "note": "Kongresszusi és kormányzati közvetítések élő adása." },
-    { "id": "nasa-plus", "name": "NASA+ (élő közvetítések)", "country": "US", "category": "public", "languages": "en", "platform": "official", "url": "https://plus.nasa.gov", "access": "free", "geo": "global", "note": "A NASA 24/7-es TV-csatornája 2024 augusztusa óta megszűnt; élő események a NASA+ oldalon és a NASA YouTube-csatornáján vannak." },
-    { "id": "nasa-youtube", "name": "NASA (hivatalos YouTube-csatorna, élő közvetítések)", "country": "US", "category": "public", "languages": "en", "platform": "official", "url": "https://www.youtube.com/@NASA", "access": "free", "geo": "global", "note": "Küldetések, indítások és ISS-nézetek." },
-    { "id": "cbc-gem", "name": "CBC Gem (CBC TV, CBC News Network)", "country": "CA", "category": "public", "languages": "en,fr", "platform": "official", "url": "https://gem.cbc.ca", "access": "free_account", "geo": "national", "note": "Ingyenes regisztráció szükséges; Kanadában érhető el." },
-    { "id": "tv-brasil", "name": "TV Brasil", "country": "BR", "category": "public", "languages": "pt", "platform": "official", "url": "https://tvbrasil.ebc.com.br", "access": "free", "geo": "global", "note": "Brazil közszolgálati csatorna." },
-    { "id": "abc-iview", "name": "ABC iview (ABC TV, ABC News)", "country": "AU", "category": "public", "languages": "en", "platform": "official", "url": "https://iview.abc.net.au", "access": "free_account", "geo": "national", "note": "Ingyenes regisztrációval, Ausztráliában." },
-    { "id": "sbs-ondemand", "name": "SBS On Demand (SBS, SBS World Movies, NITV)", "country": "AU", "category": "public", "languages": "en", "platform": "official", "url": "https://www.sbs.com.au/ondemand", "access": "free_account", "geo": "national", "note": "Ingyenes regisztrációval, Ausztráliában." },
-    { "id": "nhk-world", "name": "NHK WORLD-JAPAN", "country": "JP", "category": "news", "languages": "en,ja", "platform": "official", "url": "https://www3.nhk.or.jp/nhkworld/en/live/", "access": "free", "geo": "global", "note": "Japán nemzetközi hír- és kulturális csatornája." },
-    { "id": "arirang", "name": "Arirang TV", "country": "KR", "category": "public", "languages": "en,ko", "platform": "official", "url": "https://www.arirang.com", "access": "free", "geo": "global", "note": "Dél-koreai nemzetközi csatorna angol nyelven." },
-    { "id": "kbs-world", "name": "KBS World", "country": "KR", "category": "public", "languages": "en,ko", "platform": "official", "url": "https://world.kbs.co.kr", "access": "free", "geo": "global", "note": "A KBS nemzetközi csatornája." },
-
-    { "id": "aljazeera-en", "name": "Al Jazeera English", "country": "QA", "category": "news", "languages": "en", "platform": "official", "url": "https://www.aljazeera.com/live", "access": "free", "geo": "global", "note": "Élő adás a hivatalos oldalon és a hivatalos YouTube-csatornán." },
-    { "id": "dw-news", "name": "DW News", "country": "GLOBAL", "category": "news", "languages": "en", "platform": "official", "url": "https://www.dw.com/en/live-tv/s-100825", "access": "free", "geo": "global", "note": "A német nemzetközi közszolgálati műsorszolgáltató angol hírcsatornája." },
-    { "id": "france24-en", "name": "FRANCE 24 (angol)", "country": "GLOBAL", "category": "news", "languages": "en,fr,ar,es", "platform": "official", "url": "https://www.france24.com/en/live", "access": "free", "geo": "global", "note": "Francia nemzetközi hírcsatorna, több nyelven." },
-    { "id": "euronews", "name": "Euronews", "country": "GLOBAL", "category": "news", "languages": "en,de,fr,it,es,pt,hu,tr,ru", "platform": "official", "url": "https://www.euronews.com/live", "access": "free", "geo": "global", "note": "Többnyelvű európai hírcsatorna, magyar változattal is." },
-    { "id": "trt-world", "name": "TRT World", "country": "GLOBAL", "category": "news", "languages": "en", "platform": "official", "url": "https://www.trtworld.com/live", "access": "free", "geo": "global", "note": "A török közszolgálati műsorszolgáltató nemzetközi hírcsatornája." },
-    { "id": "cgtn", "name": "CGTN", "country": "GLOBAL", "category": "news", "languages": "en", "platform": "official", "url": "https://www.cgtn.com/live", "access": "free", "geo": "global", "note": "A kínai állami média nemzetközi csatornája. Állami finanszírozású, ezt vedd figyelembe a tartalom megítélésekor." },
-    { "id": "sky-news", "name": "Sky News (élő)", "country": "GLOBAL", "category": "news", "languages": "en", "platform": "official", "url": "https://news.sky.com/watch-live", "access": "free", "geo": "global", "note": "Az élő adás ingyenes a hivatalos oldalon és a YouTube-csatornán." },
-
-    { "id": "pluto-tv", "name": "Pluto TV", "country": "GLOBAL", "category": "fast", "languages": "multi", "platform": "pluto", "url": "https://pluto.tv", "access": "free", "geo": "national", "note": "Ingyenes, reklámtámogatott. A csatornakínálat országonként eltér, és nem minden országban érhető el." },
-    { "id": "samsung-tv-plus", "name": "Samsung TV Plus", "country": "GLOBAL", "category": "fast", "languages": "multi", "platform": "samsung", "url": "https://www.samsungtvplus.com", "access": "free", "geo": "national", "note": "Ingyenes, reklámtámogatott. Több mint 30 országban elérhető, a kínálat országonként más." },
-    { "id": "tubi", "name": "Tubi", "country": "US", "category": "fast", "languages": "en,es", "platform": "tubi", "url": "https://tubitv.com", "access": "free", "geo": "national", "note": "Ingyenes, reklámtámogatott; elsősorban az Egyesült Államokban és néhány másik országban." },
-    { "id": "roku-channel", "name": "The Roku Channel", "country": "US", "category": "fast", "languages": "en", "platform": "roku", "url": "https://therokuchannel.roku.com", "access": "free_account", "geo": "national", "note": "Ingyenes, reklámtámogatott; ingyenes fiókkal." },
-    { "id": "plex-live", "name": "Plex (ingyenes élő TV)", "country": "GLOBAL", "category": "fast", "languages": "multi", "platform": "plex", "url": "https://www.plex.tv/watch-free-tv", "access": "free_account", "geo": "national", "note": "Ingyenes, reklámtámogatott élő csatornák ingyenes Plex-fiókkal." },
-    { "id": "rakuten-tv", "name": "Rakuten TV (ingyenes csatornák)", "country": "GLOBAL", "category": "fast", "languages": "multi", "platform": "rakuten", "url": "https://rakuten.tv", "access": "free", "geo": "national", "note": "Ingyenes, reklámtámogatott csatornák egyes európai országokban." }
+    {
+      "id": "bbc-iplayer",
+      "name": "BBC iPlayer (BBC One, Two, Four, News, Parliament, CBBC, CBeebies)",
+      "country": "GB",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.bbc.co.uk/iplayer",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "uk_licence_account"
+    },
+    {
+      "id": "bbc-news-gb",
+      "name": "BBC News (élő)",
+      "country": "GB",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.bbc.co.uk/iplayer/live/bbcnews",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "uk_licence_account"
+    },
+    {
+      "id": "itvx",
+      "name": "ITVX (ITV1, ITV2, ITV3, ITV4 élő)",
+      "country": "GB",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.itv.com/watch",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account"
+    },
+    {
+      "id": "channel4",
+      "name": "Channel 4",
+      "country": "GB",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.channel4.com",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account"
+    },
+    {
+      "id": "channel5",
+      "name": "Channel 5 (My5)",
+      "country": "GB",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.channel5.com",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account"
+    },
+    {
+      "id": "s4c",
+      "name": "S4C",
+      "country": "GB",
+      "category": "public",
+      "languages": "cy,en",
+      "platform": "official",
+      "url": "https://www.s4c.cymru",
+      "access": "free",
+      "geo": "national",
+      "note_key": "lang_welsh"
+    },
+    {
+      "id": "rte-player",
+      "name": "RTÉ Player (RTÉ One, RTÉ2, RTÉ News Now)",
+      "country": "IE",
+      "category": "public",
+      "languages": "en,ga",
+      "platform": "official",
+      "url": "https://www.rte.ie/player",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_national"
+    },
+    {
+      "id": "tg4",
+      "name": "TG4",
+      "country": "IE",
+      "category": "public",
+      "languages": "ga",
+      "platform": "official",
+      "url": "https://www.tg4.ie",
+      "access": "free",
+      "geo": "national",
+      "note_key": "lang_irish"
+    },
+    {
+      "id": "ard-mediathek",
+      "name": "ARD Mediathek (Das Erste, tagesschau24, ARD alpha és regionális adók)",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.ardmediathek.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "zdf",
+      "name": "ZDFmediathek (ZDF, ZDFinfo, ZDFneo)",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.zdf.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "3sat",
+      "name": "3sat",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.3sat.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "cult_dach"
+    },
+    {
+      "id": "phoenix",
+      "name": "phoenix",
+      "country": "DE",
+      "category": "news",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.phoenix.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "phoenix"
+    },
+    {
+      "id": "arte",
+      "name": "ARTE",
+      "country": "FR",
+      "category": "public",
+      "languages": "fr,de,en,es,pl,it",
+      "platform": "official",
+      "url": "https://www.arte.tv",
+      "access": "free",
+      "geo": "national",
+      "note_key": "arte"
+    },
+    {
+      "id": "orf-on",
+      "name": "ORF ON (ORF 1, ORF 2, ORF III)",
+      "country": "AT",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://on.orf.at",
+      "access": "free",
+      "geo": "national",
+      "note_key": "rights_only_country"
+    },
+    {
+      "id": "srf-play",
+      "name": "SRF Play (SRF 1, SRF zwei, SRF info)",
+      "country": "CH",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.srf.ch/play/tv",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "rts-play",
+      "name": "RTS Play",
+      "country": "CH",
+      "category": "public",
+      "languages": "fr",
+      "platform": "official",
+      "url": "https://www.rts.ch/play/tv",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "rsi-play",
+      "name": "RSI Play",
+      "country": "CH",
+      "category": "public",
+      "languages": "it",
+      "platform": "official",
+      "url": "https://www.rsi.ch/play/tv",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "france-tv",
+      "name": "France.tv (France 2, 3, 4, 5, franceinfo)",
+      "country": "FR",
+      "category": "public",
+      "languages": "fr",
+      "platform": "official",
+      "url": "https://www.france.tv",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "franceinfo-tv",
+      "name": "franceinfo (élő)",
+      "country": "FR",
+      "category": "news",
+      "languages": "fr",
+      "platform": "official",
+      "url": "https://www.francetvinfo.fr/en-direct/tv.html",
+      "access": "free",
+      "geo": "global",
+      "note_key": "news24_fr"
+    },
+    {
+      "id": "tv5monde",
+      "name": "TV5MONDE",
+      "country": "FR",
+      "category": "public",
+      "languages": "fr",
+      "platform": "official",
+      "url": "https://www.tv5monde.com",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "lcp",
+      "name": "LCP (Assemblée nationale)",
+      "country": "FR",
+      "category": "public",
+      "languages": "fr",
+      "platform": "official",
+      "url": "https://www.lcp.fr",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "raiplay",
+      "name": "RaiPlay (Rai 1, 2, 3, 4, 5, Rai News 24 és mások)",
+      "country": "IT",
+      "category": "public",
+      "languages": "it",
+      "platform": "official",
+      "url": "https://www.raiplay.it",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_some_geo"
+    },
+    {
+      "id": "mediaset-infinity",
+      "name": "Mediaset Infinity+ (ingyenes élő csatornák)",
+      "country": "IT",
+      "category": "commercial_free",
+      "languages": "it",
+      "platform": "official",
+      "url": "https://www.mediasetinfinity.mediaset.it",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account_national"
+    },
+    {
+      "id": "rtve-play",
+      "name": "RTVE Play (La 1, La 2, 24h, Teledeporte)",
+      "country": "ES",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.rtve.es/play",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "mitele",
+      "name": "Mitele (Telecinco, Cuatro és mások)",
+      "country": "ES",
+      "category": "commercial_free",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.mitele.es",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account"
+    },
+    {
+      "id": "rtp-play",
+      "name": "RTP Play",
+      "country": "PT",
+      "category": "public",
+      "languages": "pt",
+      "platform": "official",
+      "url": "https://www.rtp.pt/play",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "npo",
+      "name": "NPO Start (NPO 1, 2, 3, NPO Nieuws)",
+      "country": "NL",
+      "category": "public",
+      "languages": "nl",
+      "platform": "official",
+      "url": "https://www.npostart.nl",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_national"
+    },
+    {
+      "id": "vrt-max",
+      "name": "VRT MAX (Één, Canvas, Ketnet)",
+      "country": "BE",
+      "category": "public",
+      "languages": "nl",
+      "platform": "official",
+      "url": "https://www.vrt.be/vrtmax",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_required"
+    },
+    {
+      "id": "rtbf-auvio",
+      "name": "RTBF Auvio (La Une, La Deux, Tipik)",
+      "country": "BE",
+      "category": "public",
+      "languages": "fr",
+      "platform": "official",
+      "url": "https://auvio.rtbf.be",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_required"
+    },
+    {
+      "id": "svt-play",
+      "name": "SVT Play (SVT1, SVT2, SVT24)",
+      "country": "SE",
+      "category": "public",
+      "languages": "sv",
+      "platform": "official",
+      "url": "https://www.svtplay.se",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "nrk-tv",
+      "name": "NRK TV (NRK1, NRK2, NRK3)",
+      "country": "NO",
+      "category": "public",
+      "languages": "no",
+      "platform": "official",
+      "url": "https://tv.nrk.no",
+      "access": "free",
+      "geo": "national",
+      "note_key": "rights_only_country"
+    },
+    {
+      "id": "dr-tv",
+      "name": "DR TV (DR1, DR2)",
+      "country": "DK",
+      "category": "public",
+      "languages": "da",
+      "platform": "official",
+      "url": "https://www.dr.dk/drtv",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_national"
+    },
+    {
+      "id": "yle-areena",
+      "name": "Yle Areena (Yle TV1, TV2, Teema)",
+      "country": "FI",
+      "category": "public",
+      "languages": "fi,sv",
+      "platform": "official",
+      "url": "https://areena.yle.fi",
+      "access": "free",
+      "geo": "national",
+      "note_key": "mostly_abroad"
+    },
+    {
+      "id": "tvp-vod",
+      "name": "TVP VOD (TVP1, TVP2, TVP Info)",
+      "country": "PL",
+      "category": "public",
+      "languages": "pl",
+      "platform": "official",
+      "url": "https://vod.tvp.pl",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "ceska-televize",
+      "name": "Česká televize (ČT1, ČT2, ČT24)",
+      "country": "CZ",
+      "category": "public",
+      "languages": "cs",
+      "platform": "official",
+      "url": "https://www.ceskatelevize.cz",
+      "access": "free",
+      "geo": "national",
+      "note_key": "rights_only_country"
+    },
+    {
+      "id": "mediaklikk",
+      "name": "Médiaklikk (M1, M2, Duna, Duna World)",
+      "country": "HU",
+      "category": "public",
+      "languages": "hu",
+      "platform": "official",
+      "url": "https://www.mediaklikk.hu",
+      "access": "free",
+      "geo": "national",
+      "note_key": "mediaklikk"
+    },
+    {
+      "id": "pbs",
+      "name": "PBS",
+      "country": "US",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.pbs.org",
+      "access": "free",
+      "geo": "national",
+      "note_key": "pbs"
+    },
+    {
+      "id": "cspan",
+      "name": "C-SPAN",
+      "country": "US",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.c-span.org/networks",
+      "access": "free",
+      "geo": "global",
+      "note_key": "cspan"
+    },
+    {
+      "id": "nasa-plus",
+      "name": "NASA+ (élő közvetítések)",
+      "country": "US",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://plus.nasa.gov",
+      "access": "free",
+      "geo": "global",
+      "note_key": "nasa_plus"
+    },
+    {
+      "id": "nasa-youtube",
+      "name": "NASA (hivatalos YouTube-csatorna, élő közvetítések)",
+      "country": "US",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.youtube.com/@NASA",
+      "access": "free",
+      "geo": "global",
+      "note_key": "nasa_yt"
+    },
+    {
+      "id": "cbc-gem",
+      "name": "CBC Gem (CBC TV, CBC News Network)",
+      "country": "CA",
+      "category": "public",
+      "languages": "en,fr",
+      "platform": "official",
+      "url": "https://gem.cbc.ca",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_national"
+    },
+    {
+      "id": "tv-brasil",
+      "name": "TV Brasil",
+      "country": "BR",
+      "category": "public",
+      "languages": "pt",
+      "platform": "official",
+      "url": "https://tvbrasil.ebc.com.br",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "abc-iview",
+      "name": "ABC iview (ABC TV, ABC News)",
+      "country": "AU",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://iview.abc.net.au",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_national"
+    },
+    {
+      "id": "sbs-ondemand",
+      "name": "SBS On Demand (SBS, SBS World Movies, NITV)",
+      "country": "AU",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.sbs.com.au/ondemand",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_national"
+    },
+    {
+      "id": "nhk-world",
+      "name": "NHK WORLD-JAPAN",
+      "country": "JP",
+      "category": "news",
+      "languages": "en,ja",
+      "platform": "official",
+      "url": "https://www3.nhk.or.jp/nhkworld/en/live/",
+      "access": "free",
+      "geo": "global",
+      "note_key": "nhk"
+    },
+    {
+      "id": "arirang",
+      "name": "Arirang TV",
+      "country": "KR",
+      "category": "public",
+      "languages": "en,ko",
+      "platform": "official",
+      "url": "https://www.arirang.com",
+      "access": "free",
+      "geo": "global",
+      "note_key": "arirang"
+    },
+    {
+      "id": "kbs-world",
+      "name": "KBS World",
+      "country": "KR",
+      "category": "public",
+      "languages": "en,ko",
+      "platform": "official",
+      "url": "https://world.kbs.co.kr",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "aljazeera-en",
+      "name": "Al Jazeera English",
+      "country": "QA",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.aljazeera.com/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "official_site_yt"
+    },
+    {
+      "id": "dw-news",
+      "name": "DW News",
+      "country": "GLOBAL",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.dw.com/en/live-tv/s-100825",
+      "access": "free",
+      "geo": "global",
+      "note_key": "dw"
+    },
+    {
+      "id": "france24-en",
+      "name": "FRANCE 24 (angol)",
+      "country": "GLOBAL",
+      "category": "news",
+      "languages": "en,fr,ar,es",
+      "platform": "official",
+      "url": "https://www.france24.com/en/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "f24"
+    },
+    {
+      "id": "euronews",
+      "name": "Euronews",
+      "country": "GLOBAL",
+      "category": "news",
+      "languages": "en,de,fr,it,es,pt,hu,tr,ru",
+      "platform": "official",
+      "url": "https://www.euronews.com/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "euronews"
+    },
+    {
+      "id": "trt-world",
+      "name": "TRT World",
+      "country": "GLOBAL",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.trtworld.com/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "trt"
+    },
+    {
+      "id": "cgtn",
+      "name": "CGTN",
+      "country": "GLOBAL",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.cgtn.com/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "cgtn"
+    },
+    {
+      "id": "sky-news",
+      "name": "Sky News (élő)",
+      "country": "GLOBAL",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://news.sky.com/watch-live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "official_site_yt"
+    },
+    {
+      "id": "pluto-tv",
+      "name": "Pluto TV",
+      "country": "GLOBAL",
+      "category": "fast",
+      "languages": "multi",
+      "platform": "pluto",
+      "url": "https://pluto.tv",
+      "access": "free",
+      "geo": "national",
+      "note_key": "fast_varies"
+    },
+    {
+      "id": "samsung-tv-plus",
+      "name": "Samsung TV Plus",
+      "country": "GLOBAL",
+      "category": "fast",
+      "languages": "multi",
+      "platform": "samsung",
+      "url": "https://www.samsungtvplus.com",
+      "access": "free",
+      "geo": "national",
+      "note_key": "samsung"
+    },
+    {
+      "id": "tubi",
+      "name": "Tubi",
+      "country": "US",
+      "category": "fast",
+      "languages": "en,es",
+      "platform": "tubi",
+      "url": "https://tubitv.com",
+      "access": "free",
+      "geo": "national",
+      "note_key": "tubi"
+    },
+    {
+      "id": "roku-channel",
+      "name": "The Roku Channel",
+      "country": "US",
+      "category": "fast",
+      "languages": "en",
+      "platform": "roku",
+      "url": "https://therokuchannel.roku.com",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "roku"
+    },
+    {
+      "id": "plex-live",
+      "name": "Plex (ingyenes élő TV)",
+      "country": "GLOBAL",
+      "category": "fast",
+      "languages": "multi",
+      "platform": "plex",
+      "url": "https://www.plex.tv/watch-free-tv",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "plex"
+    },
+    {
+      "id": "rakuten-tv",
+      "name": "Rakuten TV (ingyenes csatornák)",
+      "country": "GLOBAL",
+      "category": "fast",
+      "languages": "multi",
+      "platform": "rakuten",
+      "url": "https://rakuten.tv",
+      "access": "free",
+      "geo": "national",
+      "note_key": "rakuten"
+    }
   ]
 }

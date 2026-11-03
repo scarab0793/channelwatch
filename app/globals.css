@@ -50,6 +50,17 @@ a:hover { text-decoration: underline; }
 .brand-mark { color: var(--accent); }
 nav { display: flex; gap: 18px; }
 nav a { color: var(--muted); font-size: 0.95rem; }
+.header-right { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; justify-content: flex-end; }
+.lang-switcher { gap: 4px; }
+.lang-switcher a {
+  font-size: 0.75rem; font-weight: 600; padding: 3px 7px; border-radius: 6px;
+  border: 1px solid var(--line); color: var(--muted);
+}
+.lang-switcher a:hover { text-decoration: none; border-color: var(--accent); }
+.lang-switcher a.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+@media (max-width: 640px) {
+  .header-inner { height: auto; padding: 10px 0; flex-wrap: wrap; gap: 8px; }
+}
 
 main { padding-top: 28px; padding-bottom: 48px; min-height: 70vh; }
 

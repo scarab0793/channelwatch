@@ -22,6 +22,21 @@ npm start
 
 A `dev` és a `build` parancs automatikusan újraépíti az adatbázist (`data/tv.db`) a `data/channels.json` fájlból.
 
+## Nyelvek
+
+Az oldal alapnyelve angol (`/en/`), a nyelvválasztóban elérhető még: német (`/de/`), francia (`/fr/`), spanyol (`/es/`), magyar (`/hu/`), lengyel (`/pl/`) és orosz (`/ru/`). A gyökér (`/`) átirányít az angol változatra.
+
+A fordítások a `lib/i18n/` mappában vannak:
+
+| Fájl | Tartalom |
+|---|---|
+| `ui.ts` | Felületi szövegek és a Tudnivalók oldal |
+| `notes.ts` | A csatornákhoz tartozó jegyzetek (a `channels.json` `note_key` mezője erre mutat) |
+| `countries.ts` | Országnevek |
+| `index.ts` | A támogatott nyelvek listája (`LANGS`) |
+
+Új nyelv felvétele: add hozzá a `LANGS`-hoz és a `LANG_LABEL`-hez, majd írd meg a hozzá tartozó fordításokat a három fájlban (a TypeScript jelzi, ha valami hiányzik). Új csatornajegyzethez adj egy új kulcsot a `notes.ts`-ben, és hivatkozz rá a `channels.json`-ban.
+
 ## Telepítés (GitHub Pages)
 
 A `.github/workflows/deploy.yml` minden `main`-re küldött változásnál, hetente egyszer és kézi indításra is felépíti a statikus oldalt (`out/`), és kiteszi a GitHub Pages-re. Az egyedi domain a `public/CNAME` fájlból jön.
@@ -36,7 +51,8 @@ Egyszeri beállítás a GitHubon: **Settings → Pages → Build and deployment 
 | `scripts/seed.mjs` | Ebből építi a SQLite adatbázist (`data/tv.db`) |
 | `scripts/check-links.mjs` | Ellenőrzi, hogy a linkek elérhetők-e (`npm run check-links`) |
 | `lib/db.ts` | Adatbázis-lekérdezések |
-| `app/` | Oldalak: főoldal, országoldal, keresés, tudnivalók |
+| `app/[lang]/` | Oldalak nyelvenként: főoldal, országoldal, keresés, tudnivalók |
+| `lib/i18n/` | Fordítások (lásd lent) |
 
 ## Új csatorna felvétele (szabályok)
 

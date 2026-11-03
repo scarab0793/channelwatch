@@ -19,14 +19,12 @@ db.exec(`
 
   CREATE TABLE countries (
     code TEXT PRIMARY KEY,
-    name TEXT NOT NULL,
     name_en TEXT NOT NULL
   );
 
   CREATE TABLE platforms (
     id TEXT PRIMARY KEY,
-    name TEXT NOT NULL,
-    description TEXT NOT NULL
+    name TEXT NOT NULL
   );
 
   CREATE TABLE channels (
@@ -39,7 +37,7 @@ db.exec(`
     url TEXT NOT NULL,
     access TEXT NOT NULL CHECK (access IN ('free','free_account')),
     geo TEXT NOT NULL CHECK (geo IN ('national','global')),
-    note TEXT NOT NULL DEFAULT '',
+    note_key TEXT,
     last_checked TEXT,
     link_status TEXT NOT NULL DEFAULT 'unchecked'
   );
@@ -59,18 +57,18 @@ db.exec(`
   CREATE INDEX idx_programmes_channel_time ON programmes(channel_id, starts_at);
 `);
 
-const insCountry = db.prepare("INSERT INTO countries (code, name, name_en) VALUES (?, ?, ?)");
-const insPlatform = db.prepare("INSERT INTO platforms (id, name, description) VALUES (?, ?, ?)");
+const insCountry = db.prepare("INSERT INTO countries (code, name_en) VALUES (?, ?)");
+const insPlatform = db.prepare("INSERT INTO platforms (id, name) VALUES (?, ?)");
 const insChannel = db.prepare(
-  `INSERT INTO channels (id, name, country, category, languages, platform, url, access, geo, note)
+  `INSERT INTO channels (id, name, country, category, languages, platform, url, access, geo, note_key)
    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
 );
 
 db.exec("BEGIN");
-for (const c of data.countries) insCountry.run(c.code, c.name, c.name_en);
-for (const p of data.platforms) insPlatform.run(p.id, p.name, p.description);
+for (const c of data.countries) insCountry.run(c.code, c.name_en);
+for (const p of data.platforms) insPlatform.run(p.id, p.name);
 for (const ch of data.channels) {
-  insChannel.run(ch.id, ch.name, ch.country, ch.category, ch.languages, ch.platform, ch.url, ch.access, ch.geo, ch.note ?? "");
+  insChannel.run(ch.id, ch.name, ch.country, ch.category, ch.languages, ch.platform, ch.url, ch.access, ch.geo, ch.note_key ?? null);
 }
 db.exec("COMMIT");
 

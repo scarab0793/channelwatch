@@ -3,7 +3,7 @@ import type { DatabaseSync } from "node:sqlite";
 
 // A node:sqlite modult futásidőben töltjük be (Node >= 22.3), hogy a bundler ne akarja csomagolni.
 
-export type Country = { code: string; name: string; name_en: string; channel_count: number };
+export type Country = { code: string; name_en: string; channel_count: number };
 
 export type Channel = {
   id: string;
@@ -16,7 +16,7 @@ export type Channel = {
   url: string;
   access: "free" | "free_account";
   geo: "national" | "global";
-  note: string;
+  note_key: string | null;
   last_checked: string | null;
   link_status: string;
 };
@@ -45,25 +45,18 @@ export function getCountries(): Country[] {
   return plain<Country>(
     getDb()
       .prepare(
-        `SELECT co.code, co.name, co.name_en, COUNT(ch.id) AS channel_count
+        `SELECT co.code, co.name_en, COUNT(ch.id) AS channel_count
          FROM countries co LEFT JOIN channels ch ON ch.country = co.code
          GROUP BY co.code
-         HAVING channel_count > 0
-         ORDER BY (co.code = 'GLOBAL') DESC, co.name COLLATE NOCASE`
+         HAVING channel_count > 0`
       )
       .all()
   );
 }
 
-export function getCountry(code: string): Country | undefined {
-  return getCountries().find((c) => c.code === code);
-}
-
 export function getChannelsByCountry(code: string): Channel[] {
   return plain<Channel>(
-    getDb()
-      .prepare(`${CHANNEL_SELECT} WHERE c.country = ? ORDER BY c.category, c.name COLLATE NOCASE`)
-      .all(code)
+    getDb().prepare(`${CHANNEL_SELECT} WHERE c.country = ? ORDER BY c.name COLLATE NOCASE`).all(code)
   );
 }
 

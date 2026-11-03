@@ -19,7 +19,7 @@ export type UI = {
     typeAria: string;
   };
   card: { open: string; openAria: string };
-  category: { public: string; news: string; commercial_free: string; fast: string };
+  category: { public: string; news: string; civic: string; commercial_free: string; fast: string };
   access: { free: string; free_account: string };
   geo: { national: string; global: string };
   footer: string;
@@ -52,7 +52,7 @@ export const ui: Record<Lang, UI> = {
       typeAria: "Type",
     },
     card: { open: "Open ↗", openAria: "Open {name} on the official site" },
-    category: { public: "Public broadcaster", news: "News channel", commercial_free: "Free commercial", fast: "Free (FAST) platform" },
+    category: { public: "Public broadcaster", news: "News channel", civic: "Parliaments & institutions", commercial_free: "Free commercial", fast: "Free (FAST) platform" },
     access: { free: "No registration", free_account: "Free registration" },
     geo: { national: "Geo-restricted", global: "Available worldwide" },
     footer:
@@ -114,7 +114,7 @@ export const ui: Record<Lang, UI> = {
       typeAria: "Typ",
     },
     card: { open: "Öffnen ↗", openAria: "{name} auf der offiziellen Seite öffnen" },
-    category: { public: "Öffentlich-rechtlich", news: "Nachrichtensender", commercial_free: "Kostenlos (kommerziell)", fast: "Kostenlose (FAST-)Plattform" },
+    category: { public: "Öffentlich-rechtlich", news: "Nachrichtensender", civic: "Parlamente & Institutionen", commercial_free: "Kostenlos (kommerziell)", fast: "Kostenlose (FAST-)Plattform" },
     access: { free: "Ohne Registrierung", free_account: "Kostenlose Registrierung" },
     geo: { national: "Regional beschränkt", global: "Weltweit verfügbar" },
     footer:
@@ -176,7 +176,7 @@ export const ui: Record<Lang, UI> = {
       typeAria: "Type",
     },
     card: { open: "Ouvrir ↗", openAria: "Ouvrir {name} sur le site officiel" },
-    category: { public: "Service public", news: "Chaîne d'information", commercial_free: "Commerciale gratuite", fast: "Plateforme gratuite (FAST)" },
+    category: { public: "Service public", news: "Chaîne d'information", civic: "Parlements et institutions", commercial_free: "Commerciale gratuite", fast: "Plateforme gratuite (FAST)" },
     access: { free: "Sans inscription", free_account: "Inscription gratuite" },
     geo: { national: "Restreint géographiquement", global: "Disponible dans le monde entier" },
     footer:
@@ -238,7 +238,7 @@ export const ui: Record<Lang, UI> = {
       typeAria: "Tipo",
     },
     card: { open: "Abrir ↗", openAria: "Abrir {name} en el sitio oficial" },
-    category: { public: "Servicio público", news: "Canal de noticias", commercial_free: "Comercial gratuito", fast: "Plataforma gratuita (FAST)" },
+    category: { public: "Servicio público", news: "Canal de noticias", civic: "Parlamentos e instituciones", commercial_free: "Comercial gratuito", fast: "Plataforma gratuita (FAST)" },
     access: { free: "Sin registro", free_account: "Registro gratuito" },
     geo: { national: "Restringido por región", global: "Disponible en todo el mundo" },
     footer:
@@ -300,7 +300,7 @@ export const ui: Record<Lang, UI> = {
       typeAria: "Típus",
     },
     card: { open: "Megnyitás ↗", openAria: "{name} megnyitása a hivatalos oldalon" },
-    category: { public: "Közszolgálati", news: "Hírcsatorna", commercial_free: "Ingyenes kereskedelmi", fast: "Ingyenes (FAST) platform" },
+    category: { public: "Közszolgálati", news: "Hírcsatorna", civic: "Parlamentek és intézmények", commercial_free: "Ingyenes kereskedelmi", fast: "Ingyenes (FAST) platform" },
     access: { free: "Regisztráció nélkül", free_account: "Ingyenes regisztrációval" },
     geo: { national: "Területhez kötött", global: "Világszerte elérhető" },
     footer:
@@ -362,7 +362,7 @@ export const ui: Record<Lang, UI> = {
       typeAria: "Typ",
     },
     card: { open: "Otwórz ↗", openAria: "Otwórz {name} na oficjalnej stronie" },
-    category: { public: "Nadawca publiczny", news: "Kanał informacyjny", commercial_free: "Komercyjny, bezpłatny", fast: "Bezpłatna platforma (FAST)" },
+    category: { public: "Nadawca publiczny", news: "Kanał informacyjny", civic: "Parlamenty i instytucje", commercial_free: "Komercyjny, bezpłatny", fast: "Bezpłatna platforma (FAST)" },
     access: { free: "Bez rejestracji", free_account: "Bezpłatna rejestracja" },
     geo: { national: "Ograniczenie regionalne", global: "Dostępne na całym świecie" },
     footer:
@@ -424,7 +424,7 @@ export const ui: Record<Lang, UI> = {
       typeAria: "Тип",
     },
     card: { open: "Открыть ↗", openAria: "Открыть {name} на официальном сайте" },
-    category: { public: "Общественное вещание", news: "Новостной канал", commercial_free: "Бесплатный коммерческий", fast: "Бесплатная платформа (FAST)" },
+    category: { public: "Общественное вещание", news: "Новостной канал", civic: "Парламенты и институты", commercial_free: "Бесплатный коммерческий", fast: "Бесплатная платформа (FAST)" },
     access: { free: "Без регистрации", free_account: "Бесплатная регистрация" },
     geo: { national: "Ограничен по региону", global: "Доступен по всему миру" },
     footer:

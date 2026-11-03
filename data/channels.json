@@ -103,6 +103,198 @@
     {
       "code": "QA",
       "name_en": "Qatar"
+    },
+    {
+      "code": "AL",
+      "name_en": "Albania"
+    },
+    {
+      "code": "BA",
+      "name_en": "Bosnia and Herzegovina"
+    },
+    {
+      "code": "BG",
+      "name_en": "Bulgaria"
+    },
+    {
+      "code": "HR",
+      "name_en": "Croatia"
+    },
+    {
+      "code": "CY",
+      "name_en": "Cyprus"
+    },
+    {
+      "code": "EE",
+      "name_en": "Estonia"
+    },
+    {
+      "code": "GR",
+      "name_en": "Greece"
+    },
+    {
+      "code": "IS",
+      "name_en": "Iceland"
+    },
+    {
+      "code": "LV",
+      "name_en": "Latvia"
+    },
+    {
+      "code": "LT",
+      "name_en": "Lithuania"
+    },
+    {
+      "code": "MT",
+      "name_en": "Malta"
+    },
+    {
+      "code": "MD",
+      "name_en": "Moldova"
+    },
+    {
+      "code": "ME",
+      "name_en": "Montenegro"
+    },
+    {
+      "code": "MK",
+      "name_en": "North Macedonia"
+    },
+    {
+      "code": "RO",
+      "name_en": "Romania"
+    },
+    {
+      "code": "RS",
+      "name_en": "Serbia"
+    },
+    {
+      "code": "SK",
+      "name_en": "Slovakia"
+    },
+    {
+      "code": "SI",
+      "name_en": "Slovenia"
+    },
+    {
+      "code": "UA",
+      "name_en": "Ukraine"
+    },
+    {
+      "code": "TR",
+      "name_en": "Türkiye"
+    },
+    {
+      "code": "GE",
+      "name_en": "Georgia"
+    },
+    {
+      "code": "AM",
+      "name_en": "Armenia"
+    },
+    {
+      "code": "AR",
+      "name_en": "Argentina"
+    },
+    {
+      "code": "CL",
+      "name_en": "Chile"
+    },
+    {
+      "code": "CO",
+      "name_en": "Colombia"
+    },
+    {
+      "code": "MX",
+      "name_en": "Mexico"
+    },
+    {
+      "code": "PE",
+      "name_en": "Peru"
+    },
+    {
+      "code": "UY",
+      "name_en": "Uruguay"
+    },
+    {
+      "code": "NZ",
+      "name_en": "New Zealand"
+    },
+    {
+      "code": "IN",
+      "name_en": "India"
+    },
+    {
+      "code": "SG",
+      "name_en": "Singapore"
+    },
+    {
+      "code": "MY",
+      "name_en": "Malaysia"
+    },
+    {
+      "code": "TH",
+      "name_en": "Thailand"
+    },
+    {
+      "code": "ID",
+      "name_en": "Indonesia"
+    },
+    {
+      "code": "VN",
+      "name_en": "Vietnam"
+    },
+    {
+      "code": "TW",
+      "name_en": "Taiwan"
+    },
+    {
+      "code": "HK",
+      "name_en": "Hong Kong"
+    },
+    {
+      "code": "IL",
+      "name_en": "Israel"
+    },
+    {
+      "code": "ZA",
+      "name_en": "South Africa"
+    },
+    {
+      "code": "EU",
+      "name_en": "European Union"
+    },
+    {
+      "code": "NG",
+      "name_en": "Nigeria"
+    },
+    {
+      "code": "MA",
+      "name_en": "Morocco"
+    },
+    {
+      "code": "KE",
+      "name_en": "Kenya"
+    },
+    {
+      "code": "PK",
+      "name_en": "Pakistan"
+    },
+    {
+      "code": "BD",
+      "name_en": "Bangladesh"
+    },
+    {
+      "code": "BO",
+      "name_en": "Bolivia"
+    },
+    {
+      "code": "CR",
+      "name_en": "Costa Rica"
+    },
+    {
+      "code": "LK",
+      "name_en": "Sri Lanka"
     }
   ],
   "platforms": [
@@ -133,6 +325,30 @@
     {
       "id": "rakuten",
       "name": "Rakuten TV"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube (official channel)"
+    },
+    {
+      "id": "xumo",
+      "name": "Xumo Play"
+    },
+    {
+      "id": "lg",
+      "name": "LG Channels"
+    },
+    {
+      "id": "sling",
+      "name": "Sling Freestream"
+    },
+    {
+      "id": "localnow",
+      "name": "Local Now"
+    },
+    {
+      "id": "zattoo",
+      "name": "Zattoo"
     }
   ],
   "channels": [
@@ -855,6 +1071,1810 @@
       "access": "free",
       "geo": "national",
       "note_key": "rakuten"
+    },
+    {
+      "id": "al-rtsh",
+      "name": "RTSH (Radiotelevizioni Shqiptar)",
+      "country": "AL",
+      "category": "public",
+      "languages": "sq",
+      "platform": "official",
+      "url": "https://www.rtsh.al",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "ba-bhrt",
+      "name": "BHRT",
+      "country": "BA",
+      "category": "public",
+      "languages": "bs,hr,sr",
+      "platform": "official",
+      "url": "https://bhrt.ba",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "bg-bnt",
+      "name": "BNT (Bulgarian National Television)",
+      "country": "BG",
+      "category": "public",
+      "languages": "bg",
+      "platform": "official",
+      "url": "https://bnt.bg",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "hr-hrti",
+      "name": "HRTi (HRT 1, HRT 2, HRT 3, HRT 4)",
+      "country": "HR",
+      "category": "public",
+      "languages": "hr",
+      "platform": "official",
+      "url": "https://hrti.hrt.hr",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_national"
+    },
+    {
+      "id": "cy-cybc",
+      "name": "CyBC (RIK 1, RIK 2)",
+      "country": "CY",
+      "category": "public",
+      "languages": "el",
+      "platform": "official",
+      "url": "https://www.cybc.com.cy",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "ee-err",
+      "name": "ERR Jupiter (ETV, ETV2, ETV+)",
+      "country": "EE",
+      "category": "public",
+      "languages": "et,ru",
+      "platform": "official",
+      "url": "https://jupiter.err.ee",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "gr-ert",
+      "name": "ERT (ERT1, ERT2, ERT3, ERT News)",
+      "country": "GR",
+      "category": "public",
+      "languages": "el",
+      "platform": "official",
+      "url": "https://webtv.ert.gr",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "is-ruv",
+      "name": "RÚV",
+      "country": "IS",
+      "category": "public",
+      "languages": "is",
+      "platform": "official",
+      "url": "https://www.ruv.is",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "lv-ltv",
+      "name": "LTV (Latvijas Televīzija)",
+      "country": "LV",
+      "category": "public",
+      "languages": "lv",
+      "platform": "official",
+      "url": "https://ltv.lsm.lv",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "lt-lrt",
+      "name": "LRT (LRT TELEVIZIJA, LRT Plius)",
+      "country": "LT",
+      "category": "public",
+      "languages": "lt",
+      "platform": "official",
+      "url": "https://www.lrt.lt",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "mt-tvm",
+      "name": "TVM (Public Broadcasting Services Malta)",
+      "country": "MT",
+      "category": "public",
+      "languages": "mt,en",
+      "platform": "official",
+      "url": "https://tvmnews.mt",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "md-trm",
+      "name": "Moldova 1 (TRM)",
+      "country": "MD",
+      "category": "public",
+      "languages": "ro",
+      "platform": "official",
+      "url": "https://trm.md",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "me-rtcg",
+      "name": "RTCG",
+      "country": "ME",
+      "category": "public",
+      "languages": "sr,me",
+      "platform": "official",
+      "url": "https://www.rtcg.me",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "mk-mrt",
+      "name": "MRT",
+      "country": "MK",
+      "category": "public",
+      "languages": "mk",
+      "platform": "official",
+      "url": "https://mrt.com.mk",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "ro-tvr",
+      "name": "TVRPlus (TVR 1, TVR 2, TVR 3)",
+      "country": "RO",
+      "category": "public",
+      "languages": "ro",
+      "platform": "official",
+      "url": "https://tvrplus.ro",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "rs-rts",
+      "name": "RTS (Radio-Television of Serbia)",
+      "country": "RS",
+      "category": "public",
+      "languages": "sr",
+      "platform": "official",
+      "url": "https://www.rts.rs",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "sk-rtvs",
+      "name": "RTVS (Jednotka, Dvojka, :24)",
+      "country": "SK",
+      "category": "public",
+      "languages": "sk",
+      "platform": "official",
+      "url": "https://www.rtvs.sk",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "si-rtvslo",
+      "name": "RTV Slovenija (TV SLO 1, TV SLO 2)",
+      "country": "SI",
+      "category": "public",
+      "languages": "sl",
+      "platform": "official",
+      "url": "https://www.rtvslo.si/tv",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "ua-suspilne",
+      "name": "Suspilne (public broadcaster of Ukraine)",
+      "country": "UA",
+      "category": "public",
+      "languages": "uk",
+      "platform": "official",
+      "url": "https://suspilne.media",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "tr-trt-izle",
+      "name": "TRT İzle (TRT 1, TRT Haber, TRT Çocuk)",
+      "country": "TR",
+      "category": "public",
+      "languages": "tr",
+      "platform": "official",
+      "url": "https://www.trtizle.com",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "ge-gpb",
+      "name": "GPB (Georgian Public Broadcaster)",
+      "country": "GE",
+      "category": "public",
+      "languages": "ka,en",
+      "platform": "official",
+      "url": "https://1tv.ge",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "am-h1",
+      "name": "Armenia Public TV (H1)",
+      "country": "AM",
+      "category": "public",
+      "languages": "hy",
+      "platform": "official",
+      "url": "https://www.1tv.am",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "de-br",
+      "name": "Bayerischer Rundfunk (BR Fernsehen)",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.br.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "de-ndr",
+      "name": "NDR Fernsehen",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.ndr.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "de-wdr",
+      "name": "WDR Fernsehen",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.wdr.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "de-swr",
+      "name": "SWR Fernsehen",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.swr.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "de-hr",
+      "name": "hr-fernsehen",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.hr-fernsehen.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "de-mdr",
+      "name": "MDR Fernsehen",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.mdr.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "de-rbb",
+      "name": "rbb Fernsehen",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.rbb-online.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "de-sr",
+      "name": "SR Fernsehen",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.sr.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "de-kika",
+      "name": "KiKA",
+      "country": "DE",
+      "category": "public",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.kika.de",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "de-joyn",
+      "name": "Joyn (free live channels)",
+      "country": "DE",
+      "category": "commercial_free",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.joyn.de",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account"
+    },
+    {
+      "id": "de-bundestag",
+      "name": "Deutscher Bundestag (Mediathek, live)",
+      "country": "DE",
+      "category": "civic",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.bundestag.de/mediathek",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "fr-tf1plus",
+      "name": "TF1+ (TF1, TMC, TFX, LCI live)",
+      "country": "FR",
+      "category": "commercial_free",
+      "languages": "fr",
+      "platform": "official",
+      "url": "https://www.tf1.fr",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account_national"
+    },
+    {
+      "id": "it-la7",
+      "name": "La7",
+      "country": "IT",
+      "category": "commercial_free",
+      "languages": "it",
+      "platform": "official",
+      "url": "https://www.la7.it",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "it-skytg24",
+      "name": "Sky TG24 (live)",
+      "country": "IT",
+      "category": "news",
+      "languages": "it",
+      "platform": "official",
+      "url": "https://tg24.sky.it",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "es-tv3",
+      "name": "TV3 (CCMA, Catalonia)",
+      "country": "ES",
+      "category": "public",
+      "languages": "ca",
+      "platform": "official",
+      "url": "https://www.ccma.cat",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "es-etb",
+      "name": "ETB (EiTB, Basque Country)",
+      "country": "ES",
+      "category": "public",
+      "languages": "eu,es",
+      "platform": "official",
+      "url": "https://www.eitb.eus",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "es-tvg",
+      "name": "TVG (CRTVG, Galicia)",
+      "country": "ES",
+      "category": "public",
+      "languages": "gl",
+      "platform": "official",
+      "url": "https://www.crtvg.es",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "es-canalsur",
+      "name": "Canal Sur (Andalusia)",
+      "country": "ES",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.canalsur.es",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "es-telemadrid",
+      "name": "Telemadrid",
+      "country": "ES",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.telemadrid.es",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "es-apunt",
+      "name": "À Punt (Valencia)",
+      "country": "ES",
+      "category": "public",
+      "languages": "ca",
+      "platform": "official",
+      "url": "https://www.apuntmedia.es",
+      "access": "free",
+      "geo": "national",
+      "note_key": "some_geo"
+    },
+    {
+      "id": "es-cortes",
+      "name": "Congreso de los Diputados (live)",
+      "country": "ES",
+      "category": "civic",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.congreso.es",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "gb-stv",
+      "name": "STV Player (STV live)",
+      "country": "GB",
+      "category": "commercial_free",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://player.stv.tv",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account"
+    },
+    {
+      "id": "gb-parliament",
+      "name": "UK Parliament (Parliamentlive.tv)",
+      "country": "GB",
+      "category": "civic",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://parliamentlive.tv",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "ie-oireachtas",
+      "name": "Oireachtas TV",
+      "country": "IE",
+      "category": "civic",
+      "languages": "en,ga",
+      "platform": "official",
+      "url": "https://www.oireachtas.ie/en/oireachtas-tv",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "nl-nos",
+      "name": "NOS (live streams)",
+      "country": "NL",
+      "category": "news",
+      "languages": "nl",
+      "platform": "official",
+      "url": "https://nos.nl",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "nl-tweedekamer",
+      "name": "Tweede Kamer (Debat Direct)",
+      "country": "NL",
+      "category": "civic",
+      "languages": "nl",
+      "platform": "official",
+      "url": "https://debatdirect.tweedekamer.nl",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "pt-sic-noticias",
+      "name": "SIC Notícias",
+      "country": "PT",
+      "category": "news",
+      "languages": "pt",
+      "platform": "official",
+      "url": "https://sicnoticias.pt",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "pl-tvp-world",
+      "name": "TVP World",
+      "country": "PL",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://tvpworld.com",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "se-riksdag",
+      "name": "Sveriges riksdag (webb-tv)",
+      "country": "SE",
+      "category": "civic",
+      "languages": "sv",
+      "platform": "official",
+      "url": "https://www.riksdagen.se/sv/webb-tv",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "hu-parlament",
+      "name": "Országgyűlés (Hungarian Parliament)",
+      "country": "HU",
+      "category": "civic",
+      "languages": "hu",
+      "platform": "official",
+      "url": "https://www.parlament.hu",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "eu-europarl",
+      "name": "European Parliament Multimedia Centre",
+      "country": "EU",
+      "category": "civic",
+      "languages": "multi",
+      "platform": "official",
+      "url": "https://multimedia.europarl.europa.eu",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "eu-ebs",
+      "name": "Europe by Satellite (European Commission)",
+      "country": "EU",
+      "category": "civic",
+      "languages": "multi",
+      "platform": "official",
+      "url": "https://audiovisual.ec.europa.eu/en/ebs",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "eu-council",
+      "name": "Council of the EU (live video)",
+      "country": "EU",
+      "category": "civic",
+      "languages": "multi",
+      "platform": "official",
+      "url": "https://video.consilium.europa.eu",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "un-webtv",
+      "name": "UN Web TV",
+      "country": "GLOBAL",
+      "category": "civic",
+      "languages": "multi",
+      "platform": "official",
+      "url": "https://webtv.un.org",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "africanews",
+      "name": "Africanews",
+      "country": "GLOBAL",
+      "category": "news",
+      "languages": "en,fr",
+      "platform": "official",
+      "url": "https://www.africanews.com/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "i24news",
+      "name": "i24NEWS",
+      "country": "IL",
+      "category": "news",
+      "languages": "en,fr,ar",
+      "platform": "official",
+      "url": "https://www.i24news.tv/en/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "il-kan",
+      "name": "Kan (Israeli Public Broadcasting Corporation)",
+      "country": "IL",
+      "category": "public",
+      "languages": "he",
+      "platform": "official",
+      "url": "https://www.kan.org.il",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "aljazeera-ar",
+      "name": "Al Jazeera Arabic",
+      "country": "QA",
+      "category": "news",
+      "languages": "ar",
+      "platform": "official",
+      "url": "https://www.aljazeera.net/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "official_site_yt"
+    },
+    {
+      "id": "ar-cont",
+      "name": "Contenidos Públicos (TV Pública)",
+      "country": "AR",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.cont.ar",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "br-tvcultura",
+      "name": "TV Cultura",
+      "country": "BR",
+      "category": "public",
+      "languages": "pt",
+      "platform": "official",
+      "url": "https://tvcultura.com.br",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "br-tvcamara",
+      "name": "TV Câmara",
+      "country": "BR",
+      "category": "civic",
+      "languages": "pt",
+      "platform": "official",
+      "url": "https://www.camara.leg.br/tv",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "br-tvsenado",
+      "name": "TV Senado",
+      "country": "BR",
+      "category": "civic",
+      "languages": "pt",
+      "platform": "official",
+      "url": "https://www12.senado.leg.br/tv",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "cl-tvn",
+      "name": "TVN (Televisión Nacional de Chile)",
+      "country": "CL",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.tvn.cl",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "co-rtvcplay",
+      "name": "RTVC Play (Señal Colombia, Canal Institucional)",
+      "country": "CO",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.rtvcplay.co",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "mx-canalonce",
+      "name": "Canal Once",
+      "country": "MX",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.canalonce.mx",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "mx-canal22",
+      "name": "Canal 22",
+      "country": "MX",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://canal22.org.mx",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "pe-tvperu",
+      "name": "TV Perú",
+      "country": "PE",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.tvperu.gob.pe",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "uy-tnu",
+      "name": "TNU (Televisión Nacional Uruguay)",
+      "country": "UY",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.tnu.com.uy",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "us-bloomberg",
+      "name": "Bloomberg Television (live)",
+      "country": "US",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.bloomberg.com/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "us-cbsnews",
+      "name": "CBS News 24/7",
+      "country": "US",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.cbsnews.com/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "us-abcnews",
+      "name": "ABC News Live",
+      "country": "US",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://abcnews.go.com/Live",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "us-nbcnews",
+      "name": "NBC News NOW",
+      "country": "US",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.nbcnews.com/now",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "us-voa",
+      "name": "Voice of America (VOA)",
+      "country": "US",
+      "category": "news",
+      "languages": "en,multi",
+      "platform": "official",
+      "url": "https://www.voanews.com",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "us-house",
+      "name": "U.S. House of Representatives (live floor)",
+      "country": "US",
+      "category": "civic",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://live.house.gov",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "ca-icitou",
+      "name": "ICI TOU.TV (Radio-Canada)",
+      "country": "CA",
+      "category": "public",
+      "languages": "fr",
+      "platform": "official",
+      "url": "https://ici.tou.tv",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_national"
+    },
+    {
+      "id": "ca-cpac",
+      "name": "CPAC (Canadian parliamentary channel)",
+      "country": "CA",
+      "category": "civic",
+      "languages": "en,fr",
+      "platform": "official",
+      "url": "https://www.cpac.ca",
+      "access": "free",
+      "geo": "national",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "au-9now",
+      "name": "9Now (Nine live channels)",
+      "country": "AU",
+      "category": "commercial_free",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.9now.com.au",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account_national"
+    },
+    {
+      "id": "au-7plus",
+      "name": "7plus (Seven live channels)",
+      "country": "AU",
+      "category": "commercial_free",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://7plus.com.au",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account_national"
+    },
+    {
+      "id": "au-10play",
+      "name": "10 Play (Network 10 live channels)",
+      "country": "AU",
+      "category": "commercial_free",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://10.com.au",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account_national"
+    },
+    {
+      "id": "au-parlview",
+      "name": "ParlView (Parliament of Australia)",
+      "country": "AU",
+      "category": "civic",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://parlview.aph.gov.au",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "nz-tvnz",
+      "name": "TVNZ+ (TVNZ 1, TVNZ 2 live)",
+      "country": "NZ",
+      "category": "commercial_free",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.tvnz.co.nz",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account_national"
+    },
+    {
+      "id": "nz-threenow",
+      "name": "ThreeNow",
+      "country": "NZ",
+      "category": "commercial_free",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.threenow.co.nz",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account_national"
+    },
+    {
+      "id": "nz-maori-tv",
+      "name": "Māori Television",
+      "country": "NZ",
+      "category": "public",
+      "languages": "mi,en",
+      "platform": "official",
+      "url": "https://www.maoritelevision.com",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "in-ddnews",
+      "name": "DD News (Prasar Bharati)",
+      "country": "IN",
+      "category": "news",
+      "languages": "hi,en",
+      "platform": "official",
+      "url": "https://ddnews.gov.in",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "in-sansad",
+      "name": "Sansad TV",
+      "country": "IN",
+      "category": "civic",
+      "languages": "hi,en",
+      "platform": "official",
+      "url": "https://sansad.tv",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "sg-cna",
+      "name": "CNA (Channel NewsAsia)",
+      "country": "SG",
+      "category": "news",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.channelnewsasia.com/watch",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "my-rtm",
+      "name": "RTMklik (RTM)",
+      "country": "MY",
+      "category": "public",
+      "languages": "ms,en",
+      "platform": "official",
+      "url": "https://rtmklik.rtm.gov.my",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "th-thaipbs",
+      "name": "Thai PBS",
+      "country": "TH",
+      "category": "public",
+      "languages": "th",
+      "platform": "official",
+      "url": "https://www.thaipbs.or.th",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "id-tvri",
+      "name": "TVRI",
+      "country": "ID",
+      "category": "public",
+      "languages": "id",
+      "platform": "official",
+      "url": "https://tvri.go.id",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "vn-vtv",
+      "name": "VTV (Vietnam Television)",
+      "country": "VN",
+      "category": "public",
+      "languages": "vi",
+      "platform": "official",
+      "url": "https://vtv.vn",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "tw-pts",
+      "name": "PTS (Public Television Service)",
+      "country": "TW",
+      "category": "public",
+      "languages": "zh",
+      "platform": "official",
+      "url": "https://www.pts.org.tw",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "tw-taiwanplus",
+      "name": "TaiwanPlus",
+      "country": "TW",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.taiwanplus.com",
+      "access": "free",
+      "geo": "global",
+      "note_key": null
+    },
+    {
+      "id": "hk-rthk",
+      "name": "RTHK TV",
+      "country": "HK",
+      "category": "public",
+      "languages": "zh,en",
+      "platform": "official",
+      "url": "https://www.rthk.hk/tv",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "za-sabcplus",
+      "name": "SABC+",
+      "country": "ZA",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.sabcplus.com",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_national"
+    },
+    {
+      "id": "xumo-play",
+      "name": "Xumo Play",
+      "country": "US",
+      "category": "fast",
+      "languages": "en",
+      "platform": "xumo",
+      "url": "https://play.xumo.com",
+      "access": "free",
+      "geo": "national",
+      "note_key": "fast_varies"
+    },
+    {
+      "id": "lg-channels",
+      "name": "LG Channels",
+      "country": "GLOBAL",
+      "category": "fast",
+      "languages": "multi",
+      "platform": "lg",
+      "url": "https://www.lgchannels.com",
+      "access": "free",
+      "geo": "national",
+      "note_key": "fast_varies"
+    },
+    {
+      "id": "sling-freestream",
+      "name": "Sling Freestream",
+      "country": "US",
+      "category": "fast",
+      "languages": "en",
+      "platform": "sling",
+      "url": "https://www.sling.com/freestream",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "roku"
+    },
+    {
+      "id": "local-now",
+      "name": "Local Now",
+      "country": "US",
+      "category": "fast",
+      "languages": "en",
+      "platform": "localnow",
+      "url": "https://localnow.com",
+      "access": "free",
+      "geo": "national",
+      "note_key": "fast_varies"
+    },
+    {
+      "id": "zattoo",
+      "name": "Zattoo",
+      "country": "DE",
+      "category": "fast",
+      "languages": "de",
+      "platform": "zattoo",
+      "url": "https://zattoo.com",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "zattoo",
+      "available_in": [
+        "AT",
+        "CH"
+      ]
+    },
+    {
+      "id": "yt-aljazeera-en",
+      "name": "Al Jazeera English (YouTube live)",
+      "country": "QA",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@aljazeeraenglish/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-dw-news",
+      "name": "DW News (YouTube live)",
+      "country": "DE",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@dwnews/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-dw-deutsch",
+      "name": "DW Deutsch (YouTube live)",
+      "country": "DE",
+      "category": "news",
+      "languages": "de",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@dwdeutsch/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-dw-espanol",
+      "name": "DW Español (YouTube live)",
+      "country": "DE",
+      "category": "news",
+      "languages": "es",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@dwespanol/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-tagesschau",
+      "name": "tagesschau (YouTube live)",
+      "country": "DE",
+      "category": "news",
+      "languages": "de",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@tagesschau/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-welt",
+      "name": "WELT Nachrichtensender (YouTube live)",
+      "country": "DE",
+      "category": "news",
+      "languages": "de",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@WELTVideoTV/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-france24-en",
+      "name": "FRANCE 24 English (YouTube live)",
+      "country": "FR",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@France24_en/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-france24-fr",
+      "name": "FRANCE 24 Français (YouTube live)",
+      "country": "FR",
+      "category": "news",
+      "languages": "fr",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@FRANCE24/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-france24-es",
+      "name": "FRANCE 24 Español (YouTube live)",
+      "country": "FR",
+      "category": "news",
+      "languages": "es",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@France24_es/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-euronews-en",
+      "name": "euronews (English) (YouTube live)",
+      "country": "GLOBAL",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@euronews/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-skynews",
+      "name": "Sky News (YouTube live)",
+      "country": "GB",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@SkyNews/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-skytg24",
+      "name": "Sky TG24 (YouTube live)",
+      "country": "IT",
+      "category": "news",
+      "languages": "it",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@SkyTG24/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-trtworld",
+      "name": "TRT World (YouTube live)",
+      "country": "TR",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@trtworld/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-nhk-world",
+      "name": "NHK WORLD-JAPAN (YouTube live)",
+      "country": "JP",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@NHKWORLDJAPAN/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-cna",
+      "name": "CNA (Channel NewsAsia) (YouTube live)",
+      "country": "SG",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@channelnewsasia/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-abc-au",
+      "name": "ABC News (Australia) (YouTube live)",
+      "country": "AU",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@abcnewsaustralia/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-cbsnews",
+      "name": "CBS News (YouTube live)",
+      "country": "US",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@CBSNews/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-abcnews",
+      "name": "ABC News (US) (YouTube live)",
+      "country": "US",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@ABCNews/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-nbcnews",
+      "name": "NBC News (YouTube live)",
+      "country": "US",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@NBCNews/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-ap",
+      "name": "Associated Press (AP) (YouTube live)",
+      "country": "US",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@AssociatedPress/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-bloomberg",
+      "name": "Bloomberg Television (YouTube live)",
+      "country": "US",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@markets/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-africanews",
+      "name": "Africanews (YouTube live)",
+      "country": "GLOBAL",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@africanews/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-i24",
+      "name": "i24NEWS English (YouTube live)",
+      "country": "IL",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@i24NEWS_EN/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-tvp-world",
+      "name": "TVP World (YouTube live)",
+      "country": "PL",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@TVPWorld/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-ndtv",
+      "name": "NDTV 24x7 (YouTube live)",
+      "country": "IN",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@NDTV/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-wion",
+      "name": "WION (YouTube live)",
+      "country": "IN",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@WION/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "yt-cgtn",
+      "name": "CGTN (YouTube live)",
+      "country": "GLOBAL",
+      "category": "news",
+      "languages": "en",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@CGTN/live",
+      "access": "free",
+      "geo": "global",
+      "note_key": "youtube_live"
+    },
+    {
+      "id": "ng-nta",
+      "name": "NTA (Nigerian Television Authority)",
+      "country": "NG",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.nta.ng",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "ma-snrt",
+      "name": "SNRT (Al Aoula, Arryadia)",
+      "country": "MA",
+      "category": "public",
+      "languages": "ar,fr",
+      "platform": "official",
+      "url": "https://www.snrt.ma",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "ke-kbc",
+      "name": "KBC (Kenya Broadcasting Corporation)",
+      "country": "KE",
+      "category": "public",
+      "languages": "en,sw",
+      "platform": "official",
+      "url": "https://www.kbc.co.ke",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "pk-ptv",
+      "name": "PTV (Pakistan Television)",
+      "country": "PK",
+      "category": "public",
+      "languages": "ur,en",
+      "platform": "official",
+      "url": "https://ptv.com.pk",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "bd-btv",
+      "name": "BTV (Bangladesh Television)",
+      "country": "BD",
+      "category": "public",
+      "languages": "bn",
+      "platform": "official",
+      "url": "https://btv.gov.bd",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "bo-bolivia-tv",
+      "name": "Bolivia TV",
+      "country": "BO",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.boliviatv.bo",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "cr-sinart",
+      "name": "SINART (Canal 13 Costa Rica)",
+      "country": "CR",
+      "category": "public",
+      "languages": "es",
+      "platform": "official",
+      "url": "https://www.sinart.go.cr",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "kr-ebs",
+      "name": "EBS (Educational Broadcasting System)",
+      "country": "KR",
+      "category": "public",
+      "languages": "ko",
+      "platform": "official",
+      "url": "https://www.ebs.co.kr",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "jp-nhk-plus",
+      "name": "NHK PLUS (domestic service, Japan)",
+      "country": "JP",
+      "category": "public",
+      "languages": "ja",
+      "platform": "official",
+      "url": "https://plus.nhk.jp",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "account_national"
+    },
+    {
+      "id": "th-tpbs-news",
+      "name": "Thai PBS News",
+      "country": "TH",
+      "category": "news",
+      "languages": "th",
+      "platform": "official",
+      "url": "https://news.thaipbs.or.th",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "lk-rupavahini",
+      "name": "Sri Lanka Rupavahini Corporation",
+      "country": "LK",
+      "category": "public",
+      "languages": "si,ta,en",
+      "platform": "official",
+      "url": "https://www.rupavahini.lk",
+      "access": "free",
+      "geo": "national",
+      "note_key": null
+    },
+    {
+      "id": "no-stortinget",
+      "name": "Stortinget (live broadcasts)",
+      "country": "NO",
+      "category": "civic",
+      "languages": "no",
+      "platform": "official",
+      "url": "https://www.stortinget.no",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "dk-ft",
+      "name": "Folketinget (TV from the Folketing)",
+      "country": "DK",
+      "category": "civic",
+      "languages": "da",
+      "platform": "official",
+      "url": "https://www.ft.dk",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "fi-eduskunta",
+      "name": "Eduskunta (live broadcasts)",
+      "country": "FI",
+      "category": "civic",
+      "languages": "fi,sv",
+      "platform": "official",
+      "url": "https://www.eduskunta.fi",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "fr-assemblee",
+      "name": "Assemblée nationale (live)",
+      "country": "FR",
+      "category": "civic",
+      "languages": "fr",
+      "platform": "official",
+      "url": "https://videos.assemblee-nationale.fr",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "fr-senat",
+      "name": "Sénat (Public Sénat / live)",
+      "country": "FR",
+      "category": "civic",
+      "languages": "fr",
+      "platform": "official",
+      "url": "https://videos.senat.fr",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "it-camera",
+      "name": "Camera dei deputati (live)",
+      "country": "IT",
+      "category": "civic",
+      "languages": "it",
+      "platform": "official",
+      "url": "https://webtv.camera.it",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "it-senato",
+      "name": "Senato della Repubblica (WebTV)",
+      "country": "IT",
+      "category": "civic",
+      "languages": "it",
+      "platform": "official",
+      "url": "https://webtv.senato.it",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "at-parlament",
+      "name": "Parlament Österreich (live)",
+      "country": "AT",
+      "category": "civic",
+      "languages": "de",
+      "platform": "official",
+      "url": "https://www.parlament.gv.at",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "ch-parlament",
+      "name": "Parlament Schweiz (Ratsdebatten live)",
+      "country": "CH",
+      "category": "civic",
+      "languages": "de,fr,it",
+      "platform": "official",
+      "url": "https://www.parlament.ch",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "pl-sejm",
+      "name": "Sejm RP (transmisje)",
+      "country": "PL",
+      "category": "civic",
+      "languages": "pl",
+      "platform": "official",
+      "url": "https://www.sejm.gov.pl",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
+    },
+    {
+      "id": "cz-psp",
+      "name": "Poslanecká sněmovna (live)",
+      "country": "CZ",
+      "category": "civic",
+      "languages": "cs",
+      "platform": "official",
+      "url": "https://www.psp.cz",
+      "access": "free",
+      "geo": "global",
+      "note_key": "civic_live"
     }
   ]
 }

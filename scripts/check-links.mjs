@@ -8,6 +8,7 @@ import path from "node:path";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const db = new DatabaseSync(path.join(root, "data", "tv.db"));
+db.exec("PRAGMA busy_timeout = 5000");
 const rows = db.prepare("SELECT id, url FROM channels").all();
 const update = db.prepare("UPDATE channels SET link_status = ?, last_checked = ? WHERE id = ?");
 
@@ -31,14 +32,22 @@ async function check(url) {
 }
 
 const today = new Date().toISOString().slice(0, 10);
+const CONCURRENCY = 8;
 let bad = 0;
-for (const r of rows) {
-  const status = await check(r.url);
-  update.run(status, today, r.id);
-  if (status !== "ok") {
-    bad++;
-    console.log(`${status.padEnd(12)} ${r.id}  ${r.url}`);
+let next = 0;
+
+async function worker() {
+  while (next < rows.length) {
+    const r = rows[next++];
+    const status = await check(r.url);
+    update.run(status, today, r.id);
+    if (status !== "ok") {
+      bad++;
+      console.log(`${status.padEnd(12)} ${r.id}  ${r.url}`);
+    }
   }
 }
+
+await Promise.all(Array.from({ length: CONCURRENCY }, worker));
 console.log(`\nKész: ${rows.length} link, ebből ${bad} nem "ok". Nézd át kézzel a fentieket.`);
 db.close();

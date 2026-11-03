@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { fill, isLang, ui } from "@/lib/i18n";
+import { getAllChannels } from "@/lib/db";
 import { getCountryViews } from "@/lib/view";
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
@@ -8,7 +9,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
   if (!isLang(lang)) notFound();
   const t = ui[lang];
   const countries = getCountryViews(lang);
-  const total = countries.reduce((sum, c) => sum + c.count, 0);
+  const total = getAllChannels().length; // egyedi források (egy forrás több országban is szerepelhet)
 
   return (
     <>

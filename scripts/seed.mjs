@@ -31,7 +31,7 @@ db.exec(`
     id TEXT PRIMARY KEY,
     name TEXT NOT NULL,
     country TEXT NOT NULL REFERENCES countries(code),
-    category TEXT NOT NULL CHECK (category IN ('public','news','fast','commercial_free')),
+    category TEXT NOT NULL CHECK (category IN ('public','news','civic','fast','commercial_free')),
     languages TEXT NOT NULL,
     platform TEXT NOT NULL REFERENCES platforms(id),
     url TEXT NOT NULL,
@@ -41,6 +41,19 @@ db.exec(`
     last_checked TEXT,
     link_status TEXT NOT NULL DEFAULT 'unchecked'
   );
+
+  -- Ahol a csatorna/szolgáltatás elérhető a saját országán kívül is (pl. Zattoo: DE, AT, CH)
+  CREATE TABLE channel_availability (
+    channel_id TEXT NOT NULL REFERENCES channels(id),
+    country TEXT NOT NULL REFERENCES countries(code),
+    PRIMARY KEY (channel_id, country)
+  );
+
+  -- Egy csatorna minden országa: a saját + az elérhetőségi lista
+  CREATE VIEW channel_countries AS
+    SELECT id AS channel_id, country FROM channels
+    UNION
+    SELECT channel_id, country FROM channel_availability;
 
   CREATE INDEX idx_channels_country ON channels(country);
   CREATE INDEX idx_channels_category ON channels(category);
@@ -64,11 +77,14 @@ const insChannel = db.prepare(
    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
 );
 
+const insAvail = db.prepare("INSERT INTO channel_availability (channel_id, country) VALUES (?, ?)");
+
 db.exec("BEGIN");
 for (const c of data.countries) insCountry.run(c.code, c.name_en);
 for (const p of data.platforms) insPlatform.run(p.id, p.name);
 for (const ch of data.channels) {
   insChannel.run(ch.id, ch.name, ch.country, ch.category, ch.languages, ch.platform, ch.url, ch.access, ch.geo, ch.note_key ?? null);
+  for (const code of ch.available_in ?? []) insAvail.run(ch.id, code);
 }
 db.exec("COMMIT");
 

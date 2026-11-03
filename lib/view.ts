@@ -1,7 +1,7 @@
 import { getCountries, type Channel } from "./db";
 import { countryNames, fill, notes, ui, type Lang } from "./i18n";
 
-export const CATEGORY_ORDER = ["public", "news", "commercial_free", "fast"] as const;
+export const CATEGORY_ORDER = ["public", "news", "civic", "commercial_free", "fast"] as const;
 
 // Az országkódból zászló emoji (a GLOBAL külön kezelve).
 export function flag(code: string): string {

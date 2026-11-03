@@ -47,7 +47,7 @@ Egyszeri beállítás a GitHubon: **Settings → Pages → Build and deployment 
 
 | Mappa / fájl | Szerepe |
 |---|---|
-| `data/channels.json` | A csatornák, országok és platformok forrásadata (ezt szerkeszd) |
+| `data/channels.json` | A csatornák, országok és platformok forrásadata (ezt szerkeszd). Az `available_in` mező megadja, mely további országokban érhető el egy szolgáltatás |
 | `scripts/seed.mjs` | Ebből építi a SQLite adatbázist (`data/tv.db`) |
 | `scripts/check-links.mjs` | Ellenőrzi, hogy a linkek elérhetők-e (`npm run check-links`) |
 | `lib/db.ts` | Adatbázis-lekérdezések |
@@ -75,7 +75,8 @@ A mellékelt linkek hivatalos főoldalak, a hozzájuk tartozó ingyenességi és
 
 ## Ütemterv
 
-- [x] 1. verzió: ~60 ellenőrizendő legális forrás, országok szerint, keresés és szűrés
+- [x] 1. verzió: ~60 legális forrás, országok szerint, keresés és szűrés
+- [x] 2. verzió: 210 forrás 74 csoportban: közmédia, hivatalos YouTube-élők, parlamentek és intézmények, ingyenes platformok
 - [ ] Műsorújság (EPG): a `programmes` tábla már megvan az adatbázisban. Csak olyan EPG-forrást használj, amelynek a licence engedi a felhasználást (pl. a műsorszolgáltató saját adatai vagy hivatalos API-ja).
 - [ ] „Hol nézhetem ezt?" funkció: műsorcím alapján megmutatni, melyik legális szolgáltatón érhető el az adott országban (licencelt adatforrás kell hozzá, pl. TMDB / JustWatch partneri adat).
 - [ ] Automatikus, ütemezett linkellenőrzés és hibajelentő űrlap.

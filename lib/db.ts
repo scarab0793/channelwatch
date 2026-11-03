@@ -9,7 +9,7 @@ export type Channel = {
   id: string;
   name: string;
   country: string;
-  category: "public" | "news" | "fast" | "commercial_free";
+  category: "public" | "news" | "civic" | "fast" | "commercial_free";
   languages: string;
   platform: string;
   platform_name: string;
@@ -45,8 +45,8 @@ export function getCountries(): Country[] {
   return plain<Country>(
     getDb()
       .prepare(
-        `SELECT co.code, co.name_en, COUNT(ch.id) AS channel_count
-         FROM countries co LEFT JOIN channels ch ON ch.country = co.code
+        `SELECT co.code, co.name_en, COUNT(cc.channel_id) AS channel_count
+         FROM countries co JOIN channel_countries cc ON cc.country = co.code
          GROUP BY co.code
          HAVING channel_count > 0`
       )
@@ -56,7 +56,11 @@ export function getCountries(): Country[] {
 
 export function getChannelsByCountry(code: string): Channel[] {
   return plain<Channel>(
-    getDb().prepare(`${CHANNEL_SELECT} WHERE c.country = ? ORDER BY c.name COLLATE NOCASE`).all(code)
+    getDb()
+      .prepare(
+        `${CHANNEL_SELECT} WHERE c.id IN (SELECT channel_id FROM channel_countries WHERE country = ?) ORDER BY c.name COLLATE NOCASE`
+      )
+      .all(code)
   );
 }
 

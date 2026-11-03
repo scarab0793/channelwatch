@@ -12,10 +12,26 @@ db.exec("PRAGMA busy_timeout = 5000");
 const rows = db.prepare("SELECT id, url FROM channels").all();
 const update = db.prepare("UPDATE channels SET link_status = ?, last_checked = ? WHERE id = ?");
 
+// Pluto csatornaoldal: érvénytelen azonosítónál a Pluto a listaoldalra irányít át (200-zal),
+// ezért a végső címet és az oldal címét is ellenőrizzük.
+const PLUTO_CHANNEL = /^https:\/\/pluto\.tv\/[a-z]{2}\/watch\/live-tv\/\d+\/$/;
+async function checkPlutoChannel(url, signal) {
+  const res = await fetch(url, {
+    redirect: "follow",
+    signal,
+    headers: { "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36" },
+  });
+  if (!res.ok) return `http_${res.status}`;
+  if (res.url !== url) return "pluto_redirected";
+  const html = await res.text();
+  return /<title>Watch [^<]*Live TV Channel/.test(html) ? "ok" : "pluto_not_channel";
+}
+
 async function check(url) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), 15000);
   try {
+    if (PLUTO_CHANNEL.test(url)) return await checkPlutoChannel(url, ctrl.signal);
     let res = await fetch(url, { method: "HEAD", redirect: "follow", signal: ctrl.signal });
     if (res.status === 405 || res.status === 403) {
       res = await fetch(url, { method: "GET", redirect: "follow", signal: ctrl.signal });

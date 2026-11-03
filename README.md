@@ -76,7 +76,7 @@ A mellékelt linkek hivatalos főoldalak, a hozzájuk tartozó ingyenességi és
 ## Ütemterv
 
 - [x] 1. verzió: ~60 legális forrás, országok szerint, keresés és szűrés
-- [x] 2. verzió: 210 forrás 74 csoportban: közmédia, hivatalos YouTube-élők, parlamentek és intézmények, ingyenes platformok
+- [x] 2. verzió: 230 forrás 74 csoportban: közmédia, hivatalos YouTube-élők, parlamentek és intézmények, ingyenes platformok, Pluto TV mélylinkek
 - [ ] Műsorújság (EPG): a `programmes` tábla már megvan az adatbázisban. Csak olyan EPG-forrást használj, amelynek a licence engedi a felhasználást (pl. a műsorszolgáltató saját adatai vagy hivatalos API-ja).
 - [ ] „Hol nézhetem ezt?" funkció: műsorcím alapján megmutatni, melyik legális szolgáltatón érhető el az adott országban (licencelt adatforrás kell hozzá, pl. TMDB / JustWatch partneri adat).
 - [ ] Automatikus, ütemezett linkellenőrzés és hibajelentő űrlap.

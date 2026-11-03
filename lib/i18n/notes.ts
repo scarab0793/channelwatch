@@ -335,4 +335,13 @@ export const notes: Record<string, Record<Lang, string>> = {
     pl: "Oferuje plan bezpłatny (Zattoo Free), działający tylko w kraju zamieszkania.",
     ru: "Предлагает бесплатный тариф (Zattoo Free), который работает только в стране проживания.",
   },
+  pluto_us_channel: {
+    en: "Free, ad-supported live channel in Pluto TV's US line-up. Availability depends on your region.",
+    de: "Kostenloser, werbefinanzierter Live-Kanal im US-Angebot von Pluto TV. Die Verfügbarkeit hängt von deiner Region ab.",
+    fr: "Chaîne en direct gratuite et financée par la publicité dans l'offre américaine de Pluto TV. La disponibilité dépend de votre région.",
+    es: "Canal en directo gratuito y con publicidad de la oferta de Pluto TV en EE. UU. La disponibilidad depende de tu región.",
+    hu: "Ingyenes, reklámtámogatott élő csatorna a Pluto TV amerikai kínálatában. Az elérhetőség a régiódtól függ.",
+    pl: "Bezpłatny kanał na żywo z reklamami w amerykańskiej ofercie Pluto TV. Dostępność zależy od Twojego regionu.",
+    ru: "Бесплатный прямой канал с рекламой в американской программе Pluto TV. Доступность зависит от вашего региона.",
+  },
 };

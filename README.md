@@ -22,6 +22,12 @@ npm start
 
 A `dev` és a `build` parancs automatikusan újraépíti az adatbázist (`data/tv.db`) a `data/channels.json` fájlból.
 
+## Telepítés (GitHub Pages)
+
+A `.github/workflows/deploy.yml` minden `main`-re küldött változásnál, hetente egyszer és kézi indításra is felépíti a statikus oldalt (`out/`), és kiteszi a GitHub Pages-re. Az egyedi domain a `public/CNAME` fájlból jön.
+
+Egyszeri beállítás a GitHubon: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
 ## Felépítés
 
 | Mappa / fájl | Szerepe |

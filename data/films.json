@@ -1,0 +1,11 @@
+[
+  { "id": "nosferatu-1922", "title": "Nosferatu", "year": 1922, "kind": "film", "status": "pd_uk", "url": "https://archive.org/details/Nosferatu_DVD_quality", "source": "Internet Archive" },
+  { "id": "trip-moon-1902", "title": "A Trip to the Moon (Le Voyage dans la Lune)", "year": 1902, "kind": "film", "status": "pd_uk", "url": "https://archive.org/details/ATripToTheMoonGeorgeMelies", "source": "Internet Archive" },
+  { "id": "big-buck-bunny", "title": "Big Buck Bunny", "year": 2008, "kind": "film", "status": "cc", "url": "https://archive.org/details/BigBuckBunny_124", "source": "Blender Foundation" },
+  { "id": "elephants-dream", "title": "Elephants Dream", "year": 2006, "kind": "film", "status": "cc", "url": "https://archive.org/details/ElephantsDream", "source": "Blender Foundation" },
+  { "id": "sintel", "title": "Sintel", "year": 2010, "kind": "film", "status": "cc", "url": "https://archive.org/details/Sintel", "source": "Blender Foundation" },
+  { "id": "the-general-1926", "title": "The General", "year": 1926, "kind": "film", "status": "us_only", "until": "2037+" },
+  { "id": "metropolis-1927", "title": "Metropolis", "year": 1927, "kind": "film", "status": "us_only", "until": "2046+" },
+  { "id": "the-kid-1921", "title": "The Kid", "year": 1921, "kind": "film", "status": "us_only", "until": "2047+" },
+  { "id": "notld-1968", "title": "Night of the Living Dead", "year": 1968, "kind": "film", "status": "us_only", "until": "2090+" }
+]

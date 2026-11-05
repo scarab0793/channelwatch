@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import LangSwitcher from "../components/LangSwitcher";
 import "../globals.css";
 import { LANGS, SITE_URL, alternates, isLang, ui } from "@/lib/i18n";
+import { filmsText } from "@/lib/i18n/films";
 
 export const dynamicParams = false;
 
@@ -45,6 +46,7 @@ export default async function RootLayout({
               <nav className="main-nav">
                 <Link href={`/${lang}/`}>{t.nav.countries}</Link>
                 <Link href={`/${lang}/search/`}>{t.nav.search}</Link>
+                <Link href={`/${lang}/films/`}>{filmsText[lang].nav}</Link>
                 <Link href={`/${lang}/about/`}>{t.nav.about}</Link>
               </nav>
               <LangSwitcher current={lang} label={t.nav.language} />

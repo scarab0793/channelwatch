@@ -386,7 +386,7 @@
       "url": "https://www.itv.com/watch",
       "access": "free_account",
       "geo": "national",
-      "note_key": "ad_account"
+      "note_key": "uk_licence_ad"
     },
     {
       "id": "channel4",
@@ -398,7 +398,7 @@
       "url": "https://www.channel4.com",
       "access": "free_account",
       "geo": "national",
-      "note_key": "ad_account"
+      "note_key": "uk_licence_ad"
     },
     {
       "id": "channel5",
@@ -410,7 +410,7 @@
       "url": "https://www.channel5.com",
       "access": "free_account",
       "geo": "national",
-      "note_key": "ad_account"
+      "note_key": "uk_licence_ad"
     },
     {
       "id": "s4c",
@@ -1022,7 +1022,10 @@
       "url": "https://www.samsungtvplus.com",
       "access": "free",
       "geo": "national",
-      "note_key": "samsung"
+      "note_key": "samsung",
+      "available_in": [
+        "GB"
+      ]
     },
     {
       "id": "tubi",
@@ -1034,7 +1037,10 @@
       "url": "https://tubitv.com",
       "access": "free",
       "geo": "national",
-      "note_key": "tubi"
+      "note_key": "tubi",
+      "available_in": [
+        "GB"
+      ]
     },
     {
       "id": "roku-channel",
@@ -1598,7 +1604,7 @@
       "url": "https://player.stv.tv",
       "access": "free_account",
       "geo": "national",
-      "note_key": "ad_account"
+      "note_key": "uk_licence_ad"
     },
     {
       "id": "gb-parliament",
@@ -3115,6 +3121,30 @@
       "access": "free",
       "geo": "national",
       "note_key": "pluto_us_channel"
+    },
+    {
+      "id": "freely",
+      "name": "Freely (live TV over broadband)",
+      "country": "GB",
+      "category": "public",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://www.freely.co.uk",
+      "access": "free",
+      "geo": "national",
+      "note_key": "uk_freely"
+    },
+    {
+      "id": "gb-u",
+      "name": "U (formerly UKTV Play)",
+      "country": "GB",
+      "category": "commercial_free",
+      "languages": "en",
+      "platform": "official",
+      "url": "https://u.co.uk",
+      "access": "free_account",
+      "geo": "national",
+      "note_key": "ad_account"
     }
   ]
 }
